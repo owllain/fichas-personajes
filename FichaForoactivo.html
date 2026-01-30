@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Personaje - Foroactivo</title>
+
+    <!-- 
+        ================================================================
+        1. RECURSOS EXTERNOS (FUENTES E ICONOS)
+        ================================================================
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Librería de Iconos Lucide: Puedes ver todos los nombres aquí: https://lucide.dev/icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* 
+           ================================================================
+           2. CONFIGURACIÓN DE COLORES Y VARIABLES
+           Cambia estos valores para cambiar el look de toda la ficha
+           ================================================================
+        */
+        :root {
+            --ficha-ancho: 525px;
+
+            /* Colores de Fondo */
+            --color-fondo-pagina: #0a0a0a;
+            /* Fondo de los bloques de contenido */
+            --color-fondo-externo: #171717;
+            /* Fondo secundario de cajas de datos */
+            --color-bordes: #262626;
+            /* Color de las líneas de división */
+
+            /* Colores de Acento (Colores principales de la ficha) */
+            --color-acento-vibrante: #e11d48;
+            /* Rojo brillante neón */
+            --color-acento-profundo: #881337;
+            /* Rojo oscuro para gradientes */
+
+            /* Colores de Texto */
+            --color-texto: #f5f5f5;
+            /* Texto principal */
+            --color-texto-muted: #a3a3a3;
+            /* Texto secundario (pestañas inactivas) */
+
+            /* Efectos y Gradientes */
+            --gradiente-premium: linear-gradient(135deg, var(--color-acento-vibrante), var(--color-acento-profundo));
+            --shadow-neon: 0 4px 20px rgba(225, 29, 72, 0.15);
+
+            /* Patrón de líneas decorativo del fondo (Diagonales) */
+            --lineas-transparente: repeating-linear-gradient(45deg,
+                    transparent, transparent 10px,
+                    rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 11px,
+                    transparent 11px, transparent 21px,
+                    rgba(255, 255, 255, 0.05) 21px, rgba(255, 255, 255, 0.05) 23px);
+        }
+
+        /* Fuente personalizada para títulos */
+        @font-face {
+            font-family: 'PinkS';
+            src: url(//dl.dropbox.com/s/z30jel1s8hrvpa1/PinkS.otf);
+        }
+
+        body {
+            background-color: #050505;
+            /* Fondo oscuro detrás de la ficha */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+           ================================================================
+           3. ESTILOS DEL CONTENEDOR PRINCIPAL
+           ================================================================
+        */
+        .ficha-contenedor {
+            width: var(--ficha-ancho);
+            margin: 50px auto;
+            text-align: center;
+            font: 10px 'Raleway', sans-serif;
+            color: var(--color-texto);
+
+            /* IMAGEN DE FONDO GENERAL: Recomendado 800x1200px aprox */
+            background-image: var(--lineas-transparente), url(https://i.imgur.com/r58l4wA.jpeg);
+            background-size: auto, cover;
+            background-position: center;
+            background-attachment: scroll;
+
+            padding: 45px 60px;
+            border: 1px solid var(--color-bordes);
+            box-shadow: 0 30px 60px -20px #000;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow: hidden;
+        }
+
+        /* Overlay oscuro para mejorar lectura del contenido */
+        .ficha-contenedor::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .ficha-contenedor * {
+            box-sizing: border-box;
+            scrollbar-width: none;
+            transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .ficha-contenedor *::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Líneas decorativas en las esquinas */
+        .ficha-line-fx {
+            position: absolute;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .line-top {
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-acento-vibrante), transparent);
+        }
+
+        .line-bottom {
+            bottom: 30px;
+            left: 30px;
+            right: 30px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--color-acento-vibrante), transparent);
+        }
+
+        .line-left {
+            top: 30px;
+            bottom: 30px;
+            left: 30px;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, var(--color-acento-vibrante), transparent);
+        }
+
+        .line-right {
+            top: 30px;
+            bottom: 30px;
+            right: 30px;
+            width: 1px;
+            background: linear-gradient(180deg, transparent, var(--color-acento-vibrante), transparent);
+        }
+
+        /* Bloques maestros de contenido */
+        .ficha-bloque {
+            background: var(--color-fondo-pagina);
+            border: 1px solid var(--color-bordes);
+            padding: 12px;
+            box-shadow: 0 10px 30px -10px #000;
+            border-radius: 8px;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Separador central decorativo (Calavera) */
+        .ficha-separador-iconos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: -5px 0;
+            z-index: 3;
+            color: var(--color-acento-vibrante);
+            opacity: 0.8;
+        }
+
+        .ficha-separador-iconos::before,
+        .ficha-separador-iconos::after {
+            content: "";
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, transparent, var(--color-acento-vibrante), transparent);
+        }
+
+        /* Animación de pulso para iconos decorativos */
+        .icon-vamp {
+            filter: drop-shadow(0 0 5px var(--color-acento-vibrante));
+            animation: pulse-icon 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-icon {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        /* 
+           ================================================================
+           4. ESTILOS DE LA CABECERA Y BANNER 
+           ================================================================
+        */
+        .ficha-banner-bg {
+            margin: 40px -10px 20px;
+            height: 100px;
+            border-radius: 8px;
+            background: var(--gradiente-premium);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(225, 29, 72, 0.25);
+            position: relative;
+            overflow: visible;
+            /* Permite que el nombre 'vuele' hacia arriba */
+            z-index: 5;
+        }
+
+        /* IMAGEN DEL BANNER ROJO: Recomendado horizontal 600x200px */
+        .ficha-banner-bg::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(https://i.imgur.com/kwGxLDo.jpeg);
+            background-size: cover;
+            background-position: center 40%;
+            opacity: 0.65;
+            z-index: -1;
+            border-radius: 7px;
+        }
+
+        /* Nombre flotante en 3D */
+        .ficha-nombre-vuela {
+            position: absolute;
+            top: -42px;
+            /* Controla qué tanto sube el nombre */
+            left: 0;
+            right: 0;
+            font: 68px/1 'PinkS', cursive;
+            color: #fff;
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+            z-index: 10;
+            pointer-events: none;
+            letter-spacing: -1px;
+        }
+
+        .ficha-header {
+            display: flex;
+            align-items: stretch;
+            gap: 0;
+        }
+
+        /* 
+           ================================================================
+           5. SLIDER DE IMÁGENES
+           ================================================================
+        */
+        .ficha-slider {
+            min-width: 230px;
+            min-height: 275px;
+            /* Altura de las fotos: Recomendado 250x300px o similar */
+            border: 1px solid var(--color-bordes);
+            border-radius: 8px;
+            margin-right: -45px;
+            /* Hace que el slider sobresalga a la derecha */
+            background-color: #000;
+            box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            filter: grayscale(20%) contrast(110%);
+        }
+
+        /* Lógica del slider (No tocar si no sabes usar radio buttons) */
+        #slide1:checked~.ficha-bloque .s1,
+        #slide2:checked~.ficha-bloque .s2,
+        #slide3:checked~.ficha-bloque .s3 {
+            opacity: 1;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 5;
+        }
+
+        .slider-nav label {
+            width: 8px;
+            height: 8px;
+            background: rgba(225, 29, 72, 0.4);
+            border: 1px solid var(--color-acento-vibrante);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* 
+           ================================================================
+           6. DATOS BÁSICOS 
+           ================================================================
+        */
+        .ficha-separador-v {
+            border-left: 1px solid var(--color-bordes);
+            margin: 0 20px;
+        }
+
+        .ficha-info-basica {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: -45px;
+            /* Hace que la info sobresalga a la izquierda */
+            position: relative;
+            z-index: 3;
+        }
+
+        .ficha-titulo-seccion {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            font: 22px/1 'PinkS', cursive;
+            background: var(--gradiente-premium);
+            color: #fff;
+            border: 1px solid rgba(225, 29, 72, 0.3);
+            text-align: center;
+            margin-bottom: 8px;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .ficha-datos {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ficha-dato-item {
+            width: 100%;
+            border: 1px solid var(--color-bordes);
+            background: var(--color-fondo-externo);
+            padding: 10px 8px 6px;
+            border-radius: 6px;
+            position: relative;
+            text-align: center;
+            box-shadow: -5px 4px 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Las etiquetas pequeñas sobre los recuadros */
+        .ficha-dato-item b {
+            position: absolute;
+            text-transform: uppercase;
+            font-size: 7.5px;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 1.5px;
+            background: var(--color-acento-vibrante);
+            color: #fff;
+            padding: 1px 8px;
+            border-radius: 3px;
+        }
+
+        /* 
+           ================================================================
+           7. SISTEMA DE PESTAÑAS (TABS)
+           ================================================================
+        */
+        .ficha-tabs-header {
+            margin: 5px -10px 10px;
+            display: flex;
+            gap: 6px;
+        }
+
+        .ficha-tabs-header label {
+            flex: 1;
+            padding: 8px 5px;
+            border-radius: 6px;
+            font: 18px/1 'PinkS', cursive;
+            background: var(--color-fondo-externo);
+            color: var(--color-texto-muted);
+            border: 1px solid var(--color-bordes);
+            cursor: pointer;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+
+        .ficha-tabs-header label i {
+            font-size: 14px;
+            margin-bottom: -2px;
+        }
+
+        /* Estilo cuando una pestaña está activa */
+        #tab1:checked~.ficha-bloque label[for="tab1"],
+        #tab2:checked~.ficha-bloque label[for="tab2"],
+        #tab3:checked~.ficha-bloque label[for="tab3"],
+        #tab4:checked~.ficha-bloque label[for="tab4"] {
+            background: var(--gradiente-premium);
+            color: #fff;
+            border-color: var(--color-acento-vibrante);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(225, 29, 72, 0.2);
+        }
+
+        .ficha-contenido-tabs {
+            position: relative;
+            margin: 0 -15px;
+            height: 195px;
+            /* Altura del área de texto ajustable */
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+            padding-top: 10px;
+        }
+
+        /* Animación de entrada de las pestañas */
+        .tab-panel {
+            border: 1px solid var(--color-bordes);
+            background: var(--color-fondo-externo);
+            padding: 12px;
+            border-radius: 8px;
+            position: absolute;
+            top: 10px;
+            width: calc(100% - 20px);
+            height: calc(100% - 15px);
+            opacity: 0;
+            pointer-events: none;
+            box-shadow: 0 4px 10px #000;
+            transform: translateX(40px) scale(0.95);
+            filter: blur(8px);
+            transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .tab-panel b {
+            position: absolute;
+            text-transform: uppercase;
+            font-size: 7.5px;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: 1.5px;
+            background: var(--color-acento-vibrante);
+            color: #fff;
+            padding: 1px 10px;
+            border-radius: 3px;
+        }
+
+        .tab-texto {
+            margin-top: 10px;
+            height: 100%;
+            overflow: auto;
+            /* Permite scroll si el texto es largo */
+            text-align: justify;
+            font-size: 11px;
+            line-height: 1.5;
+            color: var(--color-texto);
+            padding-right: 5px;
+        }
+
+        /* Lógica de visibilidad de pestañas */
+        #tab1:checked~.ficha-bloque .tab-1,
+        #tab2:checked~.ficha-bloque .tab-2,
+        #tab3:checked~.ficha-bloque .tab-3,
+        #tab4:checked~.ficha-bloque .tab-4 {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            filter: blur(0);
+            pointer-events: auto;
+            z-index: 5;
+        }
+
+        /* 
+           ================================================================
+           8. CRÉDITOS Y BOTONES 
+           ================================================================
+        */
+        .ficha-credito {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .ficha-credito a {
+            display: inline-block;
+            padding: 3px 15px;
+            background: transparent;
+            color: var(--color-acento-vibrante) !important;
+            text-decoration: none;
+            font: bold 8.5px 'Raleway', sans-serif;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: 1px solid rgba(225, 29, 72, 0.4);
+            border-radius: 4px;
+            transition: .4s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .ficha-credito a i {
+            font-size: 10px;
+        }
+
+        .ficha-credito a:hover {
+            background: var(--color-acento-vibrante);
+            color: #fff !important;
+            box-shadow: var(--shadow-neon);
+        }
+
+        #btnCopyCode {
+            cursor: pointer;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ficha-contenedor">
+        <!-- Elementos decorativos de líneas -->
+        <div class="ficha-line-fx line-top"></div>
+        <div class="ficha-line-fx line-bottom"></div>
+        <div class="ficha-line-fx line-left"></div>
+        <div class="ficha-line-fx line-right"></div>
+
+        <!-- Inputs del Slider (No eliminar) -->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <!-- Inputs de las Pestañas (No eliminar) -->
+        <input type="radio" name="ficha-tabs" id="tab1" checked>
+        <input type="radio" name="ficha-tabs" id="tab2">
+        <input type="radio" name="ficha-tabs" id="tab3">
+        <input type="radio" name="ficha-tabs" id="tab4">
+
+        <!-- BLOQUE 1: BANNER E INFO BÁSICA -->
+        <div class="ficha-bloque">
+            <div class="ficha-banner-bg">
+                <div class="ficha-nombre-vuela">Nombre Apellido</div>
+            </div>
+
+            <div class="ficha-header">
+                <div class="ficha-info-basica">
+                    <div class="ficha-titulo-seccion">Información Básica</div>
+                    <div class="ficha-datos">
+                        <!-- Rellena aquí los datos de tu personaje -->
+                        <div class="ficha-dato-item"><b>Nombre</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Edad</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Ocupación</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Nacionalidad</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Grupo</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Rango</b>Dato Aquí</div>
+                    </div>
+                </div>
+
+                <div class="ficha-separador-v"></div>
+
+                <!-- Slider de fotos: Cambia las URLs para tus fotos -->
+                <div class="ficha-slider">
+                    <div class="slides">
+                        <div class="slide s1" style="background-image: url(https://i.imgur.com/GtIdAlx.jpeg);"></div>
+                        <div class="slide s2" style="background-image: url(https://i.imgur.com/kwGxLDo.jpeg);"></div>
+                        <div class="slide s3" style="background-image: url(https://i.imgur.com/26vg0EW.jpeg);"></div>
+                    </div>
+                    <div class="slider-nav">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEPARADOR CENTRAL: Puedes cambiar data-lucide="skull" por "bat", "ghost", etc -->
+        <div class="ficha-separador-iconos">
+            <i data-lucide="skull" class="icon-vamp" stroke-width="1.5" size="32"></i>
+        </div>
+
+        <!-- BLOQUE 2: PESTAÑAS DE INFORMACIÓN -->
+        <div class="ficha-bloque">
+            <div class="ficha-tabs-header">
+                <label for="tab1"><i data-lucide="brain"></i>Perso</label>
+                <label for="tab2"><i data-lucide="scroll-text"></i>Historia</label>
+                <label for="tab3"><i data-lucide="heart"></i>Gustos</label>
+                <label for="tab4"><i data-lucide="plus-square"></i>Extras</label>
+            </div>
+
+            <div class="ficha-contenido-tabs">
+                <!-- Tab 1: Personalidad -->
+                <div class="tab-panel tab-1">
+                    <b>Personalidad</b>
+                    <div class="tab-texto">Escribe aquí cómo es tu personaje...</div>
+                </div>
+                <!-- Tab 2: Historia -->
+                <div class="tab-panel tab-2">
+                    <b>Historia</b>
+                    <div class="tab-texto">Escribe aquí el pasado de tu personaje...</div>
+                </div>
+                <!-- Tab 3: Gustos -->
+                <div class="tab-panel tab-3">
+                    <b>Gustos & Disgustos</b>
+                    <div class="tab-texto">Escribe aquí qué le gusta y qué no...</div>
+                </div>
+                <!-- Tab 4: Extras -->
+                <div class="tab-panel tab-4">
+                    <b>Otros Datos</b>
+                    <div class="tab-texto">Cualquier otra información relevante...</div>
+                </div>
+            </div>
+
+            <!-- Botones de Créditos y Código -->
+            <div class="ficha-credito">
+                <a href="https://github.com/owllain" target="_blank"><i data-lucide="github"></i>Lain</a>
+                <a id="btnCopyCode"><i data-lucide="code-2"></i>Code</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        ================================================================
+        9. SCRIPTS DE FUNCIONALIDAD (NO TOCAR)
+        ================================================================
+    -->
+    <script>
+        // Inicializa los iconos de Lucide
+        lucide.createIcons();
+
+        // Lógica para copiar el código HTML al portapapeles
+        document.getElementById('btnCopyCode').addEventListener('click', function () {
+            const docCode = document.documentElement.outerHTML;
+            navigator.clipboard.writeText(docCode).then(() => {
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i data-lucide="check"></i>¡Copiado!';
+                lucide.createIcons(); // Refresca iconos
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    lucide.createIcons();
+                }, 2000);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
