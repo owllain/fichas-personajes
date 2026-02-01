@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Steampunk - Klein Moretti</title>
+    <!-- Fuentes de Google -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&family=Cinzel:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* * ------------------------------------------------------------------
+         * CORE CSS - ESTILO STEAMPUNK V.4.1 "ALTURA EXTENDIDA"
+         * ------------------------------------------------------------------
+         */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --c-brass: #b5a642;
+            --c-brass-dark: #8c7b30;
+            --c-copper: #b87333;
+            --c-leather: #3d2b1f;
+            --c-leather-light: #5d4037;
+            --c-paper: #f4e4bc;
+            --c-paper-old: #dcc896;
+            --c-ink: #2c1e15;
+            --c-accent: #7a2828;
+
+            --f-title: 'Rye', serif;
+            --f-header: 'Cinzel', serif;
+            --f-text: 'Special Elite', monospace;
+        }
+
+        /* --- SCROLLBAR PERSONALIZADO (Cobre y Cuero) --- */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #2a1a10;
+            border: 1px solid var(--c-brass-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--c-brass), var(--c-copper));
+            border-radius: 2px;
+            border: 1px solid #5c3c21;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--c-brass);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: var(--c-copper) #2a1a10;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            background-image:
+                radial-gradient(#2a2a2a 15%, transparent 16%),
+                radial-gradient(#2a2a2a 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            font-family: var(--f-text);
+            margin: 0;
+            padding: 20px 10px;
+            color: var(--c-ink);
+        }
+
+        input[name="tabs"],
+        input[name="gallery-zoom"] {
+            display: none;
+        }
+
+        /* --- EL ARTEFACTO (CONTENEDOR PRINCIPAL) --- */
+        .steam-sheet {
+            max-width: 550px;
+            margin: 0 auto;
+            background-color: var(--c-leather);
+            border: 4px solid var(--c-brass-dark);
+            box-shadow:
+                0 0 0 4px var(--c-leather),
+                0 0 0 8px var(--c-brass),
+                0 10px 30px rgba(0, 0, 0, 0.8);
+            position: relative;
+            padding: 15px;
+            background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.05) 0px, rgba(0, 0, 0, 0.05) 2px, transparent 2px, transparent 4px);
+            /* ALTURA AUMENTADA A 850px */
+            height: 850px;
+            overflow: hidden;
+        }
+
+        /* Tornillos */
+        .screw {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: radial-gradient(circle, #d4af37 20%, #8c6239 90%);
+            border-radius: 50%;
+            box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.5), 1px 1px 3px rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+
+        .screw::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 2px;
+            background: #5c3c21;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .sc-tl {
+            top: 8px;
+            left: 8px;
+        }
+
+        .sc-tr {
+            top: 8px;
+            right: 8px;
+            transform: rotate(90deg);
+        }
+
+        .sc-bl {
+            bottom: 8px;
+            left: 8px;
+            transform: rotate(20deg);
+        }
+
+        .sc-br {
+            bottom: 8px;
+            right: 8px;
+            transform: rotate(-45deg);
+        }
+
+        /* --- HEADER --- */
+        .steam-header {
+            position: relative;
+            margin-bottom: 20px;
+            border: 2px solid var(--c-brass);
+            background: #000;
+            height: 180px;
+        }
+
+        .steam-banner-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+
+        .name-plate {
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            background: linear-gradient(to bottom, var(--c-paper), var(--c-paper-old));
+            border: 2px solid var(--c-brass-dark);
+            padding: 10px 20px;
+            transform: skewX(-15deg);
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+            z-index: 5;
+            text-align: right;
+        }
+
+        .name-plate h1 {
+            font-family: var(--f-title);
+            font-size: 28px;
+            margin: 0;
+            color: #3e2723;
+            text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+            transform: skewX(15deg);
+            text-transform: uppercase;
+        }
+
+        .name-plate .subtitle {
+            font-family: var(--f-header);
+            font-size: 12px;
+            color: var(--c-accent);
+            font-weight: bold;
+            display: block;
+            transform: skewX(15deg);
+            border-top: 1px dashed var(--c-ink);
+            margin-top: 3px;
+            padding-top: 3px;
+        }
+
+        /* --- AVATAR (POSICIÓN ACTUALIZADA) --- */
+        .avatar-container {
+            position: absolute;
+            top: 55px;
+            /* ANTES: 85px | AHORA: 55px (Mucho más arriba) */
+            left: 5px;
+            width: 130px;
+            height: 130px;
+            z-index: 6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gear-frame {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 4px dashed var(--c-brass);
+            border-radius: 50%;
+            animation: spin 60s linear infinite;
+            pointer-events: none;
+        }
+
+        .avatar-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid var(--c-brass-dark);
+            object-fit: cover;
+            background: #000;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- NAVEGACIÓN --- */
+        .steam-nav {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 2px;
+            padding-right: 15px;
+            border-bottom: 4px solid var(--c-brass-dark);
+            background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.3));
+            height: 40px;
+        }
+
+        .steam-nav label {
+            font-family: var(--f-header);
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 8px 15px;
+            background: linear-gradient(to bottom, #5d4037, #3e2723);
+            color: var(--c-brass);
+            border: 1px solid var(--c-brass-dark);
+            border-bottom: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            top: 4px;
+            font-size: 0.9em;
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0% 100%);
+        }
+
+        .steam-nav label:hover {
+            color: #fff;
+            text-shadow: 0 0 5px var(--c-brass);
+        }
+
+        #tab1:checked~.steam-nav label[for="tab1"],
+        #tab2:checked~.steam-nav label[for="tab2"],
+        #tab3:checked~.steam-nav label[for="tab3"],
+        #tab4:checked~.steam-nav label[for="tab4"] {
+            background: var(--c-paper);
+            color: var(--c-ink);
+            top: 0px;
+            font-weight: 800;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 5;
+        }
+
+        /* --- CUERPO DEL CONTENIDO (ALTURA AUMENTADA) --- */
+        .content-display {
+            background-color: var(--c-paper);
+            height: 550px;
+            /* ANTES: 450px | AHORA: 550px (Más espacio útil) */
+            padding: 25px;
+            position: relative;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZjRlNGJjIi8+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkY2M4OTYiLz4KPC9zdmc+');
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .tab-section {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #tab1:checked~.content-display #content-dat,
+        #tab2:checked~.content-display #content-psi,
+        #tab3:checked~.content-display #content-inv,
+        #tab4:checked~.content-display #content-his {
+            display: block;
+        }
+
+        /* --- ELEMENTOS DE TEXTO --- */
+        .steam-box {
+            border: 2px solid rgba(140, 123, 48, 0.6);
+            background: rgba(244, 228, 188, 0.4);
+            box-shadow: inset 0 0 20px rgba(166, 137, 89, 0.2);
+            padding: 15px;
+            margin-bottom: 20px;
+            position: relative;
+            backdrop-filter: sepia(20%);
+        }
+
+        /* Triángulos */
+        .steam-box::before,
+        .steam-box::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            z-index: 2;
+        }
+
+        .steam-box::before {
+            top: -2px;
+            left: -2px;
+            border-width: 20px 20px 0 0;
+            border-color: var(--c-accent) transparent transparent transparent;
+        }
+
+        .steam-box::after {
+            bottom: -2px;
+            right: -2px;
+            border-width: 0 0 20px 20px;
+            border-color: transparent transparent var(--c-accent) transparent;
+        }
+
+        h2.steam-h2 {
+            font-family: var(--f-title);
+            font-size: 22px;
+            color: var(--c-leather);
+            text-align: center;
+            border-bottom: 3px double rgba(140, 123, 48, 0.5);
+            margin-top: 0;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+        }
+
+        .data-row {
+            display: flex;
+            border-bottom: 1px dashed rgba(184, 115, 51, 0.5);
+            padding: 6px 0;
+            align-items: baseline;
+            font-size: 0.95em;
+        }
+
+        .data-label {
+            font-family: var(--f-header);
+            font-weight: bold;
+            width: 110px;
+            color: var(--c-accent);
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+
+        .data-value {
+            font-family: var(--f-text);
+            color: var(--c-ink);
+            flex: 1;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .dropcap::first-letter {
+            font-family: var(--f-title);
+            font-size: 3em;
+            float: left;
+            margin-right: 8px;
+            line-height: 0.8;
+            color: var(--c-accent);
+        }
+
+        /* Grid de Inventario Flexible */
+        .inventory-grid {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .inventory-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        /* --- GALERÍA --- */
+        .facetas-gallery {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .thumb-img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 3px solid var(--c-brass);
+            transition: transform 0.3s, filter 0.3s;
+            filter: sepia(0.5) contrast(0.9);
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .thumb-label:hover .thumb-img {
+            transform: scale(1.05);
+            filter: sepia(0) contrast(1);
+            border-color: var(--c-accent);
+        }
+
+        /* VISOR */
+        .zoom-viewer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 26, 26, 0.96);
+            z-index: 999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .zoom-viewer img {
+            max-width: 95%;
+            max-height: 80%;
+            border: 6px solid var(--c-brass-dark);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+            object-fit: contain;
+        }
+
+        .close-zoom {
+            color: var(--c-paper);
+            font-family: var(--f-header);
+            font-size: 14px;
+            margin-top: 15px;
+            cursor: pointer;
+            border: 2px solid var(--c-brass);
+            padding: 8px 20px;
+            background: var(--c-accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .close-zoom:hover {
+            background: #903030;
+        }
+
+        #img1:checked~.viewer-1,
+        #img2:checked~.viewer-2,
+        #img3:checked~.viewer-3 {
+            display: flex;
+            animation: fadeIn 0.3s;
+        }
+
+        ul.steam-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.steam-list li {
+            padding: 4px 0 4px 22px;
+            position: relative;
+            border-bottom: 1px dotted rgba(140, 123, 48, 0.5);
+            font-size: 0.9em;
+        }
+
+        ul.steam-list li::before {
+            content: '⚙';
+            position: absolute;
+            left: 0;
+            color: var(--c-copper);
+            font-size: 1.1em;
+        }
+
+        .steam-footer {
+            text-align: center;
+            margin-top: 0;
+            font-size: 0.7em;
+            color: var(--c-leather-light);
+            border-top: 1px solid var(--c-brass-dark);
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--c-leather);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="steam-sheet">
+
+        <!-- CONTROLADORES -->
+        <input type="radio" name="tabs" id="tab1" checked>
+        <input type="radio" name="tabs" id="tab2">
+        <input type="radio" name="tabs" id="tab3">
+        <input type="radio" name="tabs" id="tab4">
+
+        <input type="radio" name="gallery-zoom" id="img-reset" checked>
+        <input type="radio" name="gallery-zoom" id="img1">
+        <input type="radio" name="gallery-zoom" id="img2">
+        <input type="radio" name="gallery-zoom" id="img3">
+
+        <!-- DECORACIÓN -->
+        <div class="screw sc-tl"></div>
+        <div class="screw sc-tr"></div>
+        <div class="screw sc-bl"></div>
+        <div class="screw sc-br"></div>
+
+        <!-- HEADER -->
+        <header class="steam-header">
+            <img src="https://i.pinimg.com/736x/f7/1f/be/f71fbeee7cff873fd53b4e859b2641c6.jpg" alt="Banner Steampunk"
+                class="steam-banner-img">
+
+            <div class="avatar-container">
+                <div class="gear-frame"></div>
+                <img src="https://i.pinimg.com/736x/a0/64/67/a0646760bab9d725efdcb522d4a89ea2.jpg" alt="Klein Moretti"
+                    class="avatar-img">
+            </div>
+
+            <div class="name-plate">
+                <h1>Klein Moretti</h1>
+                <span class="subtitle">SECUENCIA 0: EL LOCO</span>
+            </div>
+        </header>
+
+        <!-- NAVEGACIÓN -->
+        <nav class="steam-nav">
+            <label for="tab1">Expediente</label>
+            <label for="tab2">Psique</label>
+            <label for="tab3">Inventario</label>
+            <label for="tab4">Registro</label>
+        </nav>
+
+        <!-- CONTENIDO (CON SCROLL COBRIZO) -->
+        <div class="content-display">
+
+            <!-- TABS -->
+            <section id="content-dat" class="tab-section">
+                <h2 class="steam-h2">Datos de Identificación</h2>
+                <div class="steam-box">
+                    <div class="data-row"><span class="data-label">Nombre Real:</span><span class="data-value">Zhou
+                            Mingrui / Klein Moretti</span></div>
+                    <div class="data-row"><span class="data-label">Alias:</span><span class="data-value">Gehrman
+                            Sparrow, Sherlock Moriarty, Merlin Hermes</span></div>
+                    <div class="data-row"><span class="data-label">Edad:</span><span class="data-value">Inmemorial
+                            (Apariencia de 20s)</span></div>
+                    <div class="data-row"><span class="data-label">Origen:</span><span class="data-value">Tingen City,
+                            Reino de Loen</span></div>
+                    <div class="data-row"><span class="data-label">Afiliación:</span><span class="data-value">Club del
+                            Tarot (El Mundo / El Loco)</span></div>
+                    <div class="data-row"><span class="data-label">Clase:</span><span class="data-value">Vidente (Seer
+                            Pathway)</span></div>
+                </div>
+
+                <h2 class="steam-h2" style="margin-top: 25px;">Registro Visual</h2>
+                <div class="steam-box" style="text-align: center;">
+                    <p style="font-size: 0.9em; font-style: italic; margin-bottom: 15px;">
+                        "Haz clic en los archivos para examinarlos en detalle."
+                    </p>
+                    <div class="facetas-gallery">
+                        <label for="img1" class="thumb-label">
+                            <img src="https://i.pinimg.com/736x/fa/68/8d/fa688d3dadeab9fcfcce781196e234d4.jpg"
+                                alt="Sherlock" class="thumb-img">
+                        </label>
+                        <label for="img2" class="thumb-label">
+                            <img src="https://i.pinimg.com/736x/a1/4a/4e/a14a4e32d54ae8679050479af5c27d66.jpg"
+                                alt="Gehrman" class="thumb-img">
+                        </label>
+                        <label for="img3" class="thumb-label">
+                            <img src="https://i.pinimg.com/736x/c6/e0/40/c6e040727773a2406647fa7cd46213f1.jpg"
+                                alt="Merlin" class="thumb-img">
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content-psi" class="tab-section">
+                <h2 class="steam-h2">Perfil Psicológico</h2>
+                <div class="steam-box">
+                    <p class="dropcap">C</p>
+                    <p>auteloso por naturaleza, Klein Moretti opera bajo la premisa de que el conocimiento es peligroso
+                        y la ignorancia, a veces, una bendición. A pesar de haber ascendido a la divinidad como "El
+                        Loco", mantiene una humanidad fundamental, marcada por un deseo de proteger a los inocentes y
+                        una nostalgia melancólica por su vida pasada y su hogar original. (Texto de ejemplo para
+                        demostrar el scroll: Aunque actúa fríamente como Gehrman Sparrow, en el fondo sigue siendo el
+                        joven graduado de historia que solo quería volver a casa. Sus múltiples máscaras son solo
+                        herramientas de supervivencia en un mundo lleno de locura lovecraftiana.)</p>
+                </div>
+                <div class="steam-box">
+                    <h3
+                        style="font-family: var(--f-header); color: var(--c-accent); border-bottom: 1px solid var(--c-copper);">
+                        Trastornos & Singularidades</h3>
+                    <p>Posee una resistencia mental formidable, forjada a través de la locura y los susurros de los
+                        Antiguos. Sin embargo, la constante actuación y la carga de los secretos le han dejado con una
+                        sensación de aislamiento perpetuo.</p>
+                </div>
+            </section>
+
+            <section id="content-inv" class="tab-section">
+                <!-- Se puede agregar mucho contenido aquí y la tabla NO crecerá -->
+                <div class="inventory-grid">
+                    <div class="inventory-column">
+                        <h2 class="steam-h2">Habilidades</h2>
+                        <div class="steam-box">
+                            <ul class="steam-list">
+                                <li><strong>Hilos Espirituales:</strong> Control de marionetas.</li>
+                                <li><strong>Viaje Histórico:</strong> Proyecciones del pasado.</li>
+                                <li><strong>Adivinación:</strong> Precisión absoluta.</li>
+                                <li><strong>Hombre sin Rostro:</strong> Cambio de forma.</li>
+                                <li><strong>Magia de Papel:</strong> Figuras sustitutas.</li>
+                                <li><strong>Salto de Llama:</strong> Teletransporte ígneo.</li>
+                                <li><strong>Respiración Subacuática:</strong> Adaptación.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="inventory-column">
+                        <h2 class="steam-h2">Artefactos</h2>
+                        <div class="steam-box">
+                            <ul class="steam-list">
+                                <li><strong>Guante del Hambre:</strong> Pasta almas.</li>
+                                <li><strong>Bastón Estrellas:</strong> Recrea poderes.</li>
+                                <li><strong>Castillo Sefirah:</strong> Dominio divino.</li>
+                                <li><strong>Silbato de Azik:</strong> Invocación de mensajeros.</li>
+                                <li><strong>Carta del Loco:</strong> Naipe de blasfemia.</li>
+                                <li><strong>Monedas de Oro:</strong> Adivinación.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="content-his" class="tab-section">
+                <h2 class="steam-h2">Registro Histórico</h2>
+                <div class="steam-box">
+                    <p class="dropcap">T</p>
+                    <p>odo comenzó con un ritual de suerte fallido. De Zhou Mingrui a Klein Moretti, el viaje ha sido
+                        una espiral ascendente a través de la locura y el misticismo. Desde ser un simple Halcón
+                        Nocturno hasta convertirse en un aventurero en los mares brumosos, y finalmente, ascender al
+                        trono divino.</p>
+                    <p>A lo largo de los años, ha frustrado los planes de deidades malignas, ha rescrito la historia y
+                        ha salvado ciudades enteras desde las sombras, sin recibir crédito alguno. Su existencia es un
+                        secreto guardado por la niebla.</p>
+                </div>
+                <div class="steam-box" style="background-color: rgba(0,0,0,0.05); border: none; box-shadow: none;">
+                    <p style="text-align: center; font-family: var(--f-title); color: var(--c-accent);">"El Loco que no
+                        pertenece a esta era.<br>El misterioso gobernante sobre la niebla gris.<br>El Rey de Amarillo y
+                        Negro que ejerce buena suerte."</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- VISORES -->
+        <div class="zoom-viewer viewer-1">
+            <img src="https://i.pinimg.com/736x/d3/04/fe/d304fe319418e34a5d7ff92343036a51.jpg" alt="Sherlock Full">
+            <label for="img-reset" class="close-zoom">Cerrar Archivo</label>
+        </div>
+        <div class="zoom-viewer viewer-2">
+            <img src="https://i.pinimg.com/736x/a1/4a/4e/a14a4e32d54ae8679050479af5c27d66.jpg" alt="Gehrman Full">
+            <label for="img-reset" class="close-zoom">Cerrar Archivo</label>
+        </div>
+        <div class="zoom-viewer viewer-3">
+            <img src="https://i.pinimg.com/736x/c6/e0/40/c6e040727773a2406647fa7cd46213f1.jpg" alt="Merlin Full">
+            <label for="img-reset" class="close-zoom">Cerrar Archivo</label>
+        </div>
+
+        <div class="steam-footer">
+            PROPIEDAD DEL REINO DE LOEN - ARCHIVO CONFIDENCIAL CLASE 0
+        </div>
+
+    </div>
+
+</body>
+
+</html>

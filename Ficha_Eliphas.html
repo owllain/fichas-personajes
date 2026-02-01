@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Eliphas Lévi - The Haunted One</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* ================================================================
+           FICHA ELIPHAS v9.2 - "SCROLL PROOF & EXTENDED LORE"
+           ================================================================
+        */
+
+        :root {
+            --e-width: 550px;
+            --e-height: 800px;
+
+            --c-void: #0b050f;
+            --c-neon: #a855f7;
+            --c-gold: #fbbf24;
+            --c-text-main: #e9d5ff;
+
+            --hex-neon-dark: #581c87;
+            --hex-neon-light: #d8b4fe;
+
+            --f-magic: 'Cinzel Decorative', serif;
+            --f-science: 'Rajdhani', sans-serif;
+        }
+
+        body {
+            background-color: transparent;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            box-sizing: border-box;
+            font-family: var(--f-science);
+        }
+
+        .eliphas-scope {
+            all: initial;
+            font-family: var(--f-science);
+            display: block;
+            width: var(--e-width);
+            background: transparent;
+            box-sizing: border-box;
+        }
+
+        .eliphas-scope * {
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+
+        /* --- CARD --- */
+        .e-card {
+            width: 100%;
+            height: var(--e-height);
+            background-color: var(--c-void);
+            position: relative;
+            clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+            box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .e-border-fx {
+            position: absolute;
+            inset: 0;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .e-border-fx::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            padding: 2px;
+            background: linear-gradient(45deg, transparent 10%, var(--c-neon) 20%, transparent 50%, var(--c-gold) 60%, transparent 70%);
+            background-size: 300% 300%;
+            animation: circuitFlow 4s linear infinite;
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            clip-path: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0 20px);
+        }
+
+        @keyframes circuitFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* --- HEADER --- */
+        .e-header {
+            height: 280px;
+            position: relative;
+            background: #000;
+            border-bottom: 2px solid var(--c-neon);
+            z-index: 10;
+        }
+
+        .e-banner-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: opacity 0.8s ease-in-out, transform 3s ease;
+        }
+
+        .layer-1 {
+            background-image: url('https://i.pinimg.com/1200x/3e/76/6e/3e766e98480eaaff35400e4af5141533.jpg');
+            opacity: 0.8;
+            filter: grayscale(40%) contrast(120%);
+        }
+
+        .layer-2 {
+            background-image: url('https://i.imgur.com/92D61G8.jpeg');
+            opacity: 0;
+            filter: grayscale(80%) contrast(150%) sepia(30%) hue-rotate(-20deg);
+        }
+
+        .e-header::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 0%, var(--c-void) 100%);
+            pointer-events: none;
+        }
+
+        .floating-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 50;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .switch-text {
+            color: var(--c-gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 8px var(--c-gold);
+            animation: blinkText 2.5s infinite;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 5px 10px;
+            border: 1px solid var(--c-gold);
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+        }
+
+        @keyframes blinkText {
+
+            0%,
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 10px var(--c-gold);
+            }
+
+            50% {
+                opacity: 0.5;
+                text-shadow: none;
+            }
+        }
+
+        #flip-trigger {
+            display: none;
+        }
+
+        #flip-trigger:checked~.e-card .e-header .layer-1 {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+        #flip-trigger:checked~.e-card .e-header .layer-2 {
+            opacity: 0.6;
+            transform: scale(1);
+        }
+
+        #flip-trigger:checked~.e-card .e-header {
+            border-bottom-color: var(--c-gold);
+        }
+
+        #flip-trigger:checked~.e-card .e-header .floating-switch .switch-text {
+            color: var(--c-neon);
+            border-color: var(--c-neon);
+            text-shadow: 0 0 8px var(--c-neon);
+            animation: blinkTextNeon 2.5s infinite;
+        }
+
+        @keyframes blinkTextNeon {
+
+            0%,
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 10px var(--c-neon);
+            }
+
+            50% {
+                opacity: 0.5;
+                text-shadow: none;
+            }
+        }
+
+        .e-title-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            text-align: right;
+            z-index: 20;
+        }
+
+        .e-name {
+            font-family: var(--f-magic);
+            font-size: 32px;
+            color: #fff;
+            text-shadow: 0 0 15px var(--c-neon);
+            margin: 0;
+            line-height: 0.9;
+        }
+
+        .e-subtitle {
+            font-family: var(--f-science);
+            font-size: 12px;
+            color: var(--c-gold);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 2px 5px;
+        }
+
+        /* --- NAV --- */
+        .e-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 20px 0;
+            position: relative;
+            z-index: 5;
+        }
+
+        .e-btn {
+            width: 40px;
+            height: 40px;
+            background: rgba(46, 16, 101, 0.9);
+            border: 1px solid rgba(168, 85, 247, 0.4);
+            transform: rotate(45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .e-btn i {
+            transform: rotate(-45deg);
+            color: rgba(233, 213, 255, 0.8);
+        }
+
+        .e-btn:hover {
+            background: var(--c-neon);
+            box-shadow: 0 0 15px var(--c-neon);
+            border-color: #fff;
+        }
+
+        .e-btn:hover i {
+            color: #000;
+        }
+
+        input[name="e-tab"] {
+            display: none;
+        }
+
+        #tab-gal:checked~.e-card .e-nav label[for="tab-gal"],
+        #tab-bio:checked~.e-card .e-nav label[for="tab-bio"],
+        #tab-his:checked~.e-card .e-nav label[for="tab-his"],
+        #tab-cap:checked~.e-card .e-nav label[for="tab-cap"],
+        #tab-xtr:checked~.e-card .e-nav label[for="tab-xtr"] {
+            background: var(--c-gold);
+            border-color: var(--c-gold);
+            box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+        }
+
+        #tab-gal:checked~.e-card .e-nav label[for="tab-gal"] i,
+        #tab-bio:checked~.e-card .e-nav label[for="tab-bio"] i,
+        #tab-his:checked~.e-card .e-nav label[for="tab-his"] i,
+        #tab-cap:checked~.e-card .e-nav label[for="tab-cap"] i,
+        #tab-xtr:checked~.e-card .e-nav label[for="tab-xtr"] i {
+            color: #000;
+        }
+
+        /* --- BODY --- */
+        .e-body {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            padding: 0 20px 20px;
+        }
+
+        /* --- COLMENA --- */
+        .hive-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding-top: 10px;
+        }
+
+        .hive-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .hive-row.bottom {
+            margin-top: -42px;
+        }
+
+        .hex-wrapper {
+            width: 160px;
+            height: 175px;
+            position: relative;
+            filter: drop-shadow(0 0 5px var(--hex-neon-dark));
+            cursor: zoom-in;
+        }
+
+        .hex-wrapper:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            filter: drop-shadow(0 0 15px var(--hex-neon-light));
+        }
+
+        .hex-shape {
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            background: #000;
+            position: relative;
+        }
+
+        .hex-shape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+
+        .hex-wrapper:hover .hex-shape img {
+            opacity: 1;
+        }
+
+        .hex-shape::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--hex-neon-dark);
+            opacity: 0.4;
+            mix-blend-mode: color-dodge;
+        }
+
+        .hex-wrapper:hover .hex-shape::after {
+            background: var(--hex-neon-light);
+            opacity: 0.2;
+        }
+
+        /* --- MODALES --- */
+        .e-modal {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            right: 20px;
+            bottom: 10px;
+            background: rgba(11, 5, 15, 0.95);
+            border: 1px solid var(--c-gold);
+            padding: 20px;
+            transform: translateY(110%);
+            opacity: 0;
+            transition: 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            z-index: 30;
+            backdrop-filter: blur(5px);
+            clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+        }
+
+        .m-title {
+            font-family: var(--f-magic);
+            color: var(--c-gold);
+            font-size: 24px;
+            text-align: center;
+            border-bottom: 1px dashed var(--c-neon);
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+
+        .m-content {
+            height: calc(100% - 60px);
+            overflow-y: auto;
+            padding-right: 10px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--c-text-main);
+            text-align: justify;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: var(--c-neon);
+            cursor: pointer;
+        }
+
+        .close-modal:hover {
+            color: #fff;
+        }
+
+        #tab-bio:checked~.e-card .e-body .modal-bio,
+        #tab-his:checked~.e-card .e-body .modal-his,
+        #tab-cap:checked~.e-card .e-body .modal-cap,
+        #tab-xtr:checked~.e-card .e-body .modal-xtr {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .data-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 5px 0;
+            margin-bottom: 5px;
+        }
+
+        .data-label {
+            color: var(--c-neon);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        .data-val {
+            color: #fff;
+            font-size: 11px;
+        }
+
+        /* --- ZOOM --- */
+        .zoom-overlay {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .zoom-overlay img {
+            max-width: 90%;
+            max-height: 80%;
+            border: 2px solid var(--c-gold);
+        }
+
+        input[name="zoom"] {
+            display: none;
+        }
+
+        #z1:checked~.e-card .zoom-1,
+        #z2:checked~.e-card .zoom-2,
+        #z3:checked~.e-card .zoom-3,
+        #z4:checked~.e-card .zoom-4,
+        #z5:checked~.e-card .zoom-5 {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .close-zoom {
+            margin-top: 20px;
+            color: var(--c-gold);
+            border: 1px solid var(--c-gold);
+            padding: 5px 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .e-credit {
+            text-align: center;
+            font-size: 9px;
+            padding: 10px;
+            color: rgba(255, 255, 255, 0.3);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .e-credit a {
+            color: var(--c-gold);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--c-neon);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="eliphas-scope">
+        <input type="checkbox" id="flip-trigger">
+
+        <input type="radio" name="e-tab" id="tab-gal" checked>
+        <input type="radio" name="e-tab" id="tab-bio">
+        <input type="radio" name="e-tab" id="tab-his">
+        <input type="radio" name="e-tab" id="tab-cap">
+        <input type="radio" name="e-tab" id="tab-xtr">
+
+        <input type="radio" name="zoom" id="z-off" checked>
+        <input type="radio" name="zoom" id="z1">
+        <input type="radio" name="zoom" id="z2">
+        <input type="radio" name="zoom" id="z3">
+        <input type="radio" name="zoom" id="z4">
+        <input type="radio" name="zoom" id="z5">
+
+        <div class="e-card">
+            <div class="e-border-fx"></div>
+
+            <header class="e-header">
+                <div class="e-banner-layer layer-1"></div>
+                <div class="e-banner-layer layer-2"></div>
+
+                <div class="e-title-box">
+                    <h1 class="e-name">Eliphas Lévi</h1>
+                    <span class="e-subtitle">THE HAUNTED ONE</span>
+                </div>
+
+                <label class="floating-switch" for="flip-trigger">
+                    <div class="switch-text">▲ IDENTITY SWITCH ▲</div>
+                </label>
+            </header>
+
+            <nav class="e-nav">
+                <label for="tab-gal" class="e-btn" title="Registro Visual"><i data-lucide="image"></i></label>
+                <label for="tab-bio" class="e-btn" title="Expediente"><i data-lucide="file-text"></i></label>
+                <label for="tab-his" class="e-btn" title="Historia"><i data-lucide="book-open"></i></label>
+                <label for="tab-cap" class="e-btn" title="Capacidades y Equipo"><i data-lucide="zap"></i></label>
+                <label for="tab-xtr" class="e-btn" title="Notas Extra"><i data-lucide="sparkles"></i></label>
+            </nav>
+
+            <div class="e-body">
+
+                <!-- 1. GALERÍA -->
+                <div class="hive-container">
+                    <div class="hive-row">
+                        <label for="z1" class="hex-wrapper">
+                            <div class="hex-shape"><img src="https://i.imgur.com/9ujLdq3.jpeg"></div>
+                        </label>
+                        <label for="z2" class="hex-wrapper">
+                            <div class="hex-shape"><img src="https://i.imgur.com/QaVnRGR.jpeg"></div>
+                        </label>
+                        <label for="z3" class="hex-wrapper">
+                            <div class="hex-shape"><img
+                                    src="https://i.pinimg.com/1200x/bc/80/5c/bc805c4e44a3013bb66825ac90211df6.jpg">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="hive-row bottom">
+                        <label for="z4" class="hex-wrapper">
+                            <div class="hex-shape"><img src="https://i.imgur.com/tRlDLSE.jpeg"></div>
+                        </label>
+                        <label for="z5" class="hex-wrapper">
+                            <div class="hex-shape"><img src="https://i.imgur.com/noTEHRj.jpeg"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 2. EXPEDIENTE -->
+                <div class="e-modal modal-bio">
+                    <label for="tab-gal" class="close-modal"><i data-lucide="x"></i></label>
+                    <h2 class="m-title">Expediente</h2>
+                    <div class="m-content">
+                        <div class="data-row"><span class="data-label">Nombre</span><span class="data-val">Eliphas
+                                Lévi</span></div>
+                        <div class="data-row"><span class="data-label">Especie</span><span class="data-val">Nattmara -
+                                Sha</span></div>
+                        <div class="data-row"><span class="data-label">Edad Real</span><span class="data-val">1870
+                                Años</span></div>
+                        <div class="data-row"><span class="data-label">Edad Aparente</span><span class="data-val">30
+                                Años</span></div>
+                        <div class="data-row"><span class="data-label">Nacionalidad</span><span
+                                class="data-val">Noctilunia</span></div>
+                        <div class="data-row"><span class="data-label">Altura</span><span class="data-val">1.93 m / 2.12
+                                m</span></div>
+                        <div class="data-row"><span class="data-label">Tendencia</span><span
+                                class="data-val">Heterosexual</span></div>
+                        <div class="data-row"><span class="data-label">PB Utilizado</span><span
+                                class="data-val">Frankenstein (Noblesse)</span></div>
+                        <br>
+                        <p style="text-align: center; font-style: italic; color: var(--c-gold);">"Las dos provincias del
+                            bien y del mal que componen la doble naturaleza del hombre."</p>
+                        <p><strong>Apariencia:</strong> Rostro de rasgos finos, ojos azules opacados por la edad.
+                            Cabellos lacios y dorados. Viste ropas nobles desgastadas, predominando los colores oscuros.
+                            Su piel muestra signos de madurez bajo una fachada aún jovial.</p>
+                        <p><strong>Naturaleza Sha:</strong> Su forma real es una monstruosidad purpúrea de facciones
+                            afiladas. En descontrol, su tamaño crece a 2.12 m y sus ojos pierden el iris.</p>
+                    </div>
+                </div>
+
+                <!-- 3. HISTORIA (EXTENDIDA) -->
+                <div class="e-modal modal-his">
+                    <label for="tab-gal" class="close-modal"><i data-lucide="x"></i></label>
+                    <h2 class="m-title">Historia</h2>
+                    <div class="m-content">
+                        <p>Heredero de un Clan de eruditos, Eliphas nació bajo la estrella de la genialidad. Su vida
+                            estuvo marcada por el estudio del <strong>Waidan</strong> (alquimia interna), teorías que
+                            ideó para elevar la condición de su raza.</p>
+                        <p>Sin embargo, la tragedia fue sembrada por la codicia de su propio mentor. Los secretos de
+                            Eliphas fueron robados y vendidos a patrocinadores oscuros para aniquilar a su clan,
+                            tendiéndole una trampa al líder. El amargo final condujo al primogénito a la locura y a
+                            Eliphas a un viaje de rencuentro forzado con la soledad.</p>
+                        <p>Buscado y codiciado por otros, Eliphas eligió vivir una vida distante, viajando
+                            constantemente y estudiando los vacíos climáticos. Envía cartas a su hogar que nunca
+                            llegarán, pues quienes controlan su tierra ahora son los mismos que lo están cazando.</p>
+                        <p>Vive huyendo de sus errores, temiendo al día en que tenga que volver a encararlos, movido por
+                            un miedo primordial a la muerte que su lógica no puede acallar.</p>
+                    </div>
+                </div>
+
+                <!-- 4. CAPACIDADES Y EQUIPO -->
+                <div class="e-modal modal-cap">
+                    <label for="tab-gal" class="close-modal"><i data-lucide="x"></i></label>
+                    <h2 class="m-title">Capacidades</h2>
+                    <div class="m-content">
+                        <p style="color:var(--c-gold); font-weight:bold;">BENDICIÓN MALDITA</p>
+                        <p>Su cuerpo funciona como un laboratorio viviente. Altera su densidad ósea y muscular a
+                            voluntad.</p>
+                        <ul>
+                            <li><strong>Intelecto Táctico:</strong> Análisis de debilidades estructurales y anatómicas
+                                en segundos.</li>
+                            <li><strong>Regeneración Alquímica:</strong> Tejidos que se recomponen consumiendo energía
+                                vital a velocidad antinatural.</li>
+                        </ul>
+                        <hr style="border-color:rgba(255,255,255,0.1); margin: 15px 0;">
+                        <p style="color:var(--c-gold); font-weight:bold;">EQUIPAMIENTO</p>
+                        <div style="display:flex; gap:10px; margin-bottom:10px;">
+                            <i data-lucide="flask-conical" color="var(--c-neon)" size="16"></i>
+                            <div><strong>Kit Alquímico:</strong> Viales de suero fluorescente para estabilizar su
+                                condición.</div>
+                        </div>
+                        <div style="display:flex; gap:10px; margin-bottom:10px;">
+                            <i data-lucide="scroll" color="var(--c-neon)" size="16"></i>
+                            <div><strong>Grimorio:</strong> Notas indescifrables de alquimia prohibida.</div>
+                        </div>
+                        <div style="display:flex; gap:10px;">
+                            <i data-lucide="sword" color="#fff" size="16"></i>
+                            <div><strong>Bastón-Estoque:</strong> Hoja de plata oculta para asuntos graves.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. EXTRAS -->
+                <div class="e-modal modal-xtr">
+                    <label for="tab-gal" class="close-modal"><i data-lucide="x"></i></label>
+                    <h2 class="m-title">Notas Extra</h2>
+                    <div class="m-content">
+                        <p
+                            style="font-style:italic; border-left: 2px solid var(--c-neon); padding-left: 10px; margin-bottom: 15px;">
+                            “La ciencia no nos ha enseñado aún si la locura es o no lo más sublime de la inteligencia”.
+                        </p>
+                        <ul>
+                            <li><strong>Escritor Maldito:</strong> En antaño fue un famoso escritor; hoy sus obras se
+                                consideran prohibidas.</li>
+                            <li><strong>Mentor:</strong> Fue instructor para jóvenes vampyr durante mucho tiempo.</li>
+                            <li><strong>Lengua Mordaz:</strong> Le encanta el sarcasmo y posee un sentido de la
+                                orientación nulo.</li>
+                            <li><strong>Círculo de Traición:</strong> Su mayor enemigo fue una vez su mejor alumno.</li>
+                            <li><strong>Último Recurso:</strong> Si se levanta en armas, es porque el asunto no tiene
+                                remedio.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- VISORES ZOOM -->
+            <div class="zoom-overlay zoom-1"><img src="https://i.imgur.com/9ujLdq3.jpeg"><label for="z-off"
+                    class="close-zoom">Cerrar</label></div>
+            <div class="zoom-overlay zoom-2"><img src="https://i.imgur.com/QaVnRGR.jpeg"><label for="z-off"
+                    class="close-zoom">Cerrar</label></div>
+            <div class="zoom-overlay zoom-3"><img
+                    src="https://i.pinimg.com/1200x/bc/80/5c/bc805c4e44a3013bb66825ac90211df6.jpg"><label for="z-off"
+                    class="close-zoom">Cerrar</label></div>
+            <div class="zoom-overlay zoom-4"><img src="https://i.imgur.com/tRlDLSE.jpeg"><label for="z-off"
+                    class="close-zoom">Cerrar</label></div>
+            <div class="zoom-overlay zoom-5"><img src="https://i.imgur.com/noTEHRj.jpeg"><label for="z-off"
+                    class="close-zoom">Cerrar</label></div>
+
+            <div class="e-credit">
+                SYSTEM ID: ELIPHAS-V9.2 //
+                <a href="https://github.com/owllain" target="_blank">
+                    <i data-lucide="github" size="12"></i> LAIN
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

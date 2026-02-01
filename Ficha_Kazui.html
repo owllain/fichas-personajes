@@ -4,54 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha de Personaje - Foroactivo</title>
+    <title>Ficha de Personaje - Kazui von Vitra</title>
 
-    <!-- 
-        ================================================================
-        1. RECURSOS EXTERNOS (FUENTES E ICONOS)
-        ================================================================
-    -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Petit+Formal+Script&family=Pirata+One&family=Quintessential&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Librería de Iconos Lucide: Puedes ver todos los nombres aquí: https://lucide.dev/icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* 
-           ================================================================
+        /* ================================================================
            2. CONFIGURACIÓN DE COLORES Y VARIABLES
-           Cambia estos valores para cambiar el look de toda la ficha
            ================================================================
         */
         :root {
             --ficha-ancho: 525px;
 
-            /* Colores de Fondo */
             --color-fondo-pagina: #0a0a0a;
-            /* Fondo de los bloques de contenido */
             --color-fondo-externo: #171717;
-            /* Fondo secundario de cajas de datos */
             --color-bordes: #262626;
-            /* Color de las líneas de división */
 
-            /* Colores de Acento (Colores principales de la ficha) */
             --color-acento-vibrante: #e11d48;
-            /* Rojo brillante neón */
             --color-acento-profundo: #881337;
-            /* Rojo oscuro para gradientes */
 
-            /* Colores de Texto */
             --color-texto: #f5f5f5;
-            /* Texto principal */
             --color-texto-muted: #a3a3a3;
-            /* Texto secundario (pestañas inactivas) */
 
-            /* Efectos y Gradientes */
             --gradiente-premium: linear-gradient(135deg, var(--color-acento-vibrante), var(--color-acento-profundo));
             --shadow-neon: 0 4px 20px rgba(225, 29, 72, 0.15);
 
-            /* Patrón de líneas decorativo del fondo (Diagonales) */
             --lineas-transparente: repeating-linear-gradient(45deg,
                     transparent, transparent 10px,
                     rgba(255, 255, 255, 0.05) 10px, rgba(255, 255, 255, 0.05) 11px,
@@ -59,21 +42,15 @@
                     rgba(255, 255, 255, 0.05) 21px, rgba(255, 255, 255, 0.05) 23px);
         }
 
-        /* Fuente personalizada para títulos */
-        @font-face {
-            font-family: 'PinkS';
-            src: url(//dl.dropbox.com/s/z30jel1s8hrvpa1/PinkS.otf);
-        }
+        /* Eliminado @font-face de PinkS ya que usamos Google Fonts */
 
         body {
             background-color: #050505;
-            /* Fondo oscuro detrás de la ficha */
             margin: 0;
             padding: 0;
         }
 
-        /* 
-           ================================================================
+        /* ================================================================
            3. ESTILOS DEL CONTENEDOR PRINCIPAL
            ================================================================
         */
@@ -84,7 +61,6 @@
             font: 10px 'Raleway', sans-serif;
             color: var(--color-texto);
 
-            /* IMAGEN DE FONDO GENERAL: Recomendado 800x1200px aprox */
             background-image: var(--lineas-transparente), url(https://i.imgur.com/r58l4wA.jpeg);
             background-size: auto, cover;
             background-position: center;
@@ -101,7 +77,6 @@
             overflow: hidden;
         }
 
-        /* Overlay oscuro para mejorar lectura del contenido */
         .ficha-contenedor::before {
             content: "";
             position: absolute;
@@ -116,15 +91,26 @@
 
         .ficha-contenedor * {
             box-sizing: border-box;
-            scrollbar-width: none;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-acento-vibrante) transparent;
             transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        .ficha-contenedor *::-webkit-scrollbar {
-            display: none;
+        .tab-texto::-webkit-scrollbar {
+            width: 3px;
         }
 
-        /* Líneas decorativas en las esquinas */
+        .tab-texto::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+        }
+
+        .tab-texto::-webkit-scrollbar-thumb {
+            background: var(--color-acento-vibrante);
+            border-radius: 10px;
+            box-shadow: 0 0 5px var(--color-acento-vibrante);
+        }
+
         .ficha-line-fx {
             position: absolute;
             opacity: 0.2;
@@ -163,7 +149,6 @@
             background: linear-gradient(180deg, transparent, var(--color-acento-vibrante), transparent);
         }
 
-        /* Bloques maestros de contenido */
         .ficha-bloque {
             background: var(--color-fondo-pagina);
             border: 1px solid var(--color-bordes);
@@ -176,7 +161,6 @@
             flex-direction: column;
         }
 
-        /* Separador central decorativo (Calavera) */
         .ficha-separador-iconos {
             display: flex;
             align-items: center;
@@ -196,7 +180,6 @@
             background: linear-gradient(90deg, transparent, var(--color-acento-vibrante), transparent);
         }
 
-        /* Animación de pulso para iconos decorativos */
         .icon-vamp {
             filter: drop-shadow(0 0 5px var(--color-acento-vibrante));
             animation: pulse-icon 2s infinite ease-in-out;
@@ -216,9 +199,8 @@
             }
         }
 
-        /* 
-           ================================================================
-           4. ESTILOS DE LA CABECERA Y BANNER 
+        /* ================================================================
+           4. CABECERA Y BANNER 
            ================================================================
         */
         .ficha-banner-bg {
@@ -230,11 +212,9 @@
             border: 1px solid rgba(225, 29, 72, 0.25);
             position: relative;
             overflow: visible;
-            /* Permite que el nombre 'vuele' hacia arriba */
             z-index: 5;
         }
 
-        /* IMAGEN DEL BANNER ROJO: Recomendado horizontal 600x200px */
         .ficha-banner-bg::before {
             content: "";
             position: absolute;
@@ -242,7 +222,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url(https://i.imgur.com/kwGxLDo.jpeg);
+            background-image: url(https://i.imgur.com/XKEnemE.jpeg);
             background-size: cover;
             background-position: center 40%;
             opacity: 0.65;
@@ -250,14 +230,13 @@
             border-radius: 7px;
         }
 
-        /* Nombre flotante en 3D */
         .ficha-nombre-vuela {
             position: absolute;
             top: -42px;
-            /* Controla qué tanto sube el nombre */
             left: 0;
             right: 0;
-            font: 68px/1 'PinkS', cursive;
+            /* CAMBIO: PinkS -> Pirata One */
+            font: 60px/1 'Pirata One', system-ui;
             color: #fff;
             text-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
             z-index: 10;
@@ -271,19 +250,12 @@
             gap: 0;
         }
 
-        /* 
-           ================================================================
-           5. SLIDER DE IMÁGENES
-           ================================================================
-        */
         .ficha-slider {
             min-width: 230px;
             min-height: 275px;
-            /* Altura de las fotos: Recomendado 250x300px o similar */
             border: 1px solid var(--color-bordes);
             border-radius: 8px;
             margin-right: -45px;
-            /* Hace que el slider sobresalga a la derecha */
             background-color: #000;
             box-shadow: 10px 0 20px -10px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -301,7 +273,6 @@
             filter: grayscale(20%) contrast(110%);
         }
 
-        /* Lógica del slider (No tocar si no sabes usar radio buttons) */
         #slide1:checked~.ficha-bloque .s1,
         #slide2:checked~.ficha-bloque .s2,
         #slide3:checked~.ficha-bloque .s3 {
@@ -327,8 +298,7 @@
             cursor: pointer;
         }
 
-        /* 
-           ================================================================
+        /* ================================================================
            6. DATOS BÁSICOS 
            ================================================================
         */
@@ -344,7 +314,6 @@
             justify-content: center;
             align-items: center;
             margin-left: -45px;
-            /* Hace que la info sobresalga a la izquierda */
             position: relative;
             z-index: 3;
         }
@@ -353,7 +322,8 @@
             width: 100%;
             padding: 8px;
             border-radius: 6px;
-            font: 22px/1 'PinkS', cursive;
+            /* CAMBIO: PinkS -> Pirata One */
+            font: 22px/1 'Pirata One', system-ui;
             background: var(--gradiente-premium);
             color: #fff;
             border: 1px solid rgba(225, 29, 72, 0.3);
@@ -381,9 +351,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 9px;
+            min-height: 28px;
         }
 
-        /* Las etiquetas pequeñas sobre los recuadros */
         .ficha-dato-item b {
             position: absolute;
             text-transform: uppercase;
@@ -398,22 +369,22 @@
             border-radius: 3px;
         }
 
-        /* 
-           ================================================================
-           7. SISTEMA DE PESTAÑAS (TABS)
+        /* ================================================================
+           7. SISTEMA DE PESTAÑAS (TABS) - AJUSTADAS A ANCHO TOTAL
            ================================================================
         */
         .ficha-tabs-header {
-            margin: 5px -10px 10px;
+            margin: 5px -45px 10px;
             display: flex;
-            gap: 6px;
+            gap: 10px;
         }
 
         .ficha-tabs-header label {
             flex: 1;
-            padding: 8px 5px;
-            border-radius: 6px;
-            font: 18px/1 'PinkS', cursive;
+            padding: 10px 5px;
+            border-radius: 8px;
+            /* CAMBIO: PinkS -> Pirata One */
+            font: 16px/1 'Pirata One', system-ui;
             background: var(--color-fondo-externo);
             color: var(--color-texto-muted);
             border: 1px solid var(--color-bordes);
@@ -422,19 +393,20 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 3px;
+            gap: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .ficha-tabs-header label i {
-            font-size: 14px;
-            margin-bottom: -2px;
+            font-size: 16px;
+            margin-bottom: -1px;
         }
 
-        /* Estilo cuando una pestaña está activa */
         #tab1:checked~.ficha-bloque label[for="tab1"],
         #tab2:checked~.ficha-bloque label[for="tab2"],
         #tab3:checked~.ficha-bloque label[for="tab3"],
-        #tab4:checked~.ficha-bloque label[for="tab4"] {
+        #tab4:checked~.ficha-bloque label[for="tab4"],
+        #tab5:checked~.ficha-bloque label[for="tab5"] {
             background: var(--gradiente-premium);
             color: #fff;
             border-color: var(--color-acento-vibrante);
@@ -445,19 +417,17 @@
         .ficha-contenido-tabs {
             position: relative;
             margin: 0 -15px;
-            height: 195px;
-            /* Altura del área de texto ajustable */
+            height: 260px;
             display: flex;
             justify-content: center;
             overflow: hidden;
             padding-top: 10px;
         }
 
-        /* Animación de entrada de las pestañas */
         .tab-panel {
             border: 1px solid var(--color-bordes);
             background: var(--color-fondo-externo);
-            padding: 12px;
+            padding: 15px;
             border-radius: 8px;
             position: absolute;
             top: 10px;
@@ -471,7 +441,7 @@
             transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
         }
 
-        .tab-panel b {
+        .tab-panel>b {
             position: absolute;
             text-transform: uppercase;
             font-size: 7.5px;
@@ -489,19 +459,35 @@
             margin-top: 10px;
             height: 100%;
             overflow: auto;
-            /* Permite scroll si el texto es largo */
             text-align: justify;
             font-size: 11px;
-            line-height: 1.5;
+            line-height: 1.6;
             color: var(--color-texto);
-            padding-right: 5px;
+            padding-right: 10px;
         }
 
-        /* Lógica de visibilidad de pestañas */
+        .tab-texto h3 {
+            /* CAMBIO: PinkS -> Pirata One */
+            font: 24px 'Pirata One', system-ui;
+            color: var(--color-acento-vibrante);
+            margin: 15px 0 5px;
+            border-bottom: 1px solid rgba(225, 29, 72, 0.2);
+            padding-bottom: 2px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-texto h3 i {
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
         #tab1:checked~.ficha-bloque .tab-1,
         #tab2:checked~.ficha-bloque .tab-2,
         #tab3:checked~.ficha-bloque .tab-3,
-        #tab4:checked~.ficha-bloque .tab-4 {
+        #tab4:checked~.ficha-bloque .tab-4,
+        #tab5:checked~.ficha-bloque .tab-5 {
             opacity: 1;
             transform: translateX(0) scale(1);
             filter: blur(0);
@@ -509,8 +495,11 @@
             z-index: 5;
         }
 
-        /* 
-           ================================================================
+        .tab-panel:not(:checked) {
+            transform: translateX(-40px) scale(0.95);
+        }
+
+        /* ================================================================
            8. CRÉDITOS Y BOTONES 
            ================================================================
         */
@@ -538,10 +527,6 @@
             gap: 5px;
         }
 
-        .ficha-credito a i {
-            font-size: 10px;
-        }
-
         .ficha-credito a:hover {
             background: var(--color-acento-vibrante);
             color: #fff !important;
@@ -561,51 +546,46 @@
 <body>
 
     <div class="ficha-contenedor">
-        <!-- Elementos decorativos de líneas -->
         <div class="ficha-line-fx line-top"></div>
         <div class="ficha-line-fx line-bottom"></div>
         <div class="ficha-line-fx line-left"></div>
         <div class="ficha-line-fx line-right"></div>
 
-        <!-- Inputs del Slider (No eliminar) -->
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
 
-        <!-- Inputs de las Pestañas (No eliminar) -->
         <input type="radio" name="ficha-tabs" id="tab1" checked>
         <input type="radio" name="ficha-tabs" id="tab2">
         <input type="radio" name="ficha-tabs" id="tab3">
         <input type="radio" name="ficha-tabs" id="tab4">
+        <input type="radio" name="ficha-tabs" id="tab5">
 
-        <!-- BLOQUE 1: BANNER E INFO BÁSICA -->
         <div class="ficha-bloque">
             <div class="ficha-banner-bg">
-                <div class="ficha-nombre-vuela">Nombre Apellido</div>
+                <div class="ficha-nombre-vuela">Kazui von Vitra</div>
             </div>
 
             <div class="ficha-header">
                 <div class="ficha-info-basica">
                     <div class="ficha-titulo-seccion">Información Básica</div>
                     <div class="ficha-datos">
-                        <!-- Rellena aquí los datos de tu personaje -->
-                        <div class="ficha-dato-item"><b>Nombre</b>Dato Aquí</div>
-                        <div class="ficha-dato-item"><b>Edad</b>Dato Aquí</div>
-                        <div class="ficha-dato-item"><b>Ocupación</b>Dato Aquí</div>
-                        <div class="ficha-dato-item"><b>Nacionalidad</b>Dato Aquí</div>
-                        <div class="ficha-dato-item"><b>Grupo</b>Dato Aquí</div>
-                        <div class="ficha-dato-item"><b>Rango</b>Dato Aquí</div>
+                        <div class="ficha-dato-item"><b>Nombre</b>Kazui von Vitra</div>
+                        <div class="ficha-dato-item"><b>Edad</b>1025 yrs. (19 Ap.)</div>
+                        <div class="ficha-dato-item"><b>Ocupación</b>Cazador (Asesino)</div>
+                        <div class="ficha-dato-item"><b>Nacionalidad</b>Noctilunia</div>
+                        <div class="ficha-dato-item"><b>Grupo</b>Vampyr Hematófago</div>
+                        <div class="ficha-dato-item"><b>Rango</b>Presagista del fin</div>
                     </div>
                 </div>
 
                 <div class="ficha-separador-v"></div>
 
-                <!-- Slider de fotos: Cambia las URLs para tus fotos -->
                 <div class="ficha-slider">
                     <div class="slides">
-                        <div class="slide s1" style="background-image: url(https://i.imgur.com/GtIdAlx.jpeg);"></div>
-                        <div class="slide s2" style="background-image: url(https://i.imgur.com/kwGxLDo.jpeg);"></div>
-                        <div class="slide s3" style="background-image: url(https://i.imgur.com/26vg0EW.jpeg);"></div>
+                        <div class="slide s1" style="background-image: url(https://i.imgur.com/y3IfRaE.jpeg);"></div>
+                        <div class="slide s2" style="background-image: url(https://i.imgur.com/sJnyCIn.jpeg);"></div>
+                        <div class="slide s3" style="background-image: url(https://i.imgur.com/uvXbOs1.jpeg);"></div>
                     </div>
                     <div class="slider-nav">
                         <label for="slide1"></label>
@@ -616,44 +596,135 @@
             </div>
         </div>
 
-        <!-- SEPARADOR CENTRAL: Puedes cambiar data-lucide="skull" por "bat", "ghost", etc -->
         <div class="ficha-separador-iconos">
             <i data-lucide="skull" class="icon-vamp" stroke-width="1.5" size="32"></i>
         </div>
 
-        <!-- BLOQUE 2: PESTAÑAS DE INFORMACIÓN -->
         <div class="ficha-bloque">
             <div class="ficha-tabs-header">
-                <label for="tab1"><i data-lucide="brain"></i>Perso</label>
-                <label for="tab2"><i data-lucide="scroll-text"></i>Historia</label>
-                <label for="tab3"><i data-lucide="heart"></i>Gustos</label>
-                <label for="tab4"><i data-lucide="plus-square"></i>Extras</label>
+                <label for="tab1"><i data-lucide="user"></i>Descripción</label>
+                <label for="tab2"><i data-lucide="book-open"></i>Historia</label>
+                <label for="tab3"><i data-lucide="zap"></i>Habilidades</label>
+                <label for="tab4"><i data-lucide="briefcase"></i>Inventario</label>
+                <label for="tab5"><i data-lucide="sparkles"></i>Extras</label>
             </div>
 
             <div class="ficha-contenido-tabs">
-                <!-- Tab 1: Personalidad -->
                 <div class="tab-panel tab-1">
-                    <b>Personalidad</b>
-                    <div class="tab-texto">Escribe aquí cómo es tu personaje...</div>
+                    <b>Descripción</b>
+                    <div class="tab-texto">
+                        <h3><i data-lucide="user"></i>Descripción</h3>
+                        <b>Psicología:</b>
+                        Desarrolló una personalidad muy imaginativa, donde vive caminando en la cuerda floja, entre una
+                        locura insondable, abrumadora, sin nombre y una realidad sobrecogedora, la cual no tiene más que
+                        ofrecer que crueldad y desesperanza. La personalidad de Kazui se ve afectada por su propio poder
+                        el cual acelera su deterioro mental, su larga existencia se ha vuelto una sombra insidiosa que
+                        lo asecha y corroe su mente, por lo cual la mantiene aprisionada a lo mismo que su bendición,
+                        apenas un agasajo para gozar de una breve tranquilidad.<br><br>
+                        La actitud de Kazui suele variar entre el desagrado y lo incomprensible, sintiendo rencor sin
+                        fundamento ante las personas que lo rodean y solo mostrando una incomprensible simpatía cuando
+                        capta su interés. Suele costarle ordenar sus ideas de forma coherente lo que lleva a tener
+                        comportamientos erráticos, sin embargo, todos apuntan a un mismo objetivo, escapar de la
+                        realidad.<br><br>
+
+                        <b>Físico:</b>
+                        Altura, 1.52cm. Pesa 41kg. Su complexión es delgada pero atlética, notándose en un cuerpo
+                        tonificado sin exceder la masa muscular apropiada para su peso. Sus mayores rasgos físicos son
+                        los ojos color escarlata junto con unas orejas puntiagudas, alargadas y sus colmillos
+                        ligeramente pronunciados. Su voz es rasposa e intimidante, contrario a su estatura.<br><br>
+                        Sus facciones tienen una contextura suave, típica de un adolescente. Su piel es de color
+                        ceniciento. Es de nariz corta, mentón redondeado y labios finos en coloración rosada, al ser de
+                        complexión pequeña sus hombros son compactos.<br><br>
+                        El cabello de Kazui es puntiagudo, de largo pronunciado y un poco desordenado, de tono castaño
+                        oscuro. A pesar de que su estatura lo hace ver como alguien joven, para contrastar además con
+                        sus rasgos finos suele usar botas con tacón, además de accesorios para darse a ver como alguien
+                        mayor, como orejas perforadas y un tatuaje en su espalda, siendo el diseño un basilisco blanco.
+                    </div>
                 </div>
-                <!-- Tab 2: Historia -->
+
                 <div class="tab-panel tab-2">
                     <b>Historia</b>
-                    <div class="tab-texto">Escribe aquí el pasado de tu personaje...</div>
+                    <div class="tab-texto">
+                        <h3><i data-lucide="book-open"></i>Historia</h3>
+                        “En una larga pesadilla de mi juventud, alucine una noche estrellada de exquisita composición. Y
+                        mientras observaba el océano de estrellas, comencé a notar algo extraño en la luz que aquellos
+                        astros emitían. Celestiales, pensé, cuan ingenuo fui. Sus ojos negaban mi existir y poco a poco
+                        empecé a identificar, cerca de cada estrella había una masa extraña, que parecía lentamente
+                        aletear..."<br><br>
+                        Había nacido dentro de la nobleza del clan Vitra, en un ambiente de cordial frivolidad donde
+                        ambos padres eran aristocráticos e incólumes ante el resto, pero cuanto podría durar el engaño,
+                        pues al final la estabilidad solo es una mentira que se dicen todos a si mismo para fingir que,
+                        todo está bien. El destino no podía estar menos de acuerdo con tal afirmación.<br><br>
+                        Recuerdo la última vez que tuve una conversación con mi madre, fue acerca de cómo parar un
+                        corazón, la forma y el ángulo en que la mano debía entrar en el torso para poder pararlo. Así
+                        eran las conversaciones que usualmente teníamos, pues siempre me maravillaba con lo que podíamos
+                        hacer, con lo que el clan Vitra podría lograr. A mi padre en particular le cautivaba mi forma de
+                        deslumbrar el futuro y ciertamente, parecía inspirarlo.<br><br>
+                        La estabilidad del clan se vería abrumada con la noticia, la esposa de la cabecilla había
+                        fallecido al dar a luz, mientras que el heredero habría desaparecido. Aquella noche entendí las
+                        verdaderas intenciones del que había otorgado la vida a los tres. Escapando a los confines de la
+                        tierra, viajando y explorando las noches venideras, aprendiendo a vivir de la caza y la sangre
+                        sin pizca de elegancia.
+                    </div>
                 </div>
-                <!-- Tab 3: Gustos -->
+
                 <div class="tab-panel tab-3">
-                    <b>Gustos & Disgustos</b>
-                    <div class="tab-texto">Escribe aquí qué le gusta y qué no...</div>
+                    <b>Habilidades</b>
+                    <div class="tab-texto">
+                        <h3><i data-lucide="zap"></i>Habilidades</h3>
+                        <b>RITUAL, SANGUINEM:</b> Kazui lleva al límite sus habilidades como vampyr tornando su
+                        apariencia grácil en una más salvaje. Sus alas se extienden en su enormidad, al igual que sus
+                        colmillos se tornan mas prominentes y sus uñas crecen un par de centímetros.<br><br>
+                        <b>RITUAL, MARAUDER:</b> Kazui se abre las venas de una de sus muñecas para convertir la sangre
+                        en una púa, una lanza de sangre que convergió hasta coagularse en un filo triangular. Su largo
+                        es de un metro y su ancho de treinta centímetros.<br><br>
+                        <b>RITUAL, HELLBERUS:</b> Manipulador de sangre capacitado para manipular su propia sangre por
+                        lo que la transmite mediante una mordida para provocar hemolisis en sus víctimas.<br><br>
+
+                        <h3><i data-lucide="ghost"></i>Bendición Maldita</h3>
+                        <b>HORROR ANTIGUO:</b> Capable de moldear la oscuridad, Kazui la manipula para crear extensiones
+                        de su ser a raíz de su sombra. Estas ramificaciones son tentáculos cubiertos de ventosas y ojos
+                        sin parpado.<br><br>
+                        <b>ABANDONADO EN LA PERDICIÓN:</b> Kazui se rodea con un aura de sombras, absorbiendo la
+                        oscuridad a su alrededor para contenerla dentro de su cuerpo. La sombra le permitirá absorber
+                        parte del daño.
+                    </div>
                 </div>
-                <!-- Tab 4: Extras -->
+
                 <div class="tab-panel tab-4">
-                    <b>Otros Datos</b>
-                    <div class="tab-texto">Cualquier otra información relevante...</div>
+                    <b>Inventario</b>
+                    <div class="tab-texto">
+                        <h3><i data-lucide="briefcase"></i>Inventario</h3>
+                        <b>VELO FANTASMA:</b> Artefacto configurado para suprimir su bendición. El
+                        artefacto null tiene forma de dos hombreras metálicas de color dorado.<br><br>
+                        <b>ARTEFACTO BODHI, ABISMO:</b> Es un artefacto con forma de calavera que carga en su cinto,
+                        construido con una lacrima de bendición Sacra y una de bendición Maldita. Encapsula la
+                        luz.<br><br>
+                        <b>VIAL SANGRIENTO:</b> Kazui carga consigo un pequeño vial el cual contiene 50 milímetros de
+                        sangre de dragón. Es la poción que debe beber constantemente para soportar la magia que
+                        emplea.<br><br>
+                        <b>INDUMENTARIA:</b> Sus ropas están hechas en base a sus trofeos, como pertenencias de quienes
+                        derrota y criaturas a las cuales asesinó. Predilección por plumas de fénix y cuervo.
+                    </div>
+                </div>
+
+                <div class="tab-panel tab-5">
+                    <b>Extras</b>
+                    <div class="tab-texto">
+                        <h3><i data-lucide="sparkles"></i>Extras</h3>
+                        — Gusta de los placeres culinarios. En especial cuando la comida está envenenada.<br>
+                        — Es claustrofóbico.<br>
+                        — Porta consigo un grimorio que alguna vez perteneció a un lich. Se cree que está maldito.<br>
+                        — Odia a los elfos por el parecido físico que tienen con los suyos.<br>
+                        — Tiempo atrás fue un artista, antes de caer en la locura.<br>
+                        — Nunca ha tenido mascotas, la considera una práctica desagradable.<br>
+                        — No le teme a la luz del sol, pero esta le ofende.<br>
+                        — Kazui habla un idioma de dudoso origen, posiblemente inventado por él.<br>
+                        — Nunca ha tenido un amigo, por lo general las personas mueren antes de llegar ahí.
+                    </div>
                 </div>
             </div>
 
-            <!-- Botones de Créditos y Código -->
             <div class="ficha-credito">
                 <a href="https://github.com/owllain" target="_blank"><i data-lucide="github"></i>Lain</a>
                 <a id="btnCopyCode"><i data-lucide="code-2"></i>Code</a>
@@ -661,22 +732,15 @@
         </div>
     </div>
 
-    <!-- 
-        ================================================================
-        9. SCRIPTS DE FUNCIONALIDAD (NO TOCAR)
-        ================================================================
-    -->
     <script>
-        // Inicializa los iconos de Lucide
         lucide.createIcons();
 
-        // Lógica para copiar el código HTML al portapapeles
         document.getElementById('btnCopyCode').addEventListener('click', function () {
             const docCode = document.documentElement.outerHTML;
             navigator.clipboard.writeText(docCode).then(() => {
                 const originalText = this.innerHTML;
                 this.innerHTML = '<i data-lucide="check"></i>¡Copiado!';
-                lucide.createIcons(); // Refresca iconos
+                lucide.createIcons();
                 setTimeout(() => {
                     this.innerHTML = originalText;
                     lucide.createIcons();
