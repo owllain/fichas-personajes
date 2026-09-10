@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ficha Nox Arcana - El Dragón que se Tragó al Sol</title>
+    <title>Ficha Nox Arcana - El Adivino</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
@@ -43,6 +43,10 @@
         .nox-scope { width: var(--nox-width); position: relative; }
         .nox-scope > input { display: none; }
         .nox-card {
+            --state-accent: var(--decay);
+            --state-bright: var(--decay-bright);
+            --state-dark: var(--decay-dark);
+            --state-text: var(--bone);
             height: var(--nox-height);
             position: relative;
             overflow: hidden;
@@ -75,6 +79,26 @@
         @keyframes sporeDrift { to { transform: translate(70px, -120px) rotate(8deg); } }
         @keyframes decaySweep { from { transform: translateX(-4%); opacity: .3; } to { transform: translateX(4%); opacity: .8; } }
 
+        #identity:checked ~ .nox-card {
+            --decay: #d4af37;
+            --decay-bright: #ffe7a1;
+            --decay-dark: #6b4e12;
+            --bone: #f5ead0;
+            --line: rgba(212, 175, 55, .32);
+            --state-accent: #d4af37;
+            --state-bright: #ffe7a1;
+            --state-dark: #6b4e12;
+            --state-text: #f5ead0;
+            border-color: #6b4e12;
+            box-shadow: 0 0 0 1px rgba(212, 175, 55, .12), 0 0 42px rgba(128, 93, 20, .32), inset 0 0 70px rgba(53, 40, 10, .3);
+        }
+        #identity:checked ~ .nox-card::before {
+            background-image: radial-gradient(circle, rgba(255, 231, 161, .7) 0 1px, transparent 2px), radial-gradient(circle, rgba(121, 215, 66, .25) 0 1px, transparent 2px);
+        }
+        #identity:checked ~ .nox-card::after {
+            background: repeating-linear-gradient(115deg, transparent 0 38px, rgba(212, 175, 55, .045) 40px, transparent 43px 81px);
+        }
+
         .nox-border {
             position: absolute; inset: 0; z-index: 100; pointer-events: none;
             border: 1px solid transparent;
@@ -88,7 +112,7 @@
         .nox-header { height: 235px; position: relative; background: #000; border-bottom: 2px solid var(--decay); overflow: hidden; z-index: 5; }
         .banner { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity .8s ease, transform 3s ease; }
         .banner-main { background-image: linear-gradient(90deg, rgba(0, 0, 0, .45), rgba(2, 16, 5, .12)), url('https://i.pinimg.com/1200x/3f/42/5e/3f425e18ddd3a396463a7e7abfb6ba6b.jpg'); opacity: .88; filter: contrast(1.12) saturate(.8); }
-        .banner-alt { background-image: url('https://i.imgur.com/H6sjPRe.jpeg'); opacity: 0; filter: contrast(1.2) saturate(.7) hue-rotate(20deg); }
+        .banner-alt { background-image: url('https://i.imgur.com/KsTyGjZ.jpeg'); opacity: 0; filter: contrast(1.2) saturate(.7) sepia(.4); }
         .nox-header::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .12), var(--void) 100%); pointer-events: none; }
         #identity:checked ~ .nox-card .banner-main { opacity: 0; transform: scale(1.08); }
         #identity:checked ~ .nox-card .banner-alt { opacity: .78; }
@@ -112,9 +136,9 @@
         .portrait-panel { position: relative; min-height: 0; overflow: hidden; border: 1px solid var(--decay-dark); background: #000; box-shadow: 0 0 24px rgba(37, 130, 51, .26), inset 0 0 22px rgba(0, 0, 0, .85); }
         .portrait-panel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(3, 6, 4, .9) 100%), linear-gradient(90deg, rgba(0, 0, 0, .3), transparent 45%, rgba(121, 215, 66, .08)); pointer-events: none; }
         .portrait-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity .8s ease, transform 3s ease; }
-        .portrait-dragon { opacity: 0; transform: scale(1.03); }
+        .portrait-seer { opacity: 0; transform: scale(1.03); }
         #identity:checked ~ .nox-card .portrait-human { opacity: 0; transform: scale(1.06); }
-        #identity:checked ~ .nox-card .portrait-dragon { opacity: .95; transform: scale(1); }
+        #identity:checked ~ .nox-card .portrait-seer { opacity: .95; transform: scale(1); }
         .portrait-caption { position: absolute; z-index: 2; bottom: 18px; left: 18px; right: 18px; text-align: center; color: var(--decay-bright); font: 700 12px var(--font-display); letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 9px #000; }
         .hive { height: 100%; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; }
         .hive-row { display: flex; gap: 8px; justify-content: center; }
@@ -188,8 +212,8 @@
             <header class="nox-header">
                 <div class="banner banner-main"></div>
                 <div class="banner banner-alt"></div>
-                <label class="identity-switch" for="identity"><span class="switch-label">CAMBIAR FORMA // DRAGON</span></label>
-                <div class="nox-title"><h1>NOX ARCANA</h1><span>EL DRAGON QUE SE TRAGO AL SOL</span></div>
+                <label class="identity-switch" for="identity"><span class="switch-label">CAMBIAR ESTADO // ADIVINO</span></label>
+                <div class="nox-title"><h1>NOX ARCANA</h1><span>EL ADIVINO</span></div>
             </header>
 
             <nav class="nox-nav">
@@ -203,7 +227,7 @@
             <div class="nox-body">
                 <aside class="portrait-panel" aria-label="Retrato principal de Nox Arcana">
                     <img class="portrait-image portrait-human" src="https://i.pinimg.com/1200x/2a/bc/f2/2abcf2e3eb69cae68c9e82bd565adde5.jpg" alt="Nox Arcana en forma humana">
-                    <img class="portrait-image portrait-dragon" src="https://i.imgur.com/H6sjPRe.jpeg" alt="Nox Arcana en forma de dragón">
+                    <img class="portrait-image portrait-seer" src="https://i.imgur.com/KsTyGjZ.jpeg" alt="Nox Arcana en su estado de adivino">
                     <div class="portrait-caption">Nox Arcana // Lairon</div>
                 </aside>
                 <div class="hive">
