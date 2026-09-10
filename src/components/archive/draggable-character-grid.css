@@ -1,4 +1,3 @@
-.archive-order-hint { width: min(1240px, 100%); display: flex; align-items: center; gap: 7px; margin: -20px auto 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .68rem; }
 .archive-grid { display: flex; flex-wrap: wrap; align-items: stretch; }
 .archive-grid .archive-card { flex: 1 1 260px; min-width: 260px; }
 .archive-card.is-dragging { opacity: .45; cursor: grabbing; transform: scale(.98) rotate(1deg); }

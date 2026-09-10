@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { ArrowUpRight, GripVertical } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { Reorder } from 'motion/react';
 import type { CharacterProfile } from '../../types/character';
 import { characterSlug } from '../../data/characters';
@@ -39,7 +39,6 @@ export function DraggableCharacterGrid({ characters }: { characters: CharacterPr
   }
 
   return <DndProvider backend={HTML5Backend}>
-    <div className="archive-order-hint"><GripVertical size={15} /> Ordena el archivo arrastrando las fichas</div>
     <Reorder.Group axis="x" values={ordered} onReorder={persist} className="archive-grid" as="div">
       {ordered.map((character, index) => <DraggableCard key={character.name} character={character} index={index} dragging={dragging === character.name} onMove={moveCard} onDragState={setDragging} />)}
     </Reorder.Group>

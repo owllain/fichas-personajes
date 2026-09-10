@@ -11,15 +11,22 @@ export interface CharacterAbility {
   element?: string;
   description: string;
   cost?: string;
+  weakness?: string;
+  power?: string;
 }
 
 export interface CharacterProfile {
   name: string;
   alias: string;
+  nickname?: string;
   role: string;
   species: string;
   age: string;
   origin: string;
+  residence?: string;
+  sexualOrientation?: string;
+  classType?: string;
+  faceclaim?: string;
   affinity: string;
   level: string;
   occupation: string;
@@ -34,7 +41,7 @@ export interface CharacterProfile {
   history: string[];
   abilities: CharacterAbility[];
   passive: { name: string; description: string };
-  artifact: { name: string; type: string; description: string };
+  artifact: { name: string; type: string; description: string; weakness?: string; grade?: string };
   extras: string[];
   theme: CharacterTheme;
 }

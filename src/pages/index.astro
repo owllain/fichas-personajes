@@ -2,16 +2,38 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { characters } from '../data/characters';
 import { DraggableCharacterGrid } from '../components/archive/DraggableCharacterGrid';
+import { AccessibleModeModal } from '../components/accessibility/AccessibleModeModal';
 ---
 <BaseLayout title="NEXUS // Archivo de personajes" description="Archivo interactivo de personajes y sus expedientes.">
   <main class="archive-shell">
+    <!-- Capas de aura ambiental para transición suave entre tarjetas -->
+    <div class="archive-bg-layers" aria-hidden="true">
+      <div class="archive-bg-layer archive-bg-layer--base"></div>
+      <div class="archive-bg-layer archive-bg-layer--brass"></div>
+      <div class="archive-bg-layer archive-bg-layer--crimson"></div>
+      <div class="archive-bg-layer archive-bg-layer--violet"></div>
+      <div class="archive-bg-layer archive-bg-layer--green"></div>
+    </div>
+
+    <!-- Barra superior fija/encima: garantiza visibilidad completa sin superponerse a las tarjetas -->
+    <nav class="archive-topbar" aria-label="Barra de utilidades y accesibilidad">
+      <div class="archive-topbar__status">
+        <span class="status-pulse" aria-hidden="true"></span>
+        <span>SYSTEM ARCHIVE // v3.0 ONLINE</span>
+      </div>
+      <AccessibleModeModal client:load />
+    </nav>
+
     <header class="archive-header">
       <div>
-        <p class="archive-kicker">System archive // v3.0</p>
+        <p class="archive-kicker">Expedientes clasificados</p>
         <h1 class="archive-title">NEXUS</h1>
       </div>
       <p class="archive-intro">Un archivo vivo de identidades, pactos y fuerzas que no deberían haber sobrevivido.</p>
     </header>
-    <DraggableCharacterGrid client:load characters={characters} />
+
+    <section class="archive-content-section">
+      <DraggableCharacterGrid client:load characters={characters} />
+    </section>
   </main>
 </BaseLayout>

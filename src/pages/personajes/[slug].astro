@@ -10,7 +10,8 @@ export function getStaticPaths() {
 const { character } = Astro.props;
 ---
 <BaseLayout title={`${character.name} // ${character.role}`} description={character.alias}>
-  <main class="sheet-page">
+  <main class={`sheet-page sheet-page--${character.theme}`}>
+    <div class={`sheet-ambient sheet-ambient--${character.theme}`} aria-hidden="true"></div>
     <a class="sheet-back" href="/">← Volver al archivo</a>
     <CharacterSheet client:load character={character} />
   </main>
