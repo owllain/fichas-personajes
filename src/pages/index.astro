@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { ArrowUpRight } from 'lucide-react';
+import { nox } from '../data/characters/nox';
+
+const characters = [nox];
+---
+<BaseLayout title="NEXUS // Archivo de personajes" description="Archivo interactivo de personajes y sus expedientes.">
+  <main class="archive-shell">
+    <header class="archive-header">
+      <div>
+        <p class="archive-kicker">System archive // v3.0</p>
+        <h1 class="archive-title">NEXUS</h1>
+      </div>
+      <p class="archive-intro">Un archivo vivo de identidades, pactos y fuerzas que no deberían haber sobrevivido.</p>
+    </header>
+    <section class="archive-grid" aria-label="Personajes">
+      {characters.map((character) => (
+        <a class="archive-card" href={`/personajes/${character.name.toLowerCase().replaceAll(' ', '-')}`}>
+          <img src={character.cardImage} alt={`Retrato de ${character.name}`} />
+          <div class="archive-card__body">
+            <span class="archive-card__role">{character.role}</span>
+            <h2>{character.name}</h2>
+            <div class="archive-card__action"><span>Acceder al expediente</span><ArrowUpRight size={18} /></div>
+          </div>
+        </a>
+      ))}
+    </section>
+  </main>
+</BaseLayout>
