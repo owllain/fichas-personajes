@@ -1,10 +1,10 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { CharacterSheet } from '../../components/character/CharacterSheet';
-import { nox } from '../../data/characters/nox';
+import { characters, characterSlug } from '../../data/characters';
 
 export function getStaticPaths() {
-  return [{ params: { slug: 'nox-arcana' }, props: { character: nox } }];
+  return characters.map((character) => ({ params: { slug: characterSlug(character.name) }, props: { character } }));
 }
 
 const { character } = Astro.props;

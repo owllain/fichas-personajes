@@ -32,13 +32,17 @@ button { font: inherit; }
 .archive-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
 .archive-card { min-height: 450px; position: relative; overflow: hidden; display: flex; align-items: end; border: 1px solid var(--line); background: var(--surface); text-decoration: none; clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px); transition: transform .45s cubic-bezier(.2,.8,.2,1), border-color .45s ease, box-shadow .45s ease; }
 .archive-card:hover { transform: translateY(-10px); border-color: var(--green); box-shadow: 0 24px 55px rgba(0, 0, 0, .45), 0 0 35px rgba(121, 215, 66, .2); }
+.archive-card--brass { --card-accent: #d4af37; --card-soft: #ffe7a1; }
+.archive-card--crimson { --card-accent: #e11d48; --card-soft: #ff9db2; }
+.archive-card--violet { --card-accent: #a855f7; --card-soft: #e9d5ff; }
+.archive-card--brass:hover, .archive-card--crimson:hover, .archive-card--violet:hover { border-color: var(--card-accent); box-shadow: 0 24px 55px rgba(0, 0, 0, .45), 0 0 35px color-mix(in srgb, var(--card-accent) 22%, transparent); }
 .archive-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .68; filter: saturate(.75) contrast(1.1); transition: transform .8s ease, opacity .5s ease, filter .5s ease; }
 .archive-card:hover img { transform: scale(1.07); opacity: .9; filter: saturate(1) contrast(1.12); }
 .archive-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 26%, rgba(3, 7, 4, .94) 88%); }
 .archive-card__body { position: relative; z-index: 1; width: 100%; padding: 28px; }
-.archive-card__role { color: var(--green-soft); text-transform: uppercase; letter-spacing: .16em; font-weight: 700; font-size: .75rem; }
+.archive-card__role { color: var(--card-soft, var(--green-soft)); text-transform: uppercase; letter-spacing: .16em; font-weight: 700; font-size: .75rem; }
 .archive-card h2 { margin: 8px 0 20px; font: 700 clamp(1.4rem, 3vw, 2rem) var(--display); }
-.archive-card__action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; }
+.archive-card__action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid color-mix(in srgb, var(--card-accent, var(--green)) 38%, transparent); padding-top: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; }
 
 .sheet-page { min-height: 100vh; padding: clamp(16px, 4vw, 56px); }
 .sheet-back { width: min(1240px, 100%); margin: 0 auto 18px; color: var(--green-soft); text-decoration: none; text-transform: uppercase; letter-spacing: .14em; font-size: .76rem; }

@@ -17,7 +17,7 @@ export function CharacterSheet({ character }: { character: CharacterProfile }) {
   const [activeTab, setActiveTab] = useState<Tab>('visual');
   const [alternate, setAlternate] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-  const accentMode = alternate ? 'seer' : 'decay';
+  const accentMode = alternate && character.theme === 'green' ? 'alternate' : character.theme;
 
   return (
     <main className={`character-sheet character-sheet--${accentMode}`}>
@@ -68,8 +68,8 @@ export function CharacterSheet({ character }: { character: CharacterProfile }) {
 
 function VisualPanel({ character, onSelect }: { character: CharacterProfile; onSelect: (src: string) => void }) {
   return <div className="panel panel--visual">
-    <div className="panel-heading"><div><p className="eyebrow">Archivo visual</p><h2>Registros de Nox</h2></div><Eye size={20} /></div>
-    <p className="panel-lead">Cinco fragmentos conservados en el archivo de Lairon. Selecciona uno para abrirlo.</p>
+    <div className="panel-heading"><div><p className="eyebrow">Archivo visual</p><h2>Registros de {character.name}</h2></div><Eye size={20} /></div>
+    <p className="panel-lead">Fragmentos conservados en el archivo de {character.origin}. Selecciona uno para abrirlo.</p>
     <div className="image-grid">{character.images.map((image) => <button type="button" key={image.src} onClick={() => onSelect(image.src)}><img src={image.src} alt={image.alt} /><span>{image.label}</span></button>)}</div>
   </div>;
 }

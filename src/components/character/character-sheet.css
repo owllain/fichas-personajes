@@ -1,5 +1,7 @@
 .character-sheet { width: min(1240px, 100%); margin: 0 auto; --accent: var(--green); --accent-bright: var(--green-soft); --accent-dark: var(--green-dark); --accent-line: var(--line); --sheet-bg: rgba(7, 13, 8, .92); border: 1px solid var(--accent-dark); background: var(--sheet-bg); box-shadow: 0 30px 80px rgba(0, 0, 0, .45), 0 0 40px color-mix(in srgb, var(--accent) 12%, transparent); transition: border-color .6s ease, box-shadow .6s ease; }
-.character-sheet--seer { --accent: var(--gold); --accent-bright: var(--gold-soft); --accent-dark: #6b4e12; --accent-line: rgba(212, 175, 55, .3); --sheet-bg: rgba(10, 9, 5, .95); }
+.character-sheet--alternate, .character-sheet--brass { --accent: var(--gold); --accent-bright: var(--gold-soft); --accent-dark: #6b4e12; --accent-line: rgba(212, 175, 55, .3); --sheet-bg: rgba(10, 9, 5, .95); }
+.character-sheet--crimson { --accent: #e11d48; --accent-bright: #ff9db2; --accent-dark: #881337; --accent-line: rgba(225, 29, 72, .3); --sheet-bg: rgba(15, 5, 8, .95); }
+.character-sheet--violet { --accent: #a855f7; --accent-bright: #e9d5ff; --accent-dark: #581c87; --accent-line: rgba(168, 85, 247, .3); --sheet-bg: rgba(11, 5, 15, .95); }
 .character-hero { min-height: 280px; position: relative; overflow: hidden; display: flex; align-items: end; border-bottom: 1px solid var(--accent); }
 .character-hero__image { position: absolute; inset: 0; background-position: center 35%; background-size: cover; filter: saturate(.7) contrast(1.12); transition: opacity .7s ease, transform 1.2s ease; }
 .character-hero__image--alternate { opacity: 0; filter: saturate(.8) sepia(.4) contrast(1.2); }

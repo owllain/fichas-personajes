@@ -1,9 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { ArrowUpRight } from 'lucide-react';
-import { nox } from '../data/characters/nox';
-
-const characters = [nox];
+import { characters, characterSlug } from '../data/characters';
 ---
 <BaseLayout title="NEXUS // Archivo de personajes" description="Archivo interactivo de personajes y sus expedientes.">
   <main class="archive-shell">
@@ -16,7 +14,7 @@ const characters = [nox];
     </header>
     <section class="archive-grid" aria-label="Personajes">
       {characters.map((character) => (
-        <a class="archive-card" href={`/personajes/${character.name.toLowerCase().replaceAll(' ', '-')}`}>
+        <a class={`archive-card archive-card--${character.theme}`} href={`/personajes/${characterSlug(character.name)}`}>
           <img src={character.cardImage} alt={`Retrato de ${character.name}`} />
           <div class="archive-card__body">
             <span class="archive-card__role">{character.role}</span>

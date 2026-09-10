@@ -1,4 +1,4 @@
-export type CharacterTheme = 'green' | 'gold' | 'red' | 'violet';
+export type CharacterTheme = 'green' | 'brass' | 'crimson' | 'violet';
 
 export interface CharacterImage {
   src: string;
