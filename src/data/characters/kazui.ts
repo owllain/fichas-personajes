@@ -3,7 +3,7 @@ import type { CharacterProfile } from '../../types/character';
 export const kazui: CharacterProfile = {
   name: 'Kazui von Vitra',
   alias: 'El presagista del fin',
-  role: 'Cazador de sangre',
+  role: 'El presagista del fin',
   species: 'Vampyr hematófago',
   age: '1025 años / 19 aparentes',
   origin: 'Noctilunia',

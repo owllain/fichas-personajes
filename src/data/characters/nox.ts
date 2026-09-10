@@ -10,7 +10,7 @@ export const nox: CharacterProfile = {
   affinity: 'Tenebris / Lux',
   level: 'Séptimo círculo',
   occupation: 'Consejero real de Lairon',
-  cardImage: 'https://i.imgur.com/6yX3C5Y.jpeg',
+  cardImage: 'https://i.imgur.com/eyTjqS0.jpeg',
   mainImage: 'https://i.pinimg.com/1200x/3f/42/5e/3f425e18ddd3a396463a7e7abfb6ba6b.jpg',
   alternateImage: 'https://i.pinimg.com/1200x/70/39/d8/7039d896c122ac6ace8d0f1dbf04163a.jpg',
   alternateLabel: 'El Adivino',
