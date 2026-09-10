@@ -267,6 +267,24 @@
             color: white;
         }
 
+        .card-nox:hover {
+            box-shadow: 0 0 45px rgba(121, 215, 66, 0.35);
+        }
+
+        .card-nox .char-role {
+            color: #79d742;
+        }
+
+        .card-nox .card-line {
+            background: #79d742;
+        }
+
+        .card-nox:hover .btn-access {
+            background: #79d742;
+            border-color: #c5ff9a;
+            color: #031005;
+        }
+
         /* --- VISOR DE FICHAS (MODAL) --- */
         #char-viewer {
             position: fixed;
@@ -421,6 +439,18 @@
                     <div class="card-line"></div>
                     <span class="char-role">De la biblioteca maldita</span>
                     <h2 class="char-name">Eliphas Lévi</h2>
+                    <div class="btn-access">Acceder Datos</div>
+                </div>
+            </div>
+
+            <!-- CARTA NOX -->
+            <div class="char-card card-nox" onclick="openViewer('Ficha_Nox.html', '#79d742')">
+                <div class="card-bg" style="background-image: linear-gradient(rgba(2, 16, 5, 0.18), rgba(0, 0, 0, 0.25)), url('https://i.imgur.com/6yX3C5Y.jpeg');">
+                </div>
+                <div class="card-content">
+                    <div class="card-line"></div>
+                    <span class="char-role">El dragón que se tragó al sol</span>
+                    <h2 class="char-name">Nox Arcana</h2>
                     <div class="btn-access">Acceder Datos</div>
                 </div>
             </div>

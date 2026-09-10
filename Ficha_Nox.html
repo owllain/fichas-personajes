@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Nox Arcana - El Dragón que se Tragó al Sol</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --nox-width: 550px;
+            --nox-height: 820px;
+            --void: #030604;
+            --deep: #07120c;
+            --decay: #79d742;
+            --decay-bright: #c5ff9a;
+            --decay-dark: #1e5f2d;
+            --bone: #dce8d8;
+            --muted: #849589;
+            --line: rgba(121, 215, 66, .25);
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Rajdhani', sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            color: var(--bone);
+            font-family: var(--font-body);
+            background: #010201;
+            background-image: radial-gradient(circle at 50% 10%, rgba(45, 126, 52, .18), transparent 40%), linear-gradient(135deg, #020302, #08120b 50%, #010201);
+        }
+
+        .nox-scope { width: var(--nox-width); position: relative; }
+        .nox-scope > input { display: none; }
+        .nox-card {
+            height: var(--nox-height);
+            position: relative;
+            overflow: hidden;
+            background: var(--void);
+            border: 1px solid var(--decay-dark);
+            clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+            box-shadow: 0 0 0 1px rgba(121, 215, 66, .08), 0 0 42px rgba(37, 130, 51, .25), inset 0 0 70px rgba(20, 75, 30, .25);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nox-card::before, .nox-card::after {
+            content: '';
+            position: absolute;
+            inset: -30%;
+            pointer-events: none;
+            z-index: 80;
+        }
+        .nox-card::before {
+            background-image: radial-gradient(circle, rgba(197, 255, 154, .65) 0 1px, transparent 2px), radial-gradient(circle, rgba(121, 215, 66, .35) 0 1px, transparent 2px);
+            background-size: 83px 97px, 137px 119px;
+            animation: sporeDrift 22s linear infinite;
+            opacity: .28;
+            mix-blend-mode: screen;
+        }
+        .nox-card::after {
+            background: repeating-linear-gradient(115deg, transparent 0 38px, rgba(121, 215, 66, .035) 40px, transparent 43px 81px);
+            animation: decaySweep 8s ease-in-out infinite alternate;
+        }
+        @keyframes sporeDrift { to { transform: translate(70px, -120px) rotate(8deg); } }
+        @keyframes decaySweep { from { transform: translateX(-4%); opacity: .3; } to { transform: translateX(4%); opacity: .8; } }
+
+        .nox-border {
+            position: absolute; inset: 0; z-index: 100; pointer-events: none;
+            border: 1px solid transparent;
+            background: linear-gradient(125deg, transparent 20%, var(--decay) 35%, transparent 48%, var(--decay-dark) 65%, transparent 80%) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor; mask-composite: exclude;
+            background-size: 250% 250%; animation: borderRot 7s linear infinite;
+        }
+        @keyframes borderRot { to { background-position: 250% 0; } }
+
+        .nox-header { height: 285px; position: relative; background: #000; border-bottom: 2px solid var(--decay); overflow: hidden; z-index: 5; }
+        .banner { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity .8s ease, transform 3s ease; }
+        .banner-main { background-image: linear-gradient(90deg, rgba(0, 0, 0, .45), rgba(2, 16, 5, .12)), url('https://i.pinimg.com/1200x/b9/bd/3c/b9bd3c6b03489ddd083b0ac999de38aa.jpg'); opacity: .88; filter: contrast(1.12) saturate(.8); }
+        .banner-alt { background-image: url('https://i.pinimg.com/736x/0f/e2/8d/0fe28d226194d9c1db0a50917809121f.jpg'); opacity: 0; filter: contrast(1.2) saturate(.7) hue-rotate(20deg); }
+        .nox-header::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .12), var(--void) 100%); pointer-events: none; }
+        #identity:checked ~ .nox-card .banner-main { opacity: 0; transform: scale(1.08); }
+        #identity:checked ~ .nox-card .banner-alt { opacity: .78; }
+
+        .identity-switch { position: absolute; top: 18px; left: 18px; z-index: 10; cursor: pointer; }
+        .switch-label { padding: 6px 10px; border: 1px solid var(--decay); color: var(--decay-bright); background: rgba(0, 8, 2, .7); font-size: 10px; font-weight: 700; letter-spacing: 2px; animation: toxicBlink 3s infinite; clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); }
+        @keyframes toxicBlink { 0%, 100% { box-shadow: 0 0 10px rgba(121, 215, 66, .5); } 50% { box-shadow: 0 0 2px transparent; opacity: .62; } }
+        .nox-title { position: absolute; right: 20px; top: 24px; z-index: 8; text-align: right; }
+        .nox-title h1 { margin: 0; color: #fff; font: 900 38px/.9 var(--font-display); letter-spacing: 3px; text-shadow: 0 0 12px var(--decay), 0 0 28px rgba(121, 215, 66, .45); }
+        .nox-title span { color: var(--decay-bright); font-size: 12px; letter-spacing: 4px; background: rgba(0, 0, 0, .65); padding: 3px 6px; }
+
+        .nox-nav { height: 92px; display: flex; justify-content: center; align-items: center; gap: 17px; position: relative; z-index: 6; }
+        .nox-btn { width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; cursor: pointer; background: rgba(12, 43, 19, .92); border: 1px solid var(--line); transform: rotate(45deg); transition: .3s; }
+        .nox-btn i { transform: rotate(-45deg); color: var(--bone); }
+        .nox-btn:hover { background: var(--decay); border-color: var(--decay-bright); box-shadow: 0 0 20px var(--decay); }
+        .nox-btn:hover i { color: #031005; }
+        #tab-gal:checked ~ .nox-card .nox-nav label[for="tab-gal"], #tab-bio:checked ~ .nox-card .nox-nav label[for="tab-bio"], #tab-his:checked ~ .nox-card .nox-nav label[for="tab-his"], #tab-cap:checked ~ .nox-card .nox-nav label[for="tab-cap"], #tab-xtr:checked ~ .nox-card .nox-nav label[for="tab-xtr"] { background: var(--decay); border-color: var(--decay-bright); box-shadow: 0 0 18px rgba(121, 215, 66, .6); }
+        #tab-gal:checked ~ .nox-card .nox-nav label[for="tab-gal"] i, #tab-bio:checked ~ .nox-card .nox-nav label[for="tab-bio"] i, #tab-his:checked ~ .nox-card .nox-nav label[for="tab-his"] i, #tab-cap:checked ~ .nox-card .nox-nav label[for="tab-cap"] i, #tab-xtr:checked ~ .nox-card .nox-nav label[for="tab-xtr"] i { color: #031005; }
+
+        .nox-body { flex: 1; position: relative; overflow: hidden; padding: 0 20px 20px; z-index: 4; }
+        .hive { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; }
+        .hive-row { display: flex; gap: 8px; justify-content: center; }
+        .hive-row.bottom { margin-top: -43px; }
+        .hex { width: 160px; height: 176px; position: relative; cursor: zoom-in; filter: drop-shadow(0 0 5px var(--decay-dark)); }
+        .hex:hover { transform: scale(1.08); z-index: 10; filter: drop-shadow(0 0 17px var(--decay)); }
+        .hex-shape { width: 100%; height: 100%; overflow: hidden; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: #000; position: relative; }
+        .hex-shape img { width: 100%; height: 100%; object-fit: cover; opacity: .68; filter: saturate(.65) contrast(1.15); transition: .4s; }
+        .hex:hover img { opacity: 1; filter: saturate(1) contrast(1.1); transform: scale(1.05); }
+        .hex-shape::after { content: ''; position: absolute; inset: 0; background: var(--decay-dark); mix-blend-mode: screen; opacity: .22; }
+
+        .modal { position: absolute; inset: 0 20px 10px; padding: 20px; background: rgba(3, 8, 4, .96); border: 1px solid var(--decay); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); transform: translateY(110%); opacity: 0; pointer-events: none; transition: .55s cubic-bezier(.68, -.55, .27, 1.55); backdrop-filter: blur(8px); }
+        #tab-bio:checked ~ .nox-card .modal-bio, #tab-his:checked ~ .nox-card .modal-his, #tab-cap:checked ~ .nox-card .modal-cap, #tab-xtr:checked ~ .nox-card .modal-xtr { transform: translateY(0); opacity: 1; pointer-events: auto; }
+        .close { position: absolute; top: 10px; right: 10px; color: var(--decay-bright); cursor: pointer; }
+        .modal h2 { margin: 0 0 15px; padding-bottom: 7px; text-align: center; border-bottom: 1px dashed var(--decay); color: var(--decay-bright); font: 700 23px var(--font-display); text-shadow: 0 0 8px rgba(121, 215, 66, .6); }
+        .content { height: calc(100% - 52px); overflow-y: auto; padding-right: 10px; color: var(--bone); font-size: 14px; line-height: 1.55; text-align: justify; }
+        .content::-webkit-scrollbar { width: 4px; }
+        .content::-webkit-scrollbar-thumb { background: var(--decay); }
+        .data-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid rgba(121, 215, 66, .14); }
+        .data-label { color: var(--decay); font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+        .data-val { color: #fff; font-size: 12px; text-align: right; }
+        .content h3 { color: var(--decay-bright); font-size: 16px; letter-spacing: 2px; border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+        .content strong { color: var(--decay-bright); }
+        .content li { margin: 8px 0; }
+        .quote { border-left: 2px solid var(--decay); padding-left: 12px; color: #b9d8b3; font-style: italic; }
+        .stat { display: flex; align-items: center; gap: 10px; margin: 11px 0; }
+        .stat span:first-child { width: 110px; color: var(--decay); font-size: 12px; text-transform: uppercase; }
+        .meter { flex: 1; height: 6px; background: #102116; border: 1px solid var(--decay-dark); }
+        .meter i { display: block; height: 100%; background: linear-gradient(90deg, var(--decay-dark), var(--decay-bright)); box-shadow: 0 0 8px var(--decay); }
+        .credit { position: absolute; bottom: 8px; left: 0; right: 0; text-align: center; color: var(--muted); font-size: 9px; letter-spacing: 2px; z-index: 105; }
+
+        .zoom { position: absolute; inset: 0; z-index: 120; display: flex; align-items: center; justify-content: center; flex-direction: column; background: rgba(0, 3, 1, .97); opacity: 0; pointer-events: none; transition: .3s; }
+        .zoom img { max-width: 90%; max-height: 78%; object-fit: contain; border: 2px solid var(--decay); box-shadow: 0 0 28px rgba(121, 215, 66, .35); }
+        .zoom .close-zoom { margin-top: 18px; padding: 6px 20px; border: 1px solid var(--decay); color: var(--decay-bright); cursor: pointer; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; }
+        #z1:checked ~ .nox-card .zoom-1, #z2:checked ~ .nox-card .zoom-2, #z3:checked ~ .nox-card .zoom-3, #z4:checked ~ .nox-card .zoom-4, #z5:checked ~ .nox-card .zoom-5 { opacity: 1; pointer-events: auto; }
+
+        @media (max-width: 590px) {
+            body { padding: 0; }
+            .nox-scope { width: 100vw; }
+            .nox-card { min-height: 100vh; height: 100vh; clip-path: none; }
+            .nox-header { height: 245px; }
+            .hex { width: 132px; height: 145px; }
+            .nox-nav { gap: 11px; }
+            .nox-btn { width: 37px; height: 37px; }
+            .nox-title h1 { font-size: 31px; }
+        }
+        @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+    </style>
+</head>
+
+<body>
+    <main class="nox-scope">
+        <input type="checkbox" id="identity">
+        <input type="radio" name="nox-tab" id="tab-gal" checked>
+        <input type="radio" name="nox-tab" id="tab-bio">
+        <input type="radio" name="nox-tab" id="tab-his">
+        <input type="radio" name="nox-tab" id="tab-cap">
+        <input type="radio" name="nox-tab" id="tab-xtr">
+        <input type="radio" name="nox-zoom" id="z-off" checked>
+        <input type="radio" name="nox-zoom" id="z1">
+        <input type="radio" name="nox-zoom" id="z2">
+        <input type="radio" name="nox-zoom" id="z3">
+        <input type="radio" name="nox-zoom" id="z4">
+        <input type="radio" name="nox-zoom" id="z5">
+
+        <section class="nox-card">
+            <div class="nox-border"></div>
+            <header class="nox-header">
+                <div class="banner banner-main"></div>
+                <div class="banner banner-alt"></div>
+                <label class="identity-switch" for="identity"><span class="switch-label">CAMBIAR FORMA // DRAGON</span></label>
+                <div class="nox-title"><h1>NOX ARCANA</h1><span>EL DRAGON QUE SE TRAGO AL SOL</span></div>
+            </header>
+
+            <nav class="nox-nav">
+                <label for="tab-gal" class="nox-btn" title="Registro visual"><i data-lucide="image"></i></label>
+                <label for="tab-bio" class="nox-btn" title="Expediente"><i data-lucide="file-text"></i></label>
+                <label for="tab-his" class="nox-btn" title="Historia"><i data-lucide="book-open"></i></label>
+                <label for="tab-cap" class="nox-btn" title="Habilidades"><i data-lucide="skull"></i></label>
+                <label for="tab-xtr" class="nox-btn" title="Notas extra"><i data-lucide="sparkles"></i></label>
+            </nav>
+
+            <div class="nox-body">
+                <div class="hive">
+                    <div class="hive-row">
+                        <label for="z1" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/736x/f2/b3/36/f2b336548c3b95916bab2c789c02ed1e.jpg" alt="Nox, registro uno"></div></label>
+                        <label for="z2" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/736x/c9/54/aa/c954aa3e2723c151fe66c1463765ba26.jpg" alt="Nox, registro dos"></div></label>
+                        <label for="z3" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/1200x/70/39/d8/7039d896c122ac6ace8d0f1dbf04163a.jpg" alt="Nox, registro tres"></div></label>
+                    </div>
+                    <div class="hive-row bottom">
+                        <label for="z4" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/736x/0f/e2/8d/0fe28d226194d9c1db0a50917809121f.jpg" alt="Nox, forma de combate"></div></label>
+                        <label for="z5" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/736x/fe/e6/63/fee6638c5c29837a5d52e04f1ccc8596.jpg" alt="Nox, forma del decaimiento"></div></label>
+                    </div>
+                </div>
+
+                <article class="modal modal-bio">
+                    <label for="tab-gal" class="close" title="Cerrar"><i data-lucide="x"></i></label>
+                    <h2>Expediente</h2>
+                    <div class="content">
+                        <div class="data-row"><span class="data-label">Nombre</span><span class="data-val">Nox Arcana</span></div>
+                        <div class="data-row"><span class="data-label">Alias</span><span class="data-val">El dragón que se tragó al sol</span></div>
+                        <div class="data-row"><span class="data-label">Edad</span><span class="data-val">3710 años / 31 aparentes</span></div>
+                        <div class="data-row"><span class="data-label">Raza</span><span class="data-val">Dragón oscuro, clan negro</span></div>
+                        <div class="data-row"><span class="data-label">Clase</span><span class="data-val">Sacerdote</span></div>
+                        <div class="data-row"><span class="data-label">Afinidad</span><span class="data-val">Tenebris / Lux</span></div>
+                        <div class="data-row"><span class="data-label">Nivel</span><span class="data-val">Séptimo círculo</span></div>
+                        <div class="data-row"><span class="data-label">Origen / residencia</span><span class="data-val">Lairon / Lairon</span></div>
+                        <div class="data-row"><span class="data-label">Profesión</span><span class="data-val">Consejero real de Lairon</span></div>
+                        <div class="data-row"><span class="data-label">Orientación</span><span class="data-val">Heterosexual</span></div>
+                        <div class="data-row"><span class="data-label">PB</span><span class="data-val">Chrollo Lucilfer, Hunter x Hunter</span></div>
+                        <p class="quote">"La luz no es bondad. Es poder sin una sombra que lo contradiga."</p>
+                        <h3>Descripción física</h3>
+                        <p>En su forma humana, Nox tiene el cabello negro, espeso y sedoso, peinado en mechones que caen más allá de sus hombros y cubren ligeramente el ojo derecho. Sus ojos azul grisáceos, de pupilas delgadas e inclinadas, tienen una mirada feroz y calculadora. Es delgado, atlético, de músculos definidos, estatura media y postura firme.</p>
+                        <p>Viste con meticulosidad: collar de perlas, pendiente de cruz invertida, cinturón negro con hebilla de araña de plata, pantalones oscuros y botas altas marrón oscuro. Siempre lleva un libro de hechizos dedicado a sus estudios sobre la divinidad.</p>
+                        <p>En forma de dragón mide 20 metros de largo, 50 de envergadura, más de 10 metros de alto y pesa aproximadamente 25 toneladas. Sus escamas son oscuras y duras como el acero; posee cuernos dorados rematados en obsidiana, mandíbula dentada, cuello robusto, garras afiladas y una cola semicurva con filo de espada.</p>
+                        <h3>Perfil psicológico</h3>
+                        <p>Nox es solitario, defensivo y celoso de su hogar, pero también un mediador sabio que protege a quienes considera dignos. Su ego lo hace verse superior a cualquier criatura y disfruta demostrando su poder. Es cínico, manipulador y capaz de ocultar sus verdaderas intenciones tras la fachada de noble sacerdote.</p>
+                        <p>Su obsesión por la luz divina lo empuja a buscar la perfección y convertirse en rey dragón. Esa ambición convive con impulsos erráticos, una necesidad de dominación y un conflicto constante entre el deseo de poder y la conciencia de las consecuencias que provoca.</p>
+                    </div>
+                </article>
+
+                <article class="modal modal-his">
+                    <label for="tab-gal" class="close" title="Cerrar"><i data-lucide="x"></i></label>
+                    <h2>Historia</h2>
+                    <div class="content">
+                        <p>Nox nació como un dragón oscuro del clan negro, criado para convertirse en alimento del líder si algún día alcanzaba la fuerza suficiente para desafiarlo. Desde el huevo albergó una ambición distinta: convertirse en el rey dragón.</p>
+                        <p>Cuando su clan decidió erradicar al reino de los enanos, Nox comprendió que seguir a un líder maniaco destruiría cualquier posibilidad de grandeza. Se separó del clan y vagó por el mundo en busca de poder, riquezas y una forma de superar los límites de su raza.</p>
+                        <p>Su camino lo llevó a Lairon, donde comenzó a estudiar la divinidad del dios de la luz, Baldur. Al principio se sintió incómodo entre sus sacerdotes, pero descubrió que la luz podía convertirse en una herramienta decisiva para su ascenso. Estudió textos sagrados y aprendió a emplear la divinidad de forma artificial.</p>
+                        <p>Con el tiempo, Nox llegó a un acuerdo con el santo papa de Lairon. El monarca le concedió un puesto elevado en el gobierno a cambio de protección, sabiduría y la bendición de un dragón para los mejores paladines y cruzados del reino.</p>
+                        <h3>El guardián de Lairon</h3>
+                        <p>La alianza benefició a ambas partes: Lairon obtuvo la protección de un dragón antiguo y Nox consiguió acceso a conocimiento, poder e influencia. Así se convirtió en consejero real y representante del reino ante asuntos políticos, sociales y militares.</p>
+                        <p>Sin embargo, su naturaleza Tenebris nunca desapareció. Nox se convirtió en una semilla de corrupción dentro del terreno sagrado, estudiando los secretos de Lairon mientras otros sacerdotes acudían a él para comprender las sombras. Su reputación creció junto con su ambición y sus desafíos a otros dragones.</p>
+                        <p>Aún busca en los textos de Baldur la clave para perfeccionar su dominio sobre la luz. Su historia vuelve a comenzar cada vez que sus garras alcanzan un poder más allá de los reinos conocidos.</p>
+                    </div>
+                </article>
+
+                <article class="modal modal-cap">
+                    <label for="tab-gal" class="close" title="Cerrar"><i data-lucide="x"></i></label>
+                    <h2>Capacidades</h2>
+                    <div class="content">
+                        <div class="stat"><span>Tenebris</span><div class="meter"><i style="width: 96%"></i></div></div>
+                        <div class="stat"><span>Lux</span><div class="meter"><i style="width: 92%"></i></div></div>
+                        <div class="stat"><span>Control</span><div class="meter"><i style="width: 88%"></i></div></div>
+                        <div class="stat"><span>Resistencia</span><div class="meter"><i style="width: 94%"></i></div></div>
+                        <h3>Habilidades de raza</h3>
+                        <ul>
+                            <li><strong>Transformación en dragón oscuro:</strong> adopta su forma completa, aumenta su defensa física y mágica, potencia su magia y obtiene vuelo de alta velocidad. Consume 6 de maná. Potencia severa. Es vulnerable al desequilibrio entre Lux y Tenebris, además de ser un objetivo mayor para ataques a distancia.</li>
+                            <li><strong>Palabras de dragón:</strong> altera probabilidades, dados, clima, iluminación y temperatura. Puede favorecer aliados o reducir el acierto enemigo. Consume 5 de maná. Potencia potente. No afecta a rúnicos ni dragones y bloquea el uso de Lux durante dos turnos.</li>
+                        </ul>
+                        <h3>Habilidades elementales</h3>
+                        <ul>
+                            <li><strong>Aliento del dragón divino, Lux:</strong> proyecta fuego divino que ciega durante un turno. Consume 5 de maná en forma humana y 7 en forma de dragón; requiere descanso de uno o tres turnos respectivamente. Potencia moderada a severa. No afecta a usuarios Lux.</li>
+                            <li><strong>Aliento del dragón sombrío, Tenebris:</strong> libera una llama maldita que corroe la vida y provoca sueño, lujuria, ira, locura o tristeza. Tiene los mismos costes y descansos que el aliento divino, pero el efecto dura dos turnos. No afecta a usuarios Tenebris.</li>
+                        </ul>
+                        <h3>Habilidad de clase</h3>
+                        <p><strong>Cúpula de Baldur:</strong> crea una cúpula de luz sagrada durante dos turnos. Reduce un 50% el daño mágico, cura heridas menores y puede desplazarse. No protege contra daño físico, no cura heridas graves y quienes están dentro no pueden atacar mientras Nox mantiene la concentración. Consume 6 de maná. Potencia potente.</p>
+                    </div>
+                </article>
+
+                <article class="modal modal-xtr">
+                    <label for="tab-gal" class="close" title="Cerrar"><i data-lucide="x"></i></label>
+                    <h2>Notas extra</h2>
+                    <div class="content">
+                        <p class="quote">"La luz divina será el último peldaño antes de convertirme en rey dragón."</p>
+                        <h3>Pasiva</h3>
+                        <p><strong>Sinfonía de la Oscuridad y la Luz:</strong> Nox posee una afinidad innata con Tenebris y creó un segundo corazón mediante palabras de dragón para almacenar maná Lux. Ambos atributos coexisten sin contrarrestarse y se maximizan mutuamente.</p>
+                        <p>Después de usar una habilidad Lux o Tenebris, la siguiente habilidad del elemento contrario puede armonizar ambos corazones y recibir una potenciación. La armonización solo puede ocurrir una vez cada seis turnos.</p>
+                        <h3>Artefacto</h3>
+                        <p><strong>Capa del dragón refractivo:</strong> artefacto Imbuer único que envuelve a Nox en divinidad, oculta su atributo Tenebris y repele fuentes externas de Tenebris. Si recibe un ataque Tenebris superior al sexto círculo, puede debilitarse o desactivarse; si Nox pierde el control, la capa lo daña. No engaña a trascendentes de círculos octavo o noveno ni a otros dragones negros.</p>
+                        <h3>Extras</h3>
+                        <ul>
+                            <li>Adora pasear al aire libre para escapar de sus deberes de consejero.</li>
+                            <li>Disfruta estudiar la divinidad y las distintas razas del mundo.</li>
+                            <li>Tiene interés en adoptar un papel paternal y entrenar a jóvenes huérfanos.</li>
+                            <li>Es hábil con las manualidades y le agrada poseer la libertad de otros.</li>
+                            <li>Sus ojos son grisáceos; se vuelven amarillo oscuro con Lux y negros con Tenebris.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="zoom zoom-1"><img src="https://i.pinimg.com/736x/f2/b3/36/f2b336548c3b95916bab2c789c02ed1e.jpg" alt="Nox registro uno"><label for="z-off" class="close-zoom">Cerrar</label></div>
+                <div class="zoom zoom-2"><img src="https://i.pinimg.com/736x/c9/54/aa/c954aa3e2723c151fe66c1463765ba26.jpg" alt="Nox registro dos"><label for="z-off" class="close-zoom">Cerrar</label></div>
+                <div class="zoom zoom-3"><img src="https://i.pinimg.com/1200x/70/39/d8/7039d896c122ac6ace8d0f1dbf04163a.jpg" alt="Nox registro tres"><label for="z-off" class="close-zoom">Cerrar</label></div>
+                <div class="zoom zoom-4"><img src="https://i.pinimg.com/736x/0f/e2/8d/0fe28d226194d9c1db0a50917809121f.jpg" alt="Nox forma de combate"><label for="z-off" class="close-zoom">Cerrar</label></div>
+                <div class="zoom zoom-5"><img src="https://i.pinimg.com/736x/fe/e6/63/fee6638c5c29837a5d52e04f1ccc8596.jpg" alt="Nox forma del decaimiento"><label for="z-off" class="close-zoom">Cerrar</label></div>
+            </div>
+            <div class="credit">SYSTEM ID: NOX-DECAY // ARCHIVO NEXUS</div>
+        </section>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
