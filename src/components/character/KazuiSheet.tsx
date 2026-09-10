@@ -154,31 +154,29 @@ export function KazuiSheet({ character }: { character: CharacterProfile }) {
               <table className="kazui-combat-table">
                 <thead>
                   <tr>
-                    <th>Habilidad / Hechizo</th>
-                    <th>Afinidad</th>
-                    <th>Maná / Potencia</th>
-                    <th>Efecto & Limitaciones</th>
+                    <th style={{ width: '38%' }}>Habilidad & Afinidad</th>
+                    <th style={{ width: '62%' }}>Efecto, Consumo y Limitaciones</th>
                   </tr>
                 </thead>
                 <tbody>
                   {character.abilities.map((ability) => (
                     <tr key={ability.name}>
-                      <td className="kazui-table-name">
-                        <HeartPulse size={14} />
-                        <strong>{ability.name}</strong>
+                      <td className="kazui-table-lead-cell">
+                        <div className="kazui-ability-name-row">
+                          <HeartPulse size={16} />
+                          <strong>{ability.name}</strong>
+                        </div>
+                        <div className="kazui-ability-tags">
+                          <span className="kazui-element-pill">{ability.element ?? 'Tenebris'}</span>
+                          {ability.cost && <span className="kazui-cost-tag">{ability.cost}</span>}
+                        </div>
                       </td>
-                      <td>
-                        <span className="kazui-element-pill">{ability.element ?? 'Tenebris'}</span>
-                      </td>
-                      <td className="kazui-table-cost">
-                        <div>{ability.cost}</div>
-                      </td>
-                      <td className="kazui-table-desc">
-                        <p>{ability.description}</p>
+                      <td className="kazui-table-desc-cell">
+                        <p className="kazui-ability-desc">{ability.description}</p>
                         {ability.weakness && (
                           <div className="kazui-table-weakness">
-                            <AlertTriangle size={12} />
-                            <small>{ability.weakness}</small>
+                            <AlertTriangle size={14} />
+                            <span><strong>Debilidades:</strong> {ability.weakness}</span>
                           </div>
                         )}
                       </td>
