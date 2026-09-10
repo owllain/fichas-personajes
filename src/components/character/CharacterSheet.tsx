@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { BookOpen, Eye, FileText, Image as ImageIcon, Sparkles, WandSparkles, X, Zap } from 'lucide-react';
 import type { CharacterProfile } from '../../types/character';
 import './character-sheet.css';
+import { EliphasSheet } from './EliphasSheet';
+import { KazuiSheet } from './KazuiSheet';
+import { KleinSheet } from './KleinSheet';
 
 type Tab = 'visual' | 'profile' | 'history' | 'abilities' | 'extras';
 
@@ -14,6 +17,13 @@ const tabs: { id: Tab; label: string; icon: typeof ImageIcon }[] = [
 ];
 
 export function CharacterSheet({ character }: { character: CharacterProfile }) {
+  if (character.theme === 'brass') return <KleinSheet character={character} />;
+  if (character.theme === 'crimson') return <KazuiSheet character={character} />;
+  if (character.theme === 'violet') return <EliphasSheet character={character} />;
+  return <NoxSheet character={character} />;
+}
+
+function NoxSheet({ character }: { character: CharacterProfile }) {
   const [activeTab, setActiveTab] = useState<Tab>('visual');
   const [alternate, setAlternate] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
