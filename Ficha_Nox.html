@@ -11,8 +11,9 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         :root {
-            --nox-width: 550px;
-            --nox-height: 820px;
+            --nox-width: 980px;
+            --nox-height: 860px;
+            --portrait-width: 330px;
             --void: #030604;
             --deep: #07120c;
             --decay: #79d742;
@@ -84,10 +85,10 @@
         }
         @keyframes borderRot { to { background-position: 250% 0; } }
 
-        .nox-header { height: 285px; position: relative; background: #000; border-bottom: 2px solid var(--decay); overflow: hidden; z-index: 5; }
+        .nox-header { height: 235px; position: relative; background: #000; border-bottom: 2px solid var(--decay); overflow: hidden; z-index: 5; }
         .banner { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity .8s ease, transform 3s ease; }
-        .banner-main { background-image: linear-gradient(90deg, rgba(0, 0, 0, .45), rgba(2, 16, 5, .12)), url('https://i.pinimg.com/1200x/b9/bd/3c/b9bd3c6b03489ddd083b0ac999de38aa.jpg'); opacity: .88; filter: contrast(1.12) saturate(.8); }
-        .banner-alt { background-image: url('https://i.pinimg.com/736x/0f/e2/8d/0fe28d226194d9c1db0a50917809121f.jpg'); opacity: 0; filter: contrast(1.2) saturate(.7) hue-rotate(20deg); }
+        .banner-main { background-image: linear-gradient(90deg, rgba(0, 0, 0, .45), rgba(2, 16, 5, .12)), url('https://i.pinimg.com/1200x/3f/42/5e/3f425e18ddd3a396463a7e7abfb6ba6b.jpg'); opacity: .88; filter: contrast(1.12) saturate(.8); }
+        .banner-alt { background-image: url('https://i.imgur.com/H6sjPRe.jpeg'); opacity: 0; filter: contrast(1.2) saturate(.7) hue-rotate(20deg); }
         .nox-header::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 0, 0, .12), var(--void) 100%); pointer-events: none; }
         #identity:checked ~ .nox-card .banner-main { opacity: 0; transform: scale(1.08); }
         #identity:checked ~ .nox-card .banner-alt { opacity: .78; }
@@ -107,8 +108,15 @@
         #tab-gal:checked ~ .nox-card .nox-nav label[for="tab-gal"], #tab-bio:checked ~ .nox-card .nox-nav label[for="tab-bio"], #tab-his:checked ~ .nox-card .nox-nav label[for="tab-his"], #tab-cap:checked ~ .nox-card .nox-nav label[for="tab-cap"], #tab-xtr:checked ~ .nox-card .nox-nav label[for="tab-xtr"] { background: var(--decay); border-color: var(--decay-bright); box-shadow: 0 0 18px rgba(121, 215, 66, .6); }
         #tab-gal:checked ~ .nox-card .nox-nav label[for="tab-gal"] i, #tab-bio:checked ~ .nox-card .nox-nav label[for="tab-bio"] i, #tab-his:checked ~ .nox-card .nox-nav label[for="tab-his"] i, #tab-cap:checked ~ .nox-card .nox-nav label[for="tab-cap"] i, #tab-xtr:checked ~ .nox-card .nox-nav label[for="tab-xtr"] i { color: #031005; }
 
-        .nox-body { flex: 1; position: relative; overflow: hidden; padding: 0 20px 20px; z-index: 4; }
-        .hive { height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; }
+        .nox-body { flex: 1; min-height: 0; position: relative; overflow: hidden; padding: 0 24px 24px; z-index: 4; display: grid; grid-template-columns: var(--portrait-width) minmax(0, 1fr); gap: 24px; }
+        .portrait-panel { position: relative; min-height: 0; overflow: hidden; border: 1px solid var(--decay-dark); background: #000; box-shadow: 0 0 24px rgba(37, 130, 51, .26), inset 0 0 22px rgba(0, 0, 0, .85); }
+        .portrait-panel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(3, 6, 4, .9) 100%), linear-gradient(90deg, rgba(0, 0, 0, .3), transparent 45%, rgba(121, 215, 66, .08)); pointer-events: none; }
+        .portrait-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; transition: opacity .8s ease, transform 3s ease; }
+        .portrait-dragon { opacity: 0; transform: scale(1.03); }
+        #identity:checked ~ .nox-card .portrait-human { opacity: 0; transform: scale(1.06); }
+        #identity:checked ~ .nox-card .portrait-dragon { opacity: .95; transform: scale(1); }
+        .portrait-caption { position: absolute; z-index: 2; bottom: 18px; left: 18px; right: 18px; text-align: center; color: var(--decay-bright); font: 700 12px var(--font-display); letter-spacing: 3px; text-transform: uppercase; text-shadow: 0 0 9px #000; }
+        .hive { height: 100%; min-width: 0; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0; }
         .hive-row { display: flex; gap: 8px; justify-content: center; }
         .hive-row.bottom { margin-top: -43px; }
         .hex { width: 160px; height: 176px; position: relative; cursor: zoom-in; filter: drop-shadow(0 0 5px var(--decay-dark)); }
@@ -118,7 +126,7 @@
         .hex:hover img { opacity: 1; filter: saturate(1) contrast(1.1); transform: scale(1.05); }
         .hex-shape::after { content: ''; position: absolute; inset: 0; background: var(--decay-dark); mix-blend-mode: screen; opacity: .22; }
 
-        .modal { position: absolute; inset: 0 20px 10px; padding: 20px; background: rgba(3, 8, 4, .96); border: 1px solid var(--decay); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); transform: translateY(110%); opacity: 0; pointer-events: none; transition: .55s cubic-bezier(.68, -.55, .27, 1.55); backdrop-filter: blur(8px); }
+        .modal { position: absolute; top: 0; right: 24px; bottom: 10px; left: calc(var(--portrait-width) + 24px); padding: 20px 30px; background: rgba(3, 8, 4, .96); border: 1px solid var(--decay); clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px); transform: translateY(110%); opacity: 0; pointer-events: none; transition: .55s cubic-bezier(.68, -.55, .27, 1.55); backdrop-filter: blur(8px); }
         #tab-bio:checked ~ .nox-card .modal-bio, #tab-his:checked ~ .nox-card .modal-his, #tab-cap:checked ~ .nox-card .modal-cap, #tab-xtr:checked ~ .nox-card .modal-xtr { transform: translateY(0); opacity: 1; pointer-events: auto; }
         .close { position: absolute; top: 10px; right: 10px; color: var(--decay-bright); cursor: pointer; }
         .modal h2 { margin: 0 0 15px; padding-bottom: 7px; text-align: center; border-bottom: 1px dashed var(--decay); color: var(--decay-bright); font: 700 23px var(--font-display); text-shadow: 0 0 8px rgba(121, 215, 66, .6); }
@@ -143,11 +151,14 @@
         .zoom .close-zoom { margin-top: 18px; padding: 6px 20px; border: 1px solid var(--decay); color: var(--decay-bright); cursor: pointer; text-transform: uppercase; letter-spacing: 2px; font-size: 11px; }
         #z1:checked ~ .nox-card .zoom-1, #z2:checked ~ .nox-card .zoom-2, #z3:checked ~ .nox-card .zoom-3, #z4:checked ~ .nox-card .zoom-4, #z5:checked ~ .nox-card .zoom-5 { opacity: 1; pointer-events: auto; }
 
-        @media (max-width: 590px) {
+        @media (max-width: 760px) {
             body { padding: 0; }
             .nox-scope { width: 100vw; }
-            .nox-card { min-height: 100vh; height: 100vh; clip-path: none; }
+            .nox-card { min-height: 100vh; height: auto; clip-path: none; }
             .nox-header { height: 245px; }
+            .nox-body { grid-template-columns: 1fr; grid-template-rows: 300px minmax(390px, 1fr); overflow-y: auto; }
+            .portrait-panel { min-height: 300px; }
+            .modal { left: 24px; top: 324px; }
             .hex { width: 132px; height: 145px; }
             .nox-nav { gap: 11px; }
             .nox-btn { width: 37px; height: 37px; }
@@ -190,6 +201,11 @@
             </nav>
 
             <div class="nox-body">
+                <aside class="portrait-panel" aria-label="Retrato principal de Nox Arcana">
+                    <img class="portrait-image portrait-human" src="https://i.pinimg.com/1200x/2a/bc/f2/2abcf2e3eb69cae68c9e82bd565adde5.jpg" alt="Nox Arcana en forma humana">
+                    <img class="portrait-image portrait-dragon" src="https://i.imgur.com/H6sjPRe.jpeg" alt="Nox Arcana en forma de dragón">
+                    <div class="portrait-caption">Nox Arcana // Lairon</div>
+                </aside>
                 <div class="hive">
                     <div class="hive-row">
                         <label for="z1" class="hex"><div class="hex-shape"><img src="https://i.pinimg.com/736x/f2/b3/36/f2b336548c3b95916bab2c789c02ed1e.jpg" alt="Nox, registro uno"></div></label>
