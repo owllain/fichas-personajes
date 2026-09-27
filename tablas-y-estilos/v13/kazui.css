@@ -1,0 +1,60 @@
+/* LainDev / Kazui v13. Estilos acotados a .ow13. */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+.ow13.ow13-nocturno{--wine:#a94150!important;--gold:#b7a486!important;--paper:#ded6cc!important;display:block!important;width:500px!important;max-width:100%!important;margin:24px auto!important;padding:0!important;background:#151315!important;border:1px solid #393034!important;color:var(--paper)!important;font:14px/1.85 Georgia,serif!important;text-align:left!important;box-shadow:0 24px 65px #0004!important;isolation:isolate!important;overflow:hidden!important}
+.ow13.ow13-nocturno,.ow13.ow13-nocturno *{box-sizing:border-box!important}
+.ow13.ow13-nocturno div,.ow13.ow13-nocturno span,.ow13.ow13-nocturno em,.ow13.ow13-nocturno b,.ow13.ow13-nocturno a{float:none!important;min-width:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;text-transform:none!important;letter-spacing:normal!important;font:inherit!important;color:inherit!important}
+.ow13.ow13-nocturno div{display:block!important}
+            .ow13.ow13-nocturno .ow13-meta{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:14px!important;padding:14px 0!important;border-top:1px solid #3d3033!important;border-bottom:1px solid #30292c!important;font:9px/1.5 Arial,sans-serif!important;letter-spacing:1.5px!important;color:#b5aaa5!important}
+.ow13.ow13-nocturno .ow13-meta b{color:#e0d2bc!important;padding-left:4px!important}
+.ow13.ow13-nocturno .ow13-meta .ow13-rating{margin-left:auto!important;color:#d38991!important}
+.ow13.ow13-nocturno .ow13-story{padding:27px 36px 0!important;font:14px/1.85 Georgia,serif!important;color:var(--paper)!important;text-align:left!important;overflow-wrap:anywhere!important}
+.ow13.ow13-nocturno .ow13-p{margin-bottom:19px!important}
+.ow13.ow13-nocturno .ow13-lead::first-letter{float:left!important;margin:4px 8px 0 0!important;font:49px/.9 Georgia,serif!important;color:#bc777d!important}
+.ow13.ow13-nocturno .ow13-quote{margin:25px 0!important;padding:5px 0 5px 20px!important;border-left:2px solid var(--wine)!important;font:italic 19px/1.55 Georgia,serif!important;color:#c2ad97!important}
+.ow13.ow13-nocturno .ow13-dialogue{margin:22px 0 0!important;font-style:italic!important;color:#d89ca2!important}
+.ow13.ow13-nocturno .ow13-end{display:flex!important;align-items:center!important;justify-content:center!important;gap:12px!important;margin:27px 0!important;color:#8e6e63!important;font:11px/1 Georgia,serif!important}
+.ow13.ow13-nocturno .ow13-end span{display:block!important;width:44px!important;height:1px!important;background:#49373a!important}
+.ow13.ow13-nocturno .ow13-footer{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:16px!important;padding:24px 26px!important;background:#100e10!important;border-top:1px solid #392d31!important}
+.ow13.ow13-nocturno .ow13-small{margin-bottom:7px!important;font:8px/1.5 Arial,sans-serif!important;letter-spacing:1.6px!important;color:#a79485!important}
+.ow13.ow13-nocturno .ow13-name{font:21px/1.2 Georgia,serif!important;color:#dfd2c2!important}
+.ow13.ow13-nocturno .ow13-name em{font-style:italic!important}
+.ow13.ow13-nocturno .ow13-state{margin-top:10px!important;font:8px/1.5 Arial,sans-serif!important;letter-spacing:1px!important;color:#aa9597!important}
+.ow13.ow13-nocturno .ow13-state span{display:inline-block!important;width:5px!important;height:5px!important;margin-right:5px!important;background:var(--wine)!important;border-radius:50%!important}
+.ow13.ow13-nocturno .ow13-icons{display:flex!important;align-items:center!important;gap:0!important;flex:none!important}
+.ow13.ow13-nocturno .ow13-icons img{display:block!important;position:static!important;float:none!important;width:58px!important;height:64px!important;min-width:0!important;max-width:58px!important;max-height:64px!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;object-fit:contain!important;opacity:1!important;visibility:visible!important;box-shadow:none!important;background:none!important;transform:none!important;filter:drop-shadow(0 4px 4px #0008)!important}
+.ow13.ow13-nocturno .ow13-colophon{display:flex!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:10px!important;padding:11px 26px!important;background:#0d0b0d!important;border-top:1px solid #241e22!important;font:8px/1.5 Arial,sans-serif!important;letter-spacing:1px!important;color:#998c87!important}
+.ow13.ow13-nocturno .ow13-colophon a{text-decoration:none!important;color:#b09a86!important}
+.ow13.ow13-nocturno .ow13-colophon a:hover{color:#ead8c4!important}
+.ow13.ow13-nocturno .ow13-colophon a:focus-visible{outline:1px solid #ead8c4!important;outline-offset:4px!important}
+@media(max-width:400px){.ow13.ow13-nocturno .ow13-story{padding:24px 24px 0!important}.ow13.ow13-nocturno .ow13-footer{padding:22px 24px!important}.ow13.ow13-nocturno .ow13-icons{margin-left:auto!important}}
+.ow13.ow13-nocturno .ow13-cover{position:relative!important;height:330px!important;background:linear-gradient(0deg,#151315 0%,rgba(21,19,21,.92) 8%,rgba(21,19,21,.46) 28%,transparent 58%),linear-gradient(90deg,rgba(8,5,8,.63),transparent 76%),url('https://2img.net/i.imgur.com/wChigK7.jpeg') center 12% / cover no-repeat!important;border:0!important}
+.ow13.ow13-nocturno .ow13-covercopy{position:absolute!important;left:34px!important;right:22px!important;bottom:25px!important}
+.ow13.ow13-nocturno .ow13-chapter{font:9px/1.5 Arial,sans-serif!important;letter-spacing:2.6px!important;color:#cbb594!important;margin:0 0 12px!important}
+.ow13.ow13-nocturno .ow13-title{font:400 48px/.98 'Pirata One',Georgia,serif!important;letter-spacing:.2px!important;color:#f0e5d7!important;margin:0!important;text-shadow:0 3px 18px #080508!important}
+.ow13.ow13-nocturno .ow13-title span{display:block!important;font:inherit!important;color:inherit!important}
+.ow13.ow13-nocturno .ow13-title span:last-child{color:#dfb5b5!important}
+.ow13.ow13-nocturno .ow13-heading{padding:0 34px!important}
+.ow13.ow13-nocturno .ow13-meta{border-top:0!important;padding:3px 0 17px!important;gap:13px!important;font-size:9px!important}
+.ow13.ow13-nocturno .ow13-date{font:9px/1.5 Arial,sans-serif!important;color:#aa9c91!important;margin:10px 0 0!important;letter-spacing:1.2px!important}
+.ow13.ow13-nocturno .ow13-icons{gap:10px!important;flex-wrap:nowrap!important}
+.ow13.ow13-nocturno .ow13-icons img{width:50px!important;height:56px!important;max-width:50px!important;max-height:56px!important;border-radius:3px!important}
+.ow13.ow13-nocturno .ow13-footer{column-gap:24px!important;row-gap:20px!important}
+@media(max-width:400px){.ow13.ow13-nocturno .ow13-cover{height:295px!important;background-position:center,center,58% 12%!important}.ow13.ow13-nocturno .ow13-covercopy{left:24px!important;bottom:26px!important}.ow13.ow13-nocturno .ow13-title{font-size:42px!important}.ow13.ow13-nocturno .ow13-heading{padding:0 24px!important}.ow13.ow13-nocturno .ow13-meta{gap:11px!important}.ow13.ow13-nocturno .ow13-icons{margin-left:0!important}}
+
+.ow13.ow13-nocturno .ow13-title{font-family:'UnifrakturCook',Georgia,serif!important;font-weight:700!important;font-size:49px!important;line-height:1.03!important}
+.ow13.ow13-nocturno .ow13-meta{justify-content:flex-start!important;flex-wrap:nowrap!important;gap:9px!important;white-space:nowrap!important;letter-spacing:.5px!important}
+.ow13.ow13-nocturno .ow13-meta .ow13-rating{margin-left:0!important}
+.ow13.ow13-nocturno .ow13-meta>span+span{border-left:1px solid #594044!important;padding-left:9px!important}
+.ow13.ow13-nocturno .ow13-meta i{font-style:normal!important;color:#b99982!important;margin-right:4px!important;font-size:12px!important}
+.ow13.ow13-nocturno .ow13-chapter::before{content:'☽'!important;display:inline-block!important;margin-right:9px!important;color:#cba67e!important;font-size:17px!important;vertical-align:middle!important}
+.ow13.ow13-nocturno .ow13-reading{position:relative!important;margin:24px 19px 22px!important;padding:0 0 0 20px!important}
+.ow13.ow13-nocturno .ow13-reading::before{content:''!important;position:absolute!important;left:5px!important;top:17px!important;bottom:17px!important;width:1px!important;background:linear-gradient(180deg,#a48966,#674146 40%,#674146 70%,#a48966)!important}
+.ow13.ow13-nocturno .ow13-reading::after{content:'✝'!important;position:absolute!important;left:0!important;top:-3px!important;color:#c1a483!important;font:19px/1 Georgia,serif!important;background:#151315!important;padding-bottom:6px!important}
+.ow13.ow13-nocturno .ow13-rail-end{position:absolute!important;left:0!important;bottom:-4px!important;color:#c1a483!important;font:19px/1 Georgia,serif!important;background:#151315!important;padding-top:6px!important}
+.ow13.ow13-nocturno .ow13-story{max-height:600px!important;overflow-y:auto!important;overflow-x:hidden!important;scrollbar-width:thin!important;scrollbar-color:#98515a #211a1e!important;scrollbar-gutter:stable!important;padding:0 19px 0 13px!important;overscroll-behavior-y:auto!important}
+.ow13.ow13-nocturno .ow13-story:focus-visible{outline:1px solid #a48966!important;outline-offset:4px!important}
+.ow13.ow13-nocturno .ow13-story::-webkit-scrollbar{width:6px!important}
+.ow13.ow13-nocturno .ow13-story::-webkit-scrollbar-track{background:#211a1e!important;border-radius:6px!important}
+.ow13.ow13-nocturno .ow13-story::-webkit-scrollbar-thumb{background:linear-gradient(#b17a70,#863340)!important;border:1px solid #321b23!important;border-radius:6px!important;min-height:36px!important}
+.ow13.ow13-nocturno .ow13-end{color:#b89c7f!important}
+@media(max-width:400px){.ow13.ow13-nocturno .ow13-title{font-size:43px!important}.ow13.ow13-nocturno .ow13-heading{padding:0 20px!important}.ow13.ow13-nocturno .ow13-meta{font-size:8px!important;gap:7px!important}.ow13.ow13-nocturno .ow13-meta>span+span{padding-left:7px!important}.ow13.ow13-nocturno .ow13-reading{margin:22px 13px!important;padding-left:16px!important}.ow13.ow13-nocturno .ow13-story{max-height:520px!important;padding:0 12px!important}}
