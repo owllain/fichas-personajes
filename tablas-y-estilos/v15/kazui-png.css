@@ -1,0 +1,205 @@
+@font-face {
+  font-family: 'OW15 Cormorant';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OW15 Cormorant';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-2.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OW15 Source Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../v14/assets/font-3.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OW15 Source Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../v14/assets/font-4.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'OW15 Source Serif';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-5.ttf') format('truetype');
+}
+
+
+
+/* Nocturne / v15. Build adds declaration priority inside this component only. */
+.ow15.ow15-nocturne{--ink:#120f13 !important;--wine:#843c4c !important;--rose:#c99299 !important;--gold:#b99a72 !important;--text:#d8cfc6 !important;position:relative !important;display:block !important;width:510px !important;max-width:100% !important;margin:24px auto !important;padding:0 !important;border:1px solid #48343d !important;background:var(--ink) !important;color:var(--text) !important;box-shadow:0 26px 70px #0005 !important;font:14px/1.9 'OW15 Source Serif',Georgia,serif !important;text-align:left !important;isolation:isolate !important;overflow:hidden !important;color-scheme:dark !important}
+.ow15.ow15-nocturne,.ow15.ow15-nocturne *,.ow15.ow15-nocturne *::before,.ow15.ow15-nocturne *::after{box-sizing:border-box !important}
+.ow15.ow15-nocturne div,.ow15.ow15-nocturne span,.ow15.ow15-nocturne i,.ow15.ow15-nocturne b,.ow15.ow15-nocturne em,.ow15.ow15-nocturne a,.ow15.ow15-nocturne label{min-width:0 !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important;color:inherit !important;font:inherit !important;letter-spacing:normal !important;text-transform:none !important}
+.ow15.ow15-nocturne div{display:block !important}
+.ow15.ow15-nocturne img{display:block !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important;box-shadow:none !important;max-width:100% !important;object-fit:contain !important}
+.ow15.ow15-nocturne>br,.ow15.ow15-nocturne .ow15-meta>br,.ow15.ow15-nocturne .ow15-gallery>br{display:none !important}
+.ow15.ow15-nocturne .ow15-hero{position:relative !important;min-height:360px !important;background:linear-gradient(0deg,#120f13 0%,#120f13f5 7%,#120f1399 24%,transparent 60%),linear-gradient(90deg,#09060b9c,transparent 83%),url('https://2img.net/i.imgur.com/wChigK7.jpeg') center 10%/cover no-repeat !important;overflow:hidden !important}
+.ow15.ow15-nocturne .ow15-hero::before{content:'' !important;position:absolute !important;inset:0 !important;background:radial-gradient(ellipse at 24% 30%,#b2566330,transparent 65%) !important;pointer-events:none !important;animation:ow15-breath 9s ease-in-out infinite alternate !important}
+.ow15.ow15-nocturne .ow15-hero::after{content:'' !important;position:absolute !important;inset:15px 15px 36px !important;border:1px solid #c5a27230 !important;border-bottom:0 !important;pointer-events:none !important;mask-image:linear-gradient(#000 10%,transparent 80%) !important}
+.ow15.ow15-nocturne .ow15-crest{position:relative !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:7px !important;width:100px !important;height:46px !important;margin:20px auto 0 !important;filter:drop-shadow(0 2px 8px #0009) !important}
+.ow15.ow15-nocturne .ow15-wing{display:block !important;flex:none !important;width:33px !important;height:33px !important;background:url('../v14/assets/bat-wing.png') center/contain no-repeat !important;transform:rotate(-15deg) !important;opacity:.8 !important}
+.ow15.ow15-nocturne .ow15-wing:last-child{transform:scaleX(-1) rotate(-15deg) !important}
+.ow15.ow15-nocturne .ow15-jewel{width:7px !important;height:11px !important;display:block !important;border-radius:70% 70% 70% 0 !important;background:#a85565 !important;transform:rotate(-45deg) !important;box-shadow:0 0 14px #bd496077 !important}
+.ow15.ow15-nocturne .ow15-hero-copy{position:relative !important;padding:100px 35px 25px !important}
+.ow15.ow15-nocturne .ow15-kicker{display:flex !important;align-items:center !important;gap:11px !important;font:9px/1.4 Arial,sans-serif !important;letter-spacing:2.5px !important;color:#c6ad8c !important}
+.ow15.ow15-nocturne .ow15-kicker::before{content:'' !important;width:28px !important;height:1px !important;background:linear-gradient(90deg,#c6ad8c,transparent) !important}
+.ow15.ow15-nocturne .ow15-title{margin-top:12px !important;font:500 49px/.92 'OW15 Cormorant',Georgia,serif !important;letter-spacing:-1.5px !important;color:#f1e7d8 !important;text-shadow:0 3px 18px #0009 !important}
+.ow15.ow15-nocturne .ow15-title span{display:block !important;font:inherit !important;letter-spacing:inherit !important}
+.ow15.ow15-nocturne .ow15-title em{display:block !important;font:italic 500 60px/.94 'OW15 Cormorant',Georgia,serif !important;color:#dbb7bc !important;letter-spacing:-2px !important}
+.ow15.ow15-nocturne .ow15-info{padding:0 34px !important}
+.ow15.ow15-nocturne .ow15-meta{display:flex !important;align-items:center !important;justify-content:flex-start !important;flex-wrap:nowrap !important;gap:11px !important;padding:2px 0 15px !important;border-bottom:1px solid #53374288 !important;white-space:nowrap !important;font:9px/1.4 Arial,sans-serif !important;letter-spacing:.7px !important;color:#c0b0a8 !important}
+.ow15.ow15-nocturne .ow15-meta>span{display:flex !important;align-items:center !important;gap:5px !important;font:inherit !important;letter-spacing:inherit !important}
+.ow15.ow15-nocturne .ow15-meta>span+span{border-left:1px solid #61414a !important;padding-left:11px !important}
+.ow15.ow15-nocturne .ow15-meta b{color:#e5d1b5 !important}
+.ow15.ow15-nocturne .ow15-icon{display:block !important;flex:none !important;width:12px !important;height:12px !important;background-position:center !important;background-size:contain !important;background-repeat:no-repeat !important}
+.ow15.ow15-nocturne .ow15-hourglass{background-image:url('../v14/assets/hourglass.png') !important}
+.ow15.ow15-nocturne .ow15-moon{background-image:url('../v14/assets/moon.png') !important}
+.ow15.ow15-nocturne .ow15-lock{background-image:url('../v14/assets/lock.png') !important}
+.ow15.ow15-nocturne .ow15-drop{background-image:url('../v14/assets/droplet.png') !important}
+.ow15.ow15-nocturne .ow15-meta .ow15-rating{color:var(--rose) !important}
+.ow15.ow15-nocturne .ow15-date{margin-top:11px !important;font:8px/1.6 Arial,sans-serif !important;letter-spacing:1.8px !important;color:#9e8a82 !important}
+.ow15.ow15-nocturne .ow15-reading{position:relative !important;margin:28px 19px 25px !important;padding-left:25px !important}
+.ow15.ow15-nocturne .ow15-reading::before{content:'' !important;position:absolute !important;left:9px !important;top:24px !important;bottom:24px !important;width:1px !important;background:linear-gradient(#a68a62aa,#63364177 32%,#63364177 70%,#a68a62aa) !important}
+.ow15.ow15-nocturne .ow15-cross{position:absolute !important;left:0 !important;top:0 !important;width:20px !important;height:20px !important;background:url('../v14/assets/gothic-cross.png') center/contain no-repeat !important;opacity:.75 !important}
+.ow15.ow15-nocturne .ow15-cross.ow15-cross-end{top:auto !important;bottom:0 !important}
+.ow15.ow15-nocturne .ow15-story{display:block !important;max-height:600px !important;overflow-y:auto !important;overflow-x:hidden !important;scrollbar-width:thin !important;scrollbar-color:#915365 #211820 !important;scrollbar-gutter:stable !important;padding:0 20px 0 12px !important;font:14px/1.9 'OW15 Source Serif',Georgia,serif !important;color:var(--text) !important;overflow-wrap:anywhere !important;text-align:left !important}
+.ow15.ow15-nocturne .ow15-story:focus-visible{outline:1px solid #a68a6277 !important;outline-offset:4px !important}
+.ow15.ow15-nocturne .ow15-story::-webkit-scrollbar{width:6px !important}
+.ow15.ow15-nocturne .ow15-story::-webkit-scrollbar-track{background:#211820 !important;border-radius:5px !important}
+.ow15.ow15-nocturne .ow15-story::-webkit-scrollbar-thumb{background:linear-gradient(#b08c76,#824452) !important;border-radius:5px !important;border:1px solid #37212b !important}
+.ow15.ow15-nocturne .ow15-p{margin-bottom:20px !important}
+.ow15.ow15-nocturne .ow15-lead::first-letter{float:left !important;margin:3px 8px 0 0 !important;font:600 57px/.85 'OW15 Cormorant',Georgia,serif !important;color:#be8790 !important}
+.ow15.ow15-nocturne .ow15-quote{position:relative !important;margin:27px 0 !important;padding:4px 0 5px 20px !important;border-left:1px solid #af7d68 !important;font:italic 500 23px/1.35 'OW15 Cormorant',Georgia,serif !important;color:#cbb394 !important}
+.ow15.ow15-nocturne .ow15-dialogue{margin:21px 0 !important;font-style:italic !important;color:#d3a0a8 !important}
+.ow15.ow15-nocturne .ow15-ending{display:flex !important;align-items:center !important;justify-content:center !important;gap:12px !important;height:34px !important;margin:23px 0 8px !important}
+.ow15.ow15-nocturne .ow15-ending::before,.ow15.ow15-nocturne .ow15-ending::after{content:'' !important;display:block !important;width:45px !important;height:1px !important;background:linear-gradient(90deg,transparent,#876953) !important}
+.ow15.ow15-nocturne .ow15-ending::after{transform:scaleX(-1) !important}
+.ow15.ow15-nocturne .ow15-ending i{display:block !important;width:18px !important;height:18px !important;background:url('../v14/assets/gothic-cross.png') center/contain no-repeat !important;opacity:.7 !important}
+.ow15.ow15-nocturne .ow15-footer{position:relative !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:20px !important;flex-wrap:wrap !important;padding:24px 30px 20px !important;border-top:1px solid #61424a88 !important;background:radial-gradient(ellipse at 76% 48%,#54273744,transparent 65%),linear-gradient(#130e14,#0b090d) !important;overflow:hidden !important}
+.ow15.ow15-nocturne .ow15-footer::before{content:'' !important;position:absolute !important;left:30px !important;right:30px !important;top:0 !important;height:1px !important;background:linear-gradient(90deg,transparent,#b49574,transparent) !important;opacity:.5 !important}
+.ow15.ow15-nocturne .ow15-sign{position:relative !important;flex:1 1 185px !important}
+.ow15.ow15-nocturne .ow15-footer .ow15-crest{justify-content:flex-start !important;margin:0 0 14px !important;width:84px !important;height:24px !important;gap:4px !important}
+.ow15.ow15-nocturne .ow15-footer .ow15-wing{width:25px !important;height:25px !important;opacity:.65 !important}
+.ow15.ow15-nocturne .ow15-small{font:8px/1.5 Arial,sans-serif !important;letter-spacing:2px !important;color:#aa8f79 !important}
+.ow15.ow15-nocturne .ow15-name{margin:8px 0 10px !important;font:600 30px/1 'OW15 Cormorant',Georgia,serif !important;color:#e5d6c2 !important}
+.ow15.ow15-nocturne .ow15-name em{font-style:italic !important;font-weight:500 !important}
+.ow15.ow15-nocturne .ow15-state{display:flex !important;align-items:center !important;gap:6px !important;font:8px/1.5 Arial,sans-serif !important;letter-spacing:1px !important;color:#b6989e !important}
+.ow15.ow15-nocturne .ow15-state::before{content:'' !important;display:block !important;width:4px !important;height:4px !important;border-radius:50% !important;background:#a45665 !important;box-shadow:0 0 7px #ae4a6266 !important}
+.ow15.ow15-nocturne .ow15-gallery{display:flex !important;position:relative !important;flex:0 0 144px !important;flex-wrap:wrap !important;justify-content:center !important;gap:9px !important;width:144px !important}
+.ow15.ow15-nocturne .ow15-choice{position:relative !important;display:block !important;order:2 !important;flex:0 0 34px !important;width:34px !important;height:34px !important;border:1px solid #5a3b46 !important;border-radius:50% !important;padding:3px !important;cursor:pointer !important;transition:border-color .3s,box-shadow .3s,transform .3s !important}
+.ow15.ow15-nocturne .ow15-choice img{width:26px !important;height:26px !important;border-radius:50% !important;object-fit:cover !important;opacity:.55 !important;transition:opacity .3s !important}
+.ow15.ow15-nocturne .ow15-choice input{position:absolute !important;inset:0 !important;display:block !important;width:100% !important;height:100% !important;margin:0 !important;opacity:0 !important;cursor:pointer !important;z-index:2 !important}
+.ow15.ow15-nocturne .ow15-choice:has(input:checked){border-color:#c2a07a !important;box-shadow:0 0 0 3px #9a625321 !important}
+.ow15.ow15-nocturne .ow15-choice:has(input:checked) img,.ow15.ow15-nocturne .ow15-choice:hover img{opacity:1 !important}
+.ow15.ow15-nocturne .ow15-choice:hover{border-color:#bd8993 !important}
+.ow15.ow15-nocturne .ow15-choice:has(input:focus-visible){outline:2px solid #e8c9a1 !important;outline-offset:4px !important}
+.ow15.ow15-nocturne .ow15-stage{position:relative !important;order:1 !important;width:144px !important;height:114px !important;flex:0 0 144px !important;overflow:hidden !important;border:1px solid #71504477 !important;border-radius:55% 55% 5px 5px !important;background:radial-gradient(ellipse at 50% 100%,#79405133,transparent 75%) !important}
+.ow15.ow15-nocturne .ow15-stage::after{content:'' !important;position:absolute !important;inset:5px !important;border:1px solid #b99a7220 !important;border-radius:inherit !important;pointer-events:none !important}
+.ow15.ow15-nocturne .ow15-portrait{position:absolute !important;inset:10px 24px !important;display:block !important;width:96px !important;height:94px !important;max-width:none !important;object-fit:contain !important;opacity:0 !important;transform:translateY(10px) scale(.94) !important;transition:opacity .55s ease,transform .65s cubic-bezier(.2,.7,.2,1) !important;filter:drop-shadow(0 7px 9px #0008) !important}
+.ow15.ow15-nocturne .ow15-portrait:first-child{opacity:1 !important;transform:translateY(0) scale(1) !important}
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice input:checked) .ow15-portrait{opacity:0 !important;transform:translateY(10px) scale(.94) !important}
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-1:checked) .ow15-portrait:nth-child(1),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-2:checked) .ow15-portrait:nth-child(2),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-3:checked) .ow15-portrait:nth-child(3){opacity:1 !important;transform:translateY(0) scale(1) !important}
+.ow15.ow15-nocturne .ow15-colophon{display:flex !important;flex-wrap:wrap !important;justify-content:space-between !important;gap:8px !important;padding:12px 25px !important;border-top:1px solid #33232b !important;background:#0a080c !important;font:7px/1.6 Arial,sans-serif !important;letter-spacing:1px !important;color:#a69388 !important}
+.ow15.ow15-nocturne .ow15-colophon a{color:#b5a084 !important;text-decoration:none !important}
+.ow15.ow15-nocturne .ow15-colophon a:hover{color:#ead9bb !important}
+.ow15.ow15-nocturne .ow15-colophon a:focus-visible{outline:1px solid #d9b98d !important;outline-offset:4px !important}
+@keyframes ow15-breath{from{opacity:.35}to{opacity:.85}}
+@media(max-width:420px){.ow15.ow15-nocturne .ow15-hero-copy{padding:110px 24px 25px !important}.ow15.ow15-nocturne .ow15-title{font-size:43px !important}.ow15.ow15-nocturne .ow15-title em{font-size:52px !important}.ow15.ow15-nocturne .ow15-info{padding:0 22px !important}.ow15.ow15-nocturne .ow15-meta{font-size:8px !important;gap:7px !important}.ow15.ow15-nocturne .ow15-meta>span+span{padding-left:7px !important}.ow15.ow15-nocturne .ow15-icon{width:10px !important;height:10px !important}.ow15.ow15-nocturne .ow15-reading{margin:25px 13px !important;padding-left:21px !important}.ow15.ow15-nocturne .ow15-story{padding:0 12px 0 10px !important;max-height:520px !important}.ow15.ow15-nocturne .ow15-footer{padding:23px !important}.ow15.ow15-nocturne .ow15-sign{flex-basis:130px !important}.ow15.ow15-nocturne .ow15-gallery{margin:0 auto !important}.ow15.ow15-nocturne .ow15-meta{letter-spacing:0 !important}}
+@media(prefers-reduced-motion:reduce){.ow15.ow15-nocturne *,.ow15.ow15-nocturne *::before,.ow15.ow15-nocturne *::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+
+/* v15: bounded reset, stable click targets, container-aware layout. */
+.ow15.ow15-nocturne{container:ow15-card / inline-size !important;min-width:0 !important;clear:both !important;white-space:normal !important;word-break:normal !important;--gold:#b99a72 !important;--rose:#c99299 !important;--text:#ded4ca !important}
+.ow15.ow15-nocturne .ow15-title{font-weight:600 !important}
+.ow15.ow15-nocturne .ow15-title em{font-weight:600 !important}
+.ow15.ow15-nocturne .ow15-hero>.ow15-crest{position:absolute !important;left:29px !important;top:23px !important;margin:0 !important;z-index:1 !important;width:74px !important;height:36px !important}
+.ow15.ow15-nocturne .ow15-hero>.ow15-crest .ow15-wing{width:24px !important;height:24px !important}
+.ow15.ow15-nocturne .ow15-hero-copy{padding-top:162px !important}
+.ow15.ow15-nocturne .ow15-story{font-size:15px !important;line-height:1.95 !important;overscroll-behavior-y:contain !important;scrollbar-color:#b17a83 #241921 !important}
+.ow15.ow15-nocturne .ow15-story:focus-visible{outline:1px solid #a88664 !important;outline-offset:5px !important}
+.ow15.ow15-nocturne .ow15-story b,.ow15.ow15-nocturne .ow15-story strong{font-weight:600 !important;color:#f2dec3 !important}
+.ow15.ow15-nocturne .ow15-story em,.ow15.ow15-nocturne .ow15-story i{font-style:italic !important}
+.ow15.ow15-nocturne .ow15-story a{color:#e3b3ba !important;text-decoration:underline !important;text-underline-offset:3px !important;overflow-wrap:anywhere !important}
+.ow15.ow15-nocturne .ow15-story img{height:auto !important;max-width:100% !important}
+.ow15.ow15-nocturne .ow15-footer{gap:15px !important;padding:27px 28px 24px !important}
+.ow15.ow15-nocturne .ow15-sign{flex:1 1 174px !important}
+.ow15.ow15-nocturne .ow15-gallery{flex-basis:156px !important;width:156px !important;gap:8px !important}
+.ow15.ow15-nocturne .ow15-choice{flex-basis:44px !important;width:44px !important;height:44px !important;padding:5px !important;transform:none !important;transition:border-color .3s,box-shadow .3s !important;background:#1c131b !important}
+.ow15.ow15-nocturne .ow15-choice:hover{transform:none !important;box-shadow:0 0 14px #ad627333 !important}
+.ow15.ow15-nocturne .ow15-choice img{width:32px !important;height:32px !important;transition:opacity .3s,filter .3s !important}
+.ow15.ow15-nocturne .ow15-choice:hover img{filter:brightness(1.2) !important}
+.ow15.ow15-nocturne .ow15-choice input{padding:0 !important;border:0 !important;min-width:0 !important;max-width:none !important;min-height:0 !important;box-shadow:none !important;transform:none !important;appearance:auto !important}
+.ow15.ow15-nocturne .ow15-stage{width:156px !important;height:144px !important;flex-basis:156px !important;border-radius:80px 80px 6px 6px !important;background:radial-gradient(ellipse at 50% 65%,#9c516333,transparent 70%),linear-gradient(0deg,#24152177,transparent) !important}
+.ow15.ow15-nocturne .ow15-stage::before{content:'' !important;position:absolute !important;inset:9px !important;border:1px dashed #b99a7233 !important;border-radius:inherit !important;pointer-events:none !important}
+.ow15.ow15-nocturne .ow15-portrait{inset:23px 29px !important;width:96px !important;height:100px !important}
+.ow15.ow15-nocturne .ow15-colophon{font-size:8px !important;padding:13px 26px !important}
+/* In stripped-control contexts the portraits remain available on hover. */
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:hover) .ow15-portrait{opacity:0 !important}
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(1):hover) .ow15-portrait:nth-child(1),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(2):hover) .ow15-portrait:nth-child(2),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(3):hover) .ow15-portrait:nth-child(3){opacity:1 !important;transform:translateY(0) scale(1) !important}
+@container ow15-card (max-width:420px){
+.ow15.ow15-nocturne .ow15-hero-copy{padding:163px 24px 27px !important}
+.ow15.ow15-nocturne .ow15-title{font-size:43px !important}
+.ow15.ow15-nocturne .ow15-title em{font-size:52px !important}
+.ow15.ow15-nocturne .ow15-info{padding:0 20px !important}
+.ow15.ow15-nocturne .ow15-meta{font-size:8px !important;gap:6px !important;letter-spacing:0 !important}
+.ow15.ow15-nocturne .ow15-meta>span+span{padding-left:6px !important}
+.ow15.ow15-nocturne .ow15-meta>span{gap:4px !important}
+.ow15.ow15-nocturne .ow15-icon{width:10px !important;height:10px !important}
+.ow15.ow15-nocturne .ow15-reading{margin:25px 13px !important;padding-left:21px !important}
+.ow15.ow15-nocturne .ow15-story{font-size:14px !important;max-height:520px !important;padding:0 12px 0 10px !important}
+.ow15.ow15-nocturne .ow15-footer{padding:24px 18px !important;justify-content:center !important;text-align:center !important}
+.ow15.ow15-nocturne .ow15-sign{flex-basis:100% !important}
+.ow15.ow15-nocturne .ow15-footer .ow15-crest{margin:0 auto 14px !important;justify-content:center !important}
+.ow15.ow15-nocturne .ow15-state{justify-content:center !important}
+}
+@media(prefers-reduced-motion:reduce){.ow15.ow15-nocturne *,.ow15.ow15-nocturne *::before,.ow15.ow15-nocturne *::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+/* Editorial refinement after studying the supplied Ciaran screenshots.
+   Original composition and code; no third-party template copied. */
+.ow15.ow15-nocturne{width:550px !important;--text:#d6d0ca !important;--rose:#b2828a !important;--gold:#a69276 !important;border-color:#3b3035 !important;box-shadow:0 24px 70px #0004 !important}
+.ow15.ow15-nocturne .ow15-hero{min-height:390px !important}
+.ow15.ow15-nocturne .ow15-hero-copy{padding:210px 42px 28px !important}
+.ow15.ow15-nocturne .ow15-hero>.ow15-crest{left:40px !important;top:27px !important;opacity:.7 !important}
+.ow15.ow15-nocturne .ow15-title{font-size:55px !important;letter-spacing:-1px !important;color:#ede5d7 !important}
+.ow15.ow15-nocturne .ow15-title em{font-size:67px !important;letter-spacing:-1.5px !important;color:#c6a5aa !important}
+.ow15.ow15-nocturne .ow15-info{padding:0 43px !important}
+.ow15.ow15-nocturne .ow15-meta{padding:8px 0 22px !important;gap:10px !important;letter-spacing:.4px !important;color:#b8aca6 !important}
+.ow15.ow15-nocturne .ow15-reading{margin:42px 34px 39px !important;padding-left:25px !important}
+.ow15.ow15-nocturne .ow15-story{font-size:15px !important;line-height:1.85 !important;padding:0 15px 0 20px !important;color:#d6d0ca !important}
+.ow15.ow15-nocturne .ow15-p{margin-bottom:25px !important}
+.ow15.ow15-nocturne .ow15-quote{font-size:22px !important;line-height:1.5 !important;color:#b8a28d !important;margin:30px 0 !important;padding-left:18px !important;border-color:#675244 !important}
+.ow15.ow15-nocturne .ow15-dialogue{color:#c6a5aa !important}
+.ow15.ow15-nocturne .ow15-footer{padding:30px 41px 27px !important;border-top-color:#3a2c33 !important}
+.ow15.ow15-nocturne .ow15-small{letter-spacing:1.6px !important;color:#998b7c !important}
+.ow15.ow15-nocturne .ow15-stage::before{border-style:solid !important;opacity:.45 !important}
+.ow15.ow15-nocturne .ow15-colophon{font-size:8px !important;color:#998a80 !important}
+/* Alternative: cool ash, quiet silver and a desaturated portrait. */
+.ow15.ow15-nocturne.ow15-ashen{border-color:#41434a !important;--rose:#b0b5c3 !important;--gold:#b2b4b9 !important;box-shadow:0 24px 70px #0004 !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-hero{background-color:#24252d !important;background-blend-mode:normal,normal,luminosity !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-title em,.ow15.ow15-nocturne.ow15-ashen .ow15-dialogue{color:#b3b7c6 !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-hero::before{background:radial-gradient(ellipse at 20% 30%,#abb4d125,transparent 65%) !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-wing,.ow15.ow15-nocturne.ow15-ashen .ow15-icon,.ow15.ow15-nocturne.ow15-ashen .ow15-cross{filter:grayscale(1) !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-footer{background:radial-gradient(ellipse at 80% 65%,#79809f18,transparent 65%),linear-gradient(#141218,#0b0a0e) !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-story{scrollbar-color:#9298ab #211e26 !important}
+.ow15.ow15-nocturne.ow15-ashen .ow15-lead::first-letter{color:#a9b0c3 !important}
+@container ow15-card (max-width:420px){
+.ow15.ow15-nocturne .ow15-hero{min-height:365px !important}
+.ow15.ow15-nocturne .ow15-hero-copy{padding:209px 24px 26px !important}
+.ow15.ow15-nocturne .ow15-title{font-size:43px !important}
+.ow15.ow15-nocturne .ow15-title em{font-size:52px !important}
+.ow15.ow15-nocturne .ow15-info{padding:0 20px !important}
+.ow15.ow15-nocturne .ow15-meta{gap:6px !important;letter-spacing:0 !important}
+.ow15.ow15-nocturne .ow15-reading{margin:30px 13px !important;padding-left:21px !important}
+.ow15.ow15-nocturne .ow15-story{font-size:14px !important;padding:0 12px 0 10px !important}
+.ow15.ow15-nocturne .ow15-footer{padding:26px 20px !important}
+}

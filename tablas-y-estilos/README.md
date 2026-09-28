@@ -1,5 +1,9 @@
 # Tablas y estilos para Foroactivo
 
+## Kazui v15
+
+[Comparar Sangre antigua y Ceniza](v15/comparar.html) · [Instrucciones](v15/README.md) · [Investigación sobre Foroactivo y CiaranSoul](v15/ANALISIS.md).
+
 ## Nocturne / Kazui v14
 
 Nueva propuesta con galería CSS, Cormorant Garamond e iconos alojados en el repositorio. [Instrucciones y compatibilidad](v14/README.md). [Código para el post](v14/post-para-foro.txt).
