@@ -14,4 +14,4 @@ Se mantienen todos los recursos con sus licencias en ../v14/assets y ../v14/lice
 
 Para editar el diseño: modificar `kazui.source.css` y ejecutar `python build.py`. El compilador añade prioridad solo a declaraciones de las reglas de la tabla; conserva font-face y keyframes sin esa prioridad. Evitar añadir reglas globales. Tras publicar los nuevos recursos, actualizar el commit de los nuevos fragmentos. La versión ya pegada no cambia automáticamente.
 
-La galería usa radios y :has(); el primer retrato se conserva como alternativa en navegadores sin :has(). Si el editor elimina inputs, el hover sigue disponible con :has(), pero no se garantiza selección persistente ni uso táctil: debe comprobarse con la cuenta del foro antes de adoptar la versión definitiva.
+La galería usa radios y :has(); el primer retrato se conserva como alternativa en navegadores sin :has(). La imagen se elige por clic o teclado; hover solo resalta la miniatura. Si el editor elimina inputs, se conserva el primer retrato. Debe comprobarse con la cuenta del foro antes de adoptar la versión definitiva.

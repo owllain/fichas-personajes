@@ -105,10 +105,10 @@
 .ow15.ow15-nocturne .ow15-choice:has(input:focus-visible){outline:2px solid #e8c9a1 !important;outline-offset:4px !important}
 .ow15.ow15-nocturne .ow15-stage{position:relative !important;order:1 !important;width:144px !important;height:114px !important;flex:0 0 144px !important;overflow:hidden !important;border:1px solid #71504477 !important;border-radius:55% 55% 5px 5px !important;background:radial-gradient(ellipse at 50% 100%,#792e1d33,transparent 75%) !important}
 .ow15.ow15-nocturne .ow15-stage::after{content:'' !important;position:absolute !important;inset:5px !important;border:1px solid #b99a7220 !important;border-radius:inherit !important;pointer-events:none !important}
-.ow15.ow15-nocturne .ow15-portrait{position:absolute !important;inset:10px 24px !important;display:block !important;width:96px !important;height:94px !important;max-width:none !important;object-fit:contain !important;opacity:0 !important;transform:translateY(10px) scale(.94) !important;transition:opacity .55s ease,transform .65s cubic-bezier(.2,.7,.2,1) !important;filter:drop-shadow(0 7px 9px #0008) !important}
-.ow15.ow15-nocturne .ow15-portrait:first-child{opacity:1 !important;transform:translateY(0) scale(1) !important}
-.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice input:checked) .ow15-portrait{opacity:0 !important;transform:translateY(10px) scale(.94) !important}
-.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-1:checked) .ow15-portrait:nth-child(1),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-2:checked) .ow15-portrait:nth-child(2),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-3:checked) .ow15-portrait:nth-child(3){opacity:1 !important;transform:translateY(0) scale(1) !important}
+.ow15.ow15-nocturne .ow15-portrait{position:absolute !important;inset:10px 24px !important;display:block !important;width:96px !important;height:94px !important;max-width:none !important;object-fit:contain !important;opacity:0 !important;transform:none !important;transition:opacity .24s ease !important;filter:drop-shadow(0 7px 9px #0008) !important}
+.ow15.ow15-nocturne .ow15-portrait:first-child{opacity:1 !important;transform:none !important}
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice input:checked) .ow15-portrait{opacity:0 !important;transform:none !important}
+.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-1:checked) .ow15-portrait:nth-child(1),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-2:checked) .ow15-portrait:nth-child(2),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-select-3:checked) .ow15-portrait:nth-child(3){opacity:1 !important;transform:none !important}
 .ow15.ow15-nocturne .ow15-colophon{display:flex !important;flex-wrap:wrap !important;justify-content:space-between !important;gap:8px !important;padding:12px 25px !important;border-top:1px solid #33221c !important;background:#0b0807 !important;font:7px/1.6 Arial,sans-serif !important;letter-spacing:1px !important;color:#a69388 !important}
 .ow15.ow15-nocturne .ow15-colophon a{color:#b5a084 !important;text-decoration:none !important}
 .ow15.ow15-nocturne .ow15-colophon a:hover{color:#ead9bb !important}
@@ -143,9 +143,6 @@
 .ow15.ow15-nocturne .ow15-stage::before{content:'' !important;position:absolute !important;inset:9px !important;border:1px dashed #b99a7233 !important;border-radius:inherit !important;pointer-events:none !important}
 .ow15.ow15-nocturne .ow15-portrait{inset:23px 29px !important;width:96px !important;height:100px !important}
 .ow15.ow15-nocturne .ow15-colophon{font-size:8px !important;padding:13px 26px !important}
-/* In stripped-control contexts the portraits remain available on hover. */
-.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:hover) .ow15-portrait{opacity:0 !important}
-.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(1):hover) .ow15-portrait:nth-child(1),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(2):hover) .ow15-portrait:nth-child(2),.ow15.ow15-nocturne .ow15-gallery:has(.ow15-choice:nth-child(3):hover) .ow15-portrait:nth-child(3){opacity:1 !important;transform:translateY(0) scale(1) !important}
 @container ow15-card (max-width:420px){
 .ow15.ow15-nocturne .ow15-hero-copy{padding:163px 24px 27px !important}
 .ow15.ow15-nocturne .ow15-title{font-size:43px !important}
@@ -212,3 +209,5 @@
 .ow15.ow15-nocturne .ow15-jewel{display:block !important;flex:none !important;width:19px !important;height:22px !important;border-radius:0 !important;background:url('assets/skull.png') center/contain no-repeat !important;transform:none !important;box-shadow:none !important}
 .ow15.ow15-nocturne.ow15-ashen .ow15-jewel{filter:grayscale(1) !important}
 .ow15.ow15-nocturne.ow15-ashen .ow15-stage{background:#121115 !important;border-color:#8b8c9866 !important;box-shadow:0 0 18px #828ca116 !important}
+
+.ow15.ow15-nocturne .ow15-colophon{font-size:10px !important;letter-spacing:.5px !important;padding:14px 26px !important}
