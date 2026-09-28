@@ -1,0 +1,17 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preparar código editado · Sangre antigua</title><style>*{box-sizing:border-box}body{margin:0;background:#130d0d;color:#ded2c6;font:16px/1.7 Georgia}main{max-width:950px;margin:40px auto;padding:25px}h1{font-weight:normal;color:#d99b89}p{max-width:75ch}textarea{display:block;width:100%;min-height:240px;resize:vertical;margin:10px 0 20px;background:#1c1211;color:#ece0d5;border:1px solid #74443b;border-radius:5px;padding:16px;font:13px/1.6 monospace}button{padding:12px 18px;border:1px solid #a76b58;background:#6b2825;color:#fff0e3;border-radius:4px;font:16px Georgia;cursor:pointer;margin:0 12px 15px 0}button:focus-visible,textarea:focus-visible{outline:2px solid #ddbc91;outline-offset:4px}a{color:#d5ac91}#status{min-height:28px}</style></head><body><main><h1>Escribe cómodo. Pega limpio.</h1><p>Pega tu tabla editada con sus comentarios y saltos de línea. Esta herramienta retira las instrucciones y deja el código en una sola línea para el editor del foro. Trabaja localmente; no envía el relato.</p><p><a href="post-editable-comentado.txt">Abrir plantilla comentada</a> · <a href="COMO-ESCRIBIR.md">Guía de párrafos, diálogos y pensamientos</a></p><label for="source">Tu código editado</label><textarea id="source" spellcheck="false" placeholder="Pega aquí la tabla completa, desde el enlace CSS hasta el último cierre div."></textarea><button id="prepare" type="button">Preparar para Foroactivo</button><button id="copy" type="button">Copiar resultado</button><p id="status" role="status">Los bloques de pensamiento y diálogo que dejes dentro de un comentario no se publicarán.</p><label for="result">Código listo para pegar</label><textarea id="result" readonly spellcheck="false"></textarea><p>Los párrafos se separan con sus bloques div. Para un salto intencionado dentro de un párrafo, escribe &lt;br&gt;. Esta herramienta conserva esas etiquetas. Pulsa Previsualizar en el foro antes de publicar.</p></main><script>
+const source=document.getElementById('source'),result=document.getElementById('result'),status=document.getElementById('status');
+document.getElementById('prepare').addEventListener('click',()=>{
+ const input=source.value;
+ if(!input.trim()){status.textContent='Pega primero el código de la tabla.';source.focus();return;}
+ const withoutComments=input.replace(/<!--[\s\S]*?-->/g,'');
+ if(withoutComments.includes('<!--')||withoutComments.includes('-->')){status.textContent='Hay un comentario sin cerrar o mal formado. Revisa las marcas antes de continuar.';result.value='';return;}
+ result.value=withoutComments.replace(/\r\n?/g,'\n').replace(/\n[ \t]*/g,' ').trim();
+ status.textContent='Listo: '+result.value.length.toLocaleString('es')+' caracteres, sin comentarios ni saltos de línea reales.';
+});
+source.addEventListener('input',()=>{result.value='';status.textContent='Código modificado: pulsa Preparar para Foroactivo.';});
+document.getElementById('copy').addEventListener('click',async()=>{
+ if(!result.value){status.textContent='Prepara primero el código.';return;}
+ try{await navigator.clipboard.writeText(result.value);status.textContent='Copiado. Pégalo en el modo código del foro.';}
+ catch(e){result.focus();result.select();status.textContent='Resultado seleccionado: pulsa Ctrl+C para copiarlo.';}
+});
+</script></body></html>

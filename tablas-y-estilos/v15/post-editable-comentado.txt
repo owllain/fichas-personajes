@@ -1,0 +1,67 @@
+<!--
+KAZUI / SANGRE ANTIGUA · PLANTILLA EDITABLE
+Cambia el texto situado justo después de cada cierre de comentario.
+Los saltos de estas instrucciones están DENTRO de los comentarios.
+No añadas líneas vacías entre el cierre del comentario y el HTML.
+Para separar párrafos, copia un bloque ow15-p completo. El CSS pone el espacio.
+Antes de otro post, cambia las tres apariciones de kazui-v15-20260926-turno01
+por el mismo nombre nuevo y único, por ejemplo kazui-bosque-turno02.
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@76c5fa389db1ab30186fcb9fdaf6b925797b7990/tablas-y-estilos/v15/kazui.css"><div class="ow15 ow15-nocturne"><div class="ow15-hero"><div class="ow15-crest" aria-hidden="true"><i class="ow15-wing"></i><i class="ow15-jewel"></i><i class="ow15-wing"></i></div><div class="ow15-hero-copy"><div class="ow15-title"><span><!--
+01 / TÍTULO · PRIMERA LÍNEA
+-->Ecos en</span><em><!--
+02 / TÍTULO · LÍNEA CURSIVA
+-->la sombra</em></div></div></div><div class="ow15-info"><div class="ow15-meta"><span><i class="ow15-icon ow15-hourglass" aria-hidden="true"></i>TURNO <b><!--
+03 / NÚMERO DE TURNO
+-->01</b></span><span><i class="ow15-icon ow15-moon" aria-hidden="true"></i><!--
+04 / HORA O AMBIENTE
+-->NOCTURNO</span><span><i class="ow15-icon ow15-lock" aria-hidden="true"></i><!--
+05 / VISIBILIDAD
+-->PRIVADO</span><span class="ow15-rating"><i class="ow15-icon ow15-drop" aria-hidden="true"></i><!--
+06 / CLASIFICACIÓN
+-->+18</span></div></div><div class="ow15-reading"><i class="ow15-cross" aria-hidden="true"></i><i class="ow15-cross ow15-cross-end" aria-hidden="true"></i><div class="ow15-story" tabindex="0" role="region" aria-label="Relato, área desplazable"><!--
+07 / INICIO DEL RELATO
+Este primer párrafo tiene letra capitular. Usa ow15-lead solo al principio.
+--><div class="ow15-p ow15-lead">La ciudad había aprendido a guardar silencio. Bajo la lluvia, las ventanas de Stonefield parecían ojos cerrados; ninguna luz se atrevía a tocar el callejón donde Kazui se había detenido.</div><!--
+08 / NARRACIÓN · Puedes repetir este tipo de bloque cuantas veces necesites.
+--><div class="ow15-p">Llevaba varios minutos escuchando los pasos al otro lado de la verja. No avanzaban ni retrocedían. Repetían la misma distancia, con la paciencia de algo que no necesitaba respirar. Se ajustó el guante y sonrió apenas.</div><!--
+09 / PENSAMIENTO DESTACADO · Cursiva grande con línea lateral.
+Sustituye el texto; puedes mover o borrar el bloque completo.
+--><div class="ow15-quote">El silencio no siempre significa paz; a veces, es solo el respiro que toma la tormenta antes de arrasar con todo.</div><!--
+10 / MÁS NARRACIÓN
+--><div class="ow15-p">La cerradura cedió con un sonido demasiado pequeño para aquella noche. Al fondo, una silueta inclinó la cabeza, como si reconociera a un viejo amigo. Kazui cruzó el umbral. La lluvia quedó detrás.</div><!--
+11 / DIÁLOGO · Párrafo en cursiva y color de acento.
+Escribe las rayas de diálogo como parte de tu texto.
+--><div class="ow15-dialogue">—No mires atrás. Algunas cosas llevan siglos esperando que alguien vuelva la cabeza.</div><!--
+12 / AÑADE MÁS BLOQUES JUSTO DESPUÉS DE ESTE COMENTARIO
+MODELOS PARA COPIAR: selecciona solo la línea HTML que quieras y pégala
+fuera de este comentario, antes del adorno ow15-ending.
+
+NARRACIÓN:
+<div class="ow15-p">Escribe aquí otro párrafo.</div>
+
+DIÁLOGO EN SU PROPIO PÁRRAFO:
+<div class="ow15-dialogue">—Escribe aquí lo que dice Kazui.</div>
+
+PENSAMIENTO DESTACADO:
+<div class="ow15-quote">«Escribe aquí lo que piensa Kazui».</div>
+
+PENSAMIENTO DISCRETO DENTRO DE LA NARRACIÓN:
+<div class="ow15-p">Miró la puerta. <em>Algo no encaja</em>, pensó.</div>
+
+NARRACIÓN CON DIÁLOGO INTERCALADO:
+<div class="ow15-p">Kazui sonrió. <span class="ow15-dialogue">—Llegas tarde.</span> Se apartó del umbral.</div>
+
+No copies las palabras NARRACIÓN / DIÁLOGO ni las marcas de comentario.
+Puedes alternar estos bloques en cualquier orden. No están limitados a 11 párrafos.
+--><div class="ow15-ending" aria-hidden="true"><i></i></div></div></div><div class="ow15-footer"><div class="ow15-sign"><div class="ow15-crest" aria-hidden="true"><i class="ow15-wing"></i><i class="ow15-jewel"></i><i class="ow15-wing"></i></div><div class="ow15-small"><!--
+13 / LEMA DEL FOOTER
+-->EL ECO QUE PERMANECE</div><div class="ow15-name"><!--
+14 / NOMBRE · Conserva em alrededor de la parte en cursiva.
+-->Kazui <em>von Vitra</em></div><div class="ow15-state"><!--
+15 / ESTADO DE ÁNIMO
+-->ÁNIMO / PSICÓTICO</div></div><!--
+16 / GALERÍA · Normalmente no necesitas editar esta parte.
+Cada imagen aparece dos veces: miniatura y retrato grande.
+Si cambias una URL, cambia también su pareja.
+Los tamaños visibles los controla el CSS, no las cifras de los atributos HTML.
+--><div class="ow15-gallery" role="group" aria-label="Retratos de Kazui"><label class="ow15-choice"><input type="radio" class="ow15-select-1" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 1" checked><img src="https://2img.net/i.imgur.com/1Sgtj1T.png" alt="" width="26" height="26"></label><label class="ow15-choice"><input type="radio" class="ow15-select-2" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 2"><img src="https://2img.net/i.imgur.com/H3ldYL4.png" alt="" width="26" height="26"></label><label class="ow15-choice"><input type="radio" class="ow15-select-3" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 3"><img src="https://2img.net/i.imgur.com/QU4Egvs.png" alt="" width="26" height="26"></label><div class="ow15-stage" aria-hidden="true"><img class="ow15-portrait" src="https://2img.net/i.imgur.com/1Sgtj1T.png" alt="" width="96" height="94"><img class="ow15-portrait" src="https://2img.net/i.imgur.com/H3ldYL4.png" alt="" width="96" height="94"><img class="ow15-portrait" src="https://2img.net/i.imgur.com/QU4Egvs.png" alt="" width="96" height="94"></div></div></div><div class="ow15-colophon"><a href="https://github.com/owllain/fichas-personajes/blob/main/tablas-y-estilos/v15/CREDITOS.md">Créditos</a><a href="https://github.com/owllain">by Owllain</a></div></div>

@@ -2,6 +2,8 @@
 
 [Análisis, fuentes y pruebas](ANALISIS.md) · [Créditos](CREDITOS.md)
 
+Para escribir directamente en la tabla: [plantilla comentada](post-editable-comentado.txt), [guía de escritura](COMO-ESCRIBIR.md) y [compactador del código editado](compactar-post.html).
+
 Usar `post-para-foro.txt` para Sangre antigua o `post-ceniza.txt` para Ceniza. Copiar en el modo código/HTML del editor. No pegar el documento de vista previa. La alternativa `post-para-foro-png.txt` usa PNG transparentes para los símbolos.
 
 `preparar-post.html` permite escribir un relato, elegir acabado y generar un fragmento con un nombre único de galería. Su JavaScript se ejecuta solo en esa herramienta; el código exportado no contiene scripts. Es texto normal, no un editor BBCode.
