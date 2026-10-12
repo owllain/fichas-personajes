@@ -211,3 +211,8 @@
 .ow15.ow15-nocturne.ow15-ashen .ow15-stage{background:#121115;border-color:#8b8c9866;box-shadow:0 0 18px #828ca116}
 
 .ow15.ow15-nocturne .ow15-colophon{font-size:10px;letter-spacing:.5px;padding:14px 26px}
+
+/* Identify Kazui through his existing portrait (legacy posts) or explicit opt-in.
+   Higher specificity than old Ange's broad hero override, including in quotes.
+   Image only: preserve Sangre antigua / Ceniza blend and palette settings. */
+.ow15.ow15-nocturne:is(.ow15-kazui,:has(.ow15-portrait[src*="1Sgtj1T"])) > .ow15-hero{background-image:linear-gradient(0deg,#130d0d 0%,#130d0df5 7%,#130d0d99 24%,transparent 60%),linear-gradient(90deg,#09060b9c,transparent 83%),url('https://2img.net/i.imgur.com/wChigK7.jpeg')}
