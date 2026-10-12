@@ -10,7 +10,7 @@ por el mismo nombre nuevo y único, por ejemplo angeSwan-bosque-turno02.
 COLORES: en el div principal puedes añadir style="--asw-pink:#dfa2ab;--asw-red:#a72e43;--asw-beige:#ead5b9".
 ENCUADRE: --asw-position:65% 20%; --asw-size:cover. Ajusta la segunda cifra para mover el recorte vertical.
 Los pensamientos discretos pueden usar <span class="asw1-thought">«Texto»</span>.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/angeSwan/angeSwan.css"><div class="asw1 asw1-ange"><div class="asw1-hero"><div class="asw1-crest" aria-hidden="true"><i class="asw1-branch"></i><i class="asw1-rose"></i><i class="asw1-branch"></i></div><div class="asw1-hero-copy"><div class="asw1-title"><span><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@257de6e2b88327a4f66bd815d99effc341eb8a9c/tablas-y-estilos/angeSwan/angeSwan.css"><div class="asw1 asw1-ange"><div class="asw1-hero"><div class="asw1-crest" aria-hidden="true"><i class="asw1-branch"></i><i class="asw1-rose"></i><i class="asw1-branch"></i></div><div class="asw1-hero-copy"><div class="asw1-title"><span><!--
 01 / TÍTULO · PRIMERA LÍNEA
 -->Bajo la</span><em><!--
 02 / TÍTULO · LÍNEA CURSIVA
