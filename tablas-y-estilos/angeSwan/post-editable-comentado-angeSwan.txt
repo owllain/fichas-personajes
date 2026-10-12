@@ -1,0 +1,71 @@
+<!--
+ANGE SWAN / CAPERUZA CARMESÍ · PLANTILLA EDITABLE
+Cambia el texto situado justo después de cada cierre de comentario.
+Los saltos de estas instrucciones están DENTRO de los comentarios.
+No añadas líneas vacías entre el cierre del comentario y el HTML.
+Para separar párrafos, copia un bloque asw1-p completo. El CSS pone el espacio.
+Antes de otro post, cambia las tres apariciones de angeSwan-escena01-turno01
+por el mismo nombre nuevo y único, por ejemplo angeSwan-bosque-turno02.
+
+COLORES: en el div principal puedes añadir style="--asw-pink:#dfa2ab;--asw-red:#a72e43;--asw-beige:#ead5b9".
+ENCUADRE: --asw-position:65% 20%; --asw-size:cover. Ajusta la segunda cifra para mover el recorte vertical.
+Los pensamientos discretos pueden usar <span class="asw1-thought">«Texto»</span>.
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/angeSwan/angeSwan.css"><div class="asw1 asw1-ange"><div class="asw1-hero"><div class="asw1-crest" aria-hidden="true"><i class="asw1-branch"></i><i class="asw1-rose"></i><i class="asw1-branch"></i></div><div class="asw1-hero-copy"><div class="asw1-title"><span><!--
+01 / TÍTULO · PRIMERA LÍNEA
+-->Bajo la</span><em><!--
+02 / TÍTULO · LÍNEA CURSIVA
+-->caperuza</em></div></div></div><div class="asw1-info"><div class="asw1-meta"><span><i class="asw1-icon asw1-hourglass" aria-hidden="true"></i>TURNO <b><!--
+03 / NÚMERO DE TURNO
+-->01</b></span><span><i class="asw1-icon asw1-moon" aria-hidden="true"></i><!--
+04 / HORA O AMBIENTE
+-->NOCTURNO</span><span><i class="asw1-icon asw1-lock" aria-hidden="true"></i><!--
+05 / VISIBILIDAD
+-->PRIVADO</span><span class="asw1-rating"><i class="asw1-icon asw1-drop" aria-hidden="true"></i><!--
+06 / CLASIFICACIÓN
+-->+18</span></div></div><div class="asw1-reading"><i class="asw1-diamond" aria-hidden="true"></i><i class="asw1-diamond asw1-diamond-end" aria-hidden="true"></i><div class="asw1-story" tabindex="0" role="region" aria-label="Relato, área desplazable"><!--
+07 / INICIO DEL RELATO
+Este primer párrafo tiene letra capitular. Usa asw1-lead solo al principio.
+--><div class="asw1-p asw1-lead">Escribe aquí el primer párrafo de Ange. La letra inicial se decora automáticamente.</div><!--
+08 / NARRACIÓN · Puedes repetir este tipo de bloque cuantas veces necesites.
+--><div class="asw1-p">Continúa aquí tu narración. Puedes copiar este bloque para añadir tantos párrafos como necesites.</div><!--
+09 / PENSAMIENTO DESTACADO · Cursiva grande con línea lateral.
+Sustituye el texto; puedes mover o borrar el bloque completo.
+--><div class="asw1-quote">«Escribe aquí un pensamiento que quieras destacar».</div><!--
+10 / MÁS NARRACIÓN
+--><div class="asw1-p">Intercala narración, pensamientos y diálogos en el orden de tu escena.</div><!--
+11 / DIÁLOGO · Párrafo en cursiva y color de acento.
+Escribe las rayas de diálogo como parte de tu texto.
+--><div class="asw1-dialogue">— Escribe aquí lo que dice Ange. —</div><!--
+12 / AÑADE MÁS BLOQUES ANTES DEL ADORNO asw1-ending
+MODELOS PARA COPIAR: selecciona solo la línea HTML que quieras y pégala
+fuera de este comentario, antes del adorno asw1-ending.
+
+NARRACIÓN:
+<div class="asw1-p">Escribe aquí otro párrafo.</div>
+
+DIÁLOGO EN SU PROPIO PÁRRAFO:
+<div class="asw1-dialogue">— Escribe aquí lo que dice Ange. —</div>
+
+PENSAMIENTO DESTACADO:
+<div class="asw1-quote">«Escribe aquí lo que piensa Ange».</div>
+
+PENSAMIENTO DISCRETO DENTRO DE LA NARRACIÓN:
+<div class="asw1-p">Miró la puerta. <em>Algo no encaja</em>, pensó.</div>
+
+NARRACIÓN CON DIÁLOGO INTERCALADO:
+<div class="asw1-p">Ange sonrió. <span class="asw1-dialogue">— Llegas tarde. —</span> Se apartó del umbral.</div>
+
+No copies las palabras NARRACIÓN / DIÁLOGO ni las marcas de comentario.
+Puedes alternar estos bloques en cualquier orden. No están limitados a 11 párrafos.
+--><div class="asw1-ending" aria-hidden="true"><i></i></div></div></div><div class="asw1-footer"><div class="asw1-sign"><div class="asw1-crest" aria-hidden="true"><i class="asw1-branch"></i><i class="asw1-rose"></i><i class="asw1-branch"></i></div><div class="asw1-small"><!--
+13 / LEMA DEL FOOTER
+-->ENTRE ROSAS Y ESPINAS</div><div class="asw1-name"><!--
+14 / NOMBRE · Conserva em alrededor de la parte en cursiva.
+-->Ange <em>Swan</em></div><div class="asw1-state"><!--
+15 / ESTADO DE ÁNIMO
+-->ESTADO / PERDIDA</div></div><!--
+16 / GALERÍA · Normalmente no necesitas editar esta parte.
+Cada imagen aparece dos veces: miniatura y retrato grande.
+Si cambias una URL, cambia también su pareja.
+Los tamaños visibles los controla el CSS, no las cifras de los atributos HTML.
+--><div class="asw1-gallery" role="group" aria-label="Retratos de Ange"><label class="asw1-choice"><input type="radio" class="asw1-select-1" name="angeSwan-escena01-turno01" aria-label="Mostrar retrato 1" checked><img src="https://2img.net/i.imgur.com/sZU2SCZ.png" alt="" width="26" height="26"></label><label class="asw1-choice"><input type="radio" class="asw1-select-2" name="angeSwan-escena01-turno01" aria-label="Mostrar retrato 2"><img src="https://2img.net/i.imgur.com/wMiKrLe.png" alt="" width="26" height="26"></label><label class="asw1-choice"><input type="radio" class="asw1-select-3" name="angeSwan-escena01-turno01" aria-label="Mostrar retrato 3"><img src="https://2img.net/i.imgur.com/edQKXxg.png" alt="" width="26" height="26"></label><div class="asw1-stage" aria-hidden="true"><img class="asw1-portrait" src="https://2img.net/i.imgur.com/sZU2SCZ.png" alt="" width="96" height="94"><img class="asw1-portrait" src="https://2img.net/i.imgur.com/wMiKrLe.png" alt="" width="96" height="94"><img class="asw1-portrait" src="https://2img.net/i.imgur.com/edQKXxg.png" alt="" width="96" height="94"></div></div></div><div class="asw1-colophon"><a href="https://github.com/owllain/fichas-personajes/blob/main/tablas-y-estilos/angeSwan/CREDITOS.md">Créditos</a><a href="https://github.com/owllain">by Owllain</a></div></div>
