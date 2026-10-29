@@ -6,7 +6,7 @@ No añadas líneas vacías entre el cierre del comentario y el HTML.
 Para separar párrafos, copia un bloque kzh1-p completo. El CSS pone el espacio.
 Antes de otro post, cambia las tres apariciones de kazui-v15-20260926-turno01
 por el mismo nombre nuevo y único, por ejemplo kazui-bosque-turno02.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiHalloween/kazui-halloween.css"><div class="kzh1 kzh1-nocturne kzh1-kazui kzh1-halloween"><div class="kzh1-hero"><div class="kzh1-crest" aria-hidden="true"><i class="kzh1-wing"></i><i class="kzh1-jewel"></i><i class="kzh1-wing"></i></div><div class="kzh1-hero-copy"><div class="kzh1-title"><span><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@d22207e5247f050d6ef8d65f9e972aee43ca4704/tablas-y-estilos/kazuiHalloween/kazui-halloween.css"><div class="kzh1 kzh1-nocturne kzh1-kazui kzh1-halloween"><div class="kzh1-hero"><div class="kzh1-crest" aria-hidden="true"><i class="kzh1-wing"></i><i class="kzh1-jewel"></i><i class="kzh1-wing"></i></div><div class="kzh1-hero-copy"><div class="kzh1-title"><span><!--
 01 / TÍTULO · PRIMERA LÍNEA
 -->Ecos en</span><em><!--
 02 / TÍTULO · LÍNEA CURSIVA
