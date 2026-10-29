@@ -6,7 +6,7 @@ No añadas líneas vacías entre el cierre del comentario y el HTML.
 Para separar párrafos, copia un bloque ow15-p completo. El CSS pone el espacio.
 Antes de otro post, cambia las tres apariciones de kazui-v15-20260926-turno01
 por el mismo nombre nuevo y único, por ejemplo kazui-bosque-turno02.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/v15/kazui-halloween.css"><div class="ow15 ow15-nocturne ow15-kazui ow15-halloween"><div class="ow15-hero"><div class="ow15-crest" aria-hidden="true"><i class="ow15-wing"></i><i class="ow15-jewel"></i><i class="ow15-wing"></i></div><div class="ow15-hero-copy"><div class="ow15-title"><span><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@92deb02936db7f1e751027b03db7e4656995d4d3/tablas-y-estilos/v15/kazui-halloween.css"><div class="ow15 ow15-nocturne ow15-kazui ow15-halloween"><div class="ow15-hero"><div class="ow15-crest" aria-hidden="true"><i class="ow15-wing"></i><i class="ow15-jewel"></i><i class="ow15-wing"></i></div><div class="ow15-hero-copy"><div class="ow15-title"><span><!--
 01 / TÍTULO · PRIMERA LÍNEA
 -->Ecos en</span><em><!--
 02 / TÍTULO · LÍNEA CURSIVA
