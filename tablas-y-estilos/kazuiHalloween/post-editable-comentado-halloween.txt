@@ -1,0 +1,67 @@
+<!--
+KAZUI / SANGRE ANTIGUA · PLANTILLA EDITABLE
+Cambia el texto situado justo después de cada cierre de comentario.
+Los saltos de estas instrucciones están DENTRO de los comentarios.
+No añadas líneas vacías entre el cierre del comentario y el HTML.
+Para separar párrafos, copia un bloque kzh1-p completo. El CSS pone el espacio.
+Antes de otro post, cambia las tres apariciones de kazui-v15-20260926-turno01
+por el mismo nombre nuevo y único, por ejemplo kazui-bosque-turno02.
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiHalloween/kazui-halloween.css"><div class="kzh1 kzh1-nocturne kzh1-kazui kzh1-halloween"><div class="kzh1-hero"><div class="kzh1-crest" aria-hidden="true"><i class="kzh1-wing"></i><i class="kzh1-jewel"></i><i class="kzh1-wing"></i></div><div class="kzh1-hero-copy"><div class="kzh1-title"><span><!--
+01 / TÍTULO · PRIMERA LÍNEA
+-->Ecos en</span><em><!--
+02 / TÍTULO · LÍNEA CURSIVA
+-->la sombra</em></div></div></div><div class="kzh1-info"><div class="kzh1-meta"><span><i class="kzh1-icon kzh1-hourglass" aria-hidden="true"></i>TURNO <b><!--
+03 / NÚMERO DE TURNO
+-->01</b></span><span><i class="kzh1-icon kzh1-moon" aria-hidden="true"></i><!--
+04 / HORA O AMBIENTE
+-->NOCTURNO</span><span><i class="kzh1-icon kzh1-lock" aria-hidden="true"></i><!--
+05 / VISIBILIDAD
+-->PRIVADO</span><span class="kzh1-rating"><i class="kzh1-icon kzh1-drop" aria-hidden="true"></i><!--
+06 / CLASIFICACIÓN
+-->+18</span></div></div><div class="kzh1-reading"><i class="kzh1-cross" aria-hidden="true"></i><i class="kzh1-cross kzh1-cross-end" aria-hidden="true"></i><div class="kzh1-story" tabindex="0" role="region" aria-label="Relato, área desplazable"><!--
+07 / INICIO DEL RELATO
+Este primer párrafo tiene letra capitular. Usa kzh1-lead solo al principio.
+--><div class="kzh1-p kzh1-lead">La ciudad había aprendido a guardar silencio. Bajo la lluvia, las ventanas de Stonefield parecían ojos cerrados; ninguna luz se atrevía a tocar el callejón donde Kazui se había detenido.</div><!--
+08 / NARRACIÓN · Puedes repetir este tipo de bloque cuantas veces necesites.
+--><div class="kzh1-p">Llevaba varios minutos escuchando los pasos al otro lado de la verja. No avanzaban ni retrocedían. Repetían la misma distancia, con la paciencia de algo que no necesitaba respirar. Se ajustó el guante y sonrió apenas.</div><!--
+09 / PENSAMIENTO DESTACADO · Cursiva grande con línea lateral.
+Sustituye el texto; puedes mover o borrar el bloque completo.
+--><div class="kzh1-quote">El silencio no siempre significa paz; a veces, es solo el respiro que toma la tormenta antes de arrasar con todo.</div><!--
+10 / MÁS NARRACIÓN
+--><div class="kzh1-p">La cerradura cedió con un sonido demasiado pequeño para aquella noche. Al fondo, una silueta inclinó la cabeza, como si reconociera a un viejo amigo. Kazui cruzó el umbral. La lluvia quedó detrás.</div><!--
+11 / DIÁLOGO · Párrafo en cursiva y color de acento.
+Escribe las rayas de diálogo como parte de tu texto.
+--><div class="kzh1-dialogue">—No mires atrás. Algunas cosas llevan siglos esperando que alguien vuelva la cabeza.</div><!--
+12 / AÑADE MÁS BLOQUES JUSTO DESPUÉS DE ESTE COMENTARIO
+MODELOS PARA COPIAR: selecciona solo la línea HTML que quieras y pégala
+fuera de este comentario, antes del adorno kzh1-ending.
+
+NARRACIÓN:
+<div class="kzh1-p">Escribe aquí otro párrafo.</div>
+
+DIÁLOGO EN SU PROPIO PÁRRAFO:
+<div class="kzh1-dialogue">—Escribe aquí lo que dice Kazui.</div>
+
+PENSAMIENTO DESTACADO:
+<div class="kzh1-quote">«Escribe aquí lo que piensa Kazui».</div>
+
+PENSAMIENTO DISCRETO DENTRO DE LA NARRACIÓN:
+<div class="kzh1-p">Miró la puerta. <em>Algo no encaja</em>, pensó.</div>
+
+NARRACIÓN CON DIÁLOGO INTERCALADO:
+<div class="kzh1-p">Kazui sonrió. <span class="kzh1-dialogue">—Llegas tarde.</span> Se apartó del umbral.</div>
+
+No copies las palabras NARRACIÓN / DIÁLOGO ni las marcas de comentario.
+Puedes alternar estos bloques en cualquier orden. No están limitados a 11 párrafos.
+--><div class="kzh1-ending" aria-hidden="true"><i></i></div></div></div><div class="kzh1-footer"><div class="kzh1-sign"><div class="kzh1-crest" aria-hidden="true"><i class="kzh1-wing"></i><i class="kzh1-jewel"></i><i class="kzh1-wing"></i></div><div class="kzh1-small"><!--
+13 / LEMA DEL FOOTER
+-->EL ECO QUE PERMANECE</div><div class="kzh1-name"><!--
+14 / NOMBRE · Conserva em alrededor de la parte en cursiva.
+-->Kazui <em>von Vitra</em></div><div class="kzh1-state"><!--
+15 / ESTADO DE ÁNIMO
+-->ÁNIMO / PSICÓTICO</div></div><!--
+16 / GALERÍA · Normalmente no necesitas editar esta parte.
+Cada imagen aparece dos veces: miniatura y retrato grande.
+Si cambias una URL, cambia también su pareja.
+Los tamaños visibles los controla el CSS, no las cifras de los atributos HTML.
+--><div class="kzh1-gallery" role="group" aria-label="Retratos de Kazui"><label class="kzh1-choice"><input type="radio" class="kzh1-select-1" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 1" checked><img src="https://2img.net/i.imgur.com/1Sgtj1T.png" alt="" width="26" height="26"></label><label class="kzh1-choice"><input type="radio" class="kzh1-select-2" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 2"><img src="https://2img.net/i.imgur.com/H3ldYL4.png" alt="" width="26" height="26"></label><label class="kzh1-choice"><input type="radio" class="kzh1-select-3" name="kazui-v15-20260926-turno01" aria-label="Mostrar retrato 3"><img src="https://2img.net/i.imgur.com/QU4Egvs.png" alt="" width="26" height="26"></label><div class="kzh1-stage" aria-hidden="true"><img class="kzh1-portrait" src="https://2img.net/i.imgur.com/1Sgtj1T.png" alt="" width="96" height="94"><img class="kzh1-portrait" src="https://2img.net/i.imgur.com/H3ldYL4.png" alt="" width="96" height="94"><img class="kzh1-portrait" src="https://2img.net/i.imgur.com/QU4Egvs.png" alt="" width="96" height="94"></div></div></div><div class="kzh1-colophon"><a href="https://github.com/owllain/fichas-personajes/blob/main/tablas-y-estilos/kazuiHalloween/CREDITOS.md">Créditos</a><a href="https://github.com/owllain">by Owllain</a></div></div>

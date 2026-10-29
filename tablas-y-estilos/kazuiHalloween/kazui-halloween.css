@@ -1,0 +1,247 @@
+@font-face {
+  font-family: 'KZH1 Cormorant';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-1.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KZH1 Cormorant';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-2.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KZH1 Source Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../v14/assets/font-3.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KZH1 Source Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../v14/assets/font-4.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'KZH1 Source Serif';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../v14/assets/font-5.ttf') format('truetype');
+}
+
+
+
+/* Nocturne / v15. Build adds declaration priority inside this component only. */
+.kzh1.kzh1-nocturne{--ink:#130d0d !important;--wine:#872d26 !important;--rose:#c56253 !important;--gold:#b99a72 !important;--text:#d8cfc6 !important;position:relative !important;display:block !important;width:510px !important;max-width:100% !important;margin:24px auto !important;padding:0 !important;border:1px solid #48302b !important;background:var(--ink) !important;color:var(--text) !important;box-shadow:0 26px 70px #0005 !important;font:14px/1.9 'KZH1 Source Serif',Georgia,serif !important;text-align:left !important;isolation:isolate !important;overflow:hidden !important;color-scheme:dark !important}
+.kzh1.kzh1-nocturne,.kzh1.kzh1-nocturne *,.kzh1.kzh1-nocturne *::before,.kzh1.kzh1-nocturne *::after{box-sizing:border-box !important}
+.kzh1.kzh1-nocturne div,.kzh1.kzh1-nocturne span,.kzh1.kzh1-nocturne i,.kzh1.kzh1-nocturne b,.kzh1.kzh1-nocturne em,.kzh1.kzh1-nocturne a,.kzh1.kzh1-nocturne label{min-width:0 !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important;background:transparent !important;box-shadow:none !important;color:inherit !important;font:inherit !important;letter-spacing:normal !important;text-transform:none !important}
+.kzh1.kzh1-nocturne div{display:block !important}
+.kzh1.kzh1-nocturne img{display:block !important;float:none !important;margin:0 !important;padding:0 !important;border:0 !important;box-shadow:none !important;max-width:100% !important;object-fit:contain !important}
+.kzh1.kzh1-nocturne>br,.kzh1.kzh1-nocturne .kzh1-meta>br,.kzh1.kzh1-nocturne .kzh1-gallery>br{display:none !important}
+.kzh1.kzh1-nocturne .kzh1-hero{position:relative !important;min-height:360px !important;background:linear-gradient(0deg,#130d0d 0%,#130d0df5 7%,#130d0d99 24%,transparent 60%),linear-gradient(90deg,#09060b9c,transparent 83%),url('https://2img.net/i.imgur.com/YeSpBkx.jpeg') center 10%/cover no-repeat !important;overflow:hidden !important}
+.kzh1.kzh1-nocturne .kzh1-hero::before{content:'' !important;position:absolute !important;inset:0 !important;background:radial-gradient(ellipse at 24% 30%,#9f302330,transparent 65%) !important;pointer-events:none !important;animation:kzh1-breath 9s ease-in-out infinite alternate !important}
+.kzh1.kzh1-nocturne .kzh1-hero::after{content:'' !important;position:absolute !important;inset:15px 15px 36px !important;border:1px solid #c5a27230 !important;border-bottom:0 !important;pointer-events:none !important;mask-image:linear-gradient(#000 10%,transparent 80%) !important}
+.kzh1.kzh1-nocturne .kzh1-crest{position:relative !important;display:flex !important;align-items:center !important;justify-content:center !important;gap:7px !important;width:100px !important;height:46px !important;margin:20px auto 0 !important;filter:drop-shadow(0 2px 8px #0009) !important}
+.kzh1.kzh1-nocturne .kzh1-wing{display:block !important;flex:none !important;width:33px !important;height:33px !important;background:url('../v14/assets/bat-wing.svg') center/contain no-repeat !important;transform:rotate(-15deg) !important;opacity:.8 !important}
+.kzh1.kzh1-nocturne .kzh1-wing:last-child{transform:scaleX(-1) rotate(-15deg) !important}
+.kzh1.kzh1-nocturne .kzh1-jewel{width:7px !important;height:11px !important;display:block !important;border-radius:70% 70% 70% 0 !important;background:#a2392b !important;transform:rotate(-45deg) !important;box-shadow:0 0 14px #bd362777 !important}
+.kzh1.kzh1-nocturne .kzh1-hero-copy{position:relative !important;padding:100px 35px 25px !important}
+.kzh1.kzh1-nocturne .kzh1-kicker{display:flex !important;align-items:center !important;gap:11px !important;font:9px/1.4 Arial,sans-serif !important;letter-spacing:2.5px !important;color:#c6ad8c !important}
+.kzh1.kzh1-nocturne .kzh1-kicker::before{content:'' !important;width:28px !important;height:1px !important;background:linear-gradient(90deg,#c6ad8c,transparent) !important}
+.kzh1.kzh1-nocturne .kzh1-title{margin-top:12px !important;font:500 49px/.92 'KZH1 Cormorant',Georgia,serif !important;letter-spacing:-1.5px !important;color:#f1e7d8 !important;text-shadow:0 3px 18px #0009 !important}
+.kzh1.kzh1-nocturne .kzh1-title span{display:block !important;font:inherit !important;letter-spacing:inherit !important}
+.kzh1.kzh1-nocturne .kzh1-title em{display:block !important;font:italic 500 60px/.94 'KZH1 Cormorant',Georgia,serif !important;color:#c35e58 !important;letter-spacing:-2px !important}
+.kzh1.kzh1-nocturne .kzh1-info{padding:0 34px !important}
+.kzh1.kzh1-nocturne .kzh1-meta{display:flex !important;align-items:center !important;justify-content:flex-start !important;flex-wrap:nowrap !important;gap:11px !important;padding:2px 0 15px !important;border-bottom:1px solid #53342a88 !important;white-space:nowrap !important;font:9px/1.4 Arial,sans-serif !important;letter-spacing:.7px !important;color:#c0b0a8 !important}
+.kzh1.kzh1-nocturne .kzh1-meta>span{display:flex !important;align-items:center !important;gap:5px !important;font:inherit !important;letter-spacing:inherit !important}
+.kzh1.kzh1-nocturne .kzh1-meta>span+span{border-left:1px solid #613c31 !important;padding-left:11px !important}
+.kzh1.kzh1-nocturne .kzh1-meta b{color:#e5d1b5 !important}
+.kzh1.kzh1-nocturne .kzh1-icon{display:block !important;flex:none !important;width:12px !important;height:12px !important;background-position:center !important;background-size:contain !important;background-repeat:no-repeat !important}
+.kzh1.kzh1-nocturne .kzh1-hourglass{background-image:url('../v14/assets/hourglass.svg') !important}
+.kzh1.kzh1-nocturne .kzh1-moon{background-image:url('../v14/assets/moon.svg') !important}
+.kzh1.kzh1-nocturne .kzh1-lock{background-image:url('../v14/assets/lock.svg') !important}
+.kzh1.kzh1-nocturne .kzh1-drop{background-image:url('../v14/assets/droplet.svg') !important}
+.kzh1.kzh1-nocturne .kzh1-meta .kzh1-rating{color:var(--rose) !important}
+.kzh1.kzh1-nocturne .kzh1-date{margin-top:11px !important;font:8px/1.6 Arial,sans-serif !important;letter-spacing:1.8px !important;color:#9e8a82 !important}
+.kzh1.kzh1-nocturne .kzh1-reading{position:relative !important;margin:28px 19px 25px !important;padding-left:25px !important}
+.kzh1.kzh1-nocturne .kzh1-reading::before{content:'' !important;position:absolute !important;left:9px !important;top:24px !important;bottom:24px !important;width:1px !important;background:linear-gradient(#a68a62aa,#63302a77 32%,#63302a77 70%,#a68a62aa) !important}
+.kzh1.kzh1-nocturne .kzh1-cross{position:absolute !important;left:0 !important;top:0 !important;width:20px !important;height:20px !important;background:url('../v14/assets/gothic-cross.svg') center/contain no-repeat !important;opacity:.75 !important}
+.kzh1.kzh1-nocturne .kzh1-cross.kzh1-cross-end{top:auto !important;bottom:0 !important}
+.kzh1.kzh1-nocturne .kzh1-story{display:block !important;max-height:600px !important;overflow-y:auto !important;overflow-x:hidden !important;scrollbar-width:thin !important;scrollbar-color:#963e32 #211614 !important;scrollbar-gutter:stable !important;padding:0 20px 0 12px !important;font:14px/1.9 'KZH1 Source Serif',Georgia,serif !important;color:var(--text) !important;overflow-wrap:anywhere !important;text-align:left !important}
+.kzh1.kzh1-nocturne .kzh1-story:focus-visible{outline:1px solid #a68a6277 !important;outline-offset:4px !important}
+.kzh1.kzh1-nocturne .kzh1-story::-webkit-scrollbar{width:6px !important}
+.kzh1.kzh1-nocturne .kzh1-story::-webkit-scrollbar-track{background:#211614 !important;border-radius:5px !important}
+.kzh1.kzh1-nocturne .kzh1-story::-webkit-scrollbar-thumb{background:linear-gradient(#b08c76,#82362b) !important;border-radius:5px !important;border:1px solid #372019 !important}
+.kzh1.kzh1-nocturne .kzh1-p{margin-bottom:20px !important}
+.kzh1.kzh1-nocturne .kzh1-lead::first-letter{float:left !important;margin:3px 8px 0 0 !important;font:600 57px/.85 'KZH1 Cormorant',Georgia,serif !important;color:#bb6655 !important}
+.kzh1.kzh1-nocturne .kzh1-quote{position:relative !important;margin:27px 0 !important;padding:4px 0 5px 20px !important;border-left:1px solid #af7d68 !important;font:italic 500 23px/1.35 'KZH1 Cormorant',Georgia,serif !important;color:#cbb394 !important}
+.kzh1.kzh1-nocturne .kzh1-dialogue{margin:21px 0 !important;font-style:italic !important;color:#cc897b !important}
+.kzh1.kzh1-nocturne .kzh1-ending{display:flex !important;align-items:center !important;justify-content:center !important;gap:12px !important;height:34px !important;margin:23px 0 8px !important}
+.kzh1.kzh1-nocturne .kzh1-ending::before,.kzh1.kzh1-nocturne .kzh1-ending::after{content:'' !important;display:block !important;width:45px !important;height:1px !important;background:linear-gradient(90deg,transparent,#876953) !important}
+.kzh1.kzh1-nocturne .kzh1-ending::after{transform:scaleX(-1) !important}
+.kzh1.kzh1-nocturne .kzh1-ending i{display:block !important;width:18px !important;height:18px !important;background:url('../v14/assets/gothic-cross.svg') center/contain no-repeat !important;opacity:.7 !important}
+.kzh1.kzh1-nocturne .kzh1-footer{position:relative !important;display:flex !important;align-items:center !important;justify-content:space-between !important;gap:20px !important;flex-wrap:wrap !important;padding:24px 30px 20px !important;border-top:1px solid #613b2f88 !important;background:radial-gradient(ellipse at 76% 48%,#541e1544,transparent 65%),linear-gradient(#170d0e,#0c0908) !important;overflow:hidden !important}
+.kzh1.kzh1-nocturne .kzh1-footer::before{content:'' !important;position:absolute !important;left:30px !important;right:30px !important;top:0 !important;height:1px !important;background:linear-gradient(90deg,transparent,#b49574,transparent) !important;opacity:.5 !important}
+.kzh1.kzh1-nocturne .kzh1-sign{position:relative !important;flex:1 1 185px !important}
+.kzh1.kzh1-nocturne .kzh1-footer .kzh1-crest{justify-content:flex-start !important;margin:0 0 14px !important;width:84px !important;height:24px !important;gap:4px !important}
+.kzh1.kzh1-nocturne .kzh1-footer .kzh1-wing{width:25px !important;height:25px !important;opacity:.65 !important}
+.kzh1.kzh1-nocturne .kzh1-small{font:8px/1.5 Arial,sans-serif !important;letter-spacing:2px !important;color:#aa8f79 !important}
+.kzh1.kzh1-nocturne .kzh1-name{margin:8px 0 10px !important;font:600 30px/1 'KZH1 Cormorant',Georgia,serif !important;color:#e5d6c2 !important}
+.kzh1.kzh1-nocturne .kzh1-name em{font-style:italic !important;font-weight:500 !important}
+.kzh1.kzh1-nocturne .kzh1-state{display:flex !important;align-items:center !important;gap:6px !important;font:8px/1.5 Arial,sans-serif !important;letter-spacing:1px !important;color:#b69283 !important}
+.kzh1.kzh1-nocturne .kzh1-state::before{content:'' !important;display:block !important;width:4px !important;height:4px !important;border-radius:50% !important;background:#a44332 !important;box-shadow:0 0 7px #ae392766 !important}
+.kzh1.kzh1-nocturne .kzh1-gallery{display:flex !important;position:relative !important;flex:0 0 144px !important;flex-wrap:wrap !important;justify-content:center !important;gap:9px !important;width:144px !important}
+.kzh1.kzh1-nocturne .kzh1-choice{position:relative !important;display:block !important;order:2 !important;flex:0 0 34px !important;width:34px !important;height:34px !important;border:1px solid #5a382d !important;border-radius:50% !important;padding:3px !important;cursor:pointer !important;transition:border-color .3s,box-shadow .3s,transform .3s !important}
+.kzh1.kzh1-nocturne .kzh1-choice img{width:26px !important;height:26px !important;border-radius:50% !important;object-fit:cover !important;opacity:.55 !important;transition:opacity .3s !important}
+.kzh1.kzh1-nocturne .kzh1-choice input{position:absolute !important;inset:0 !important;display:block !important;width:100% !important;height:100% !important;margin:0 !important;opacity:0 !important;cursor:pointer !important;z-index:2 !important}
+.kzh1.kzh1-nocturne .kzh1-choice:has(input:checked){border-color:#c2a07a !important;box-shadow:0 0 0 3px #9a625321 !important}
+.kzh1.kzh1-nocturne .kzh1-choice:has(input:checked) img,.kzh1.kzh1-nocturne .kzh1-choice:hover img{opacity:1 !important}
+.kzh1.kzh1-nocturne .kzh1-choice:hover{border-color:#bd705d !important}
+.kzh1.kzh1-nocturne .kzh1-choice:has(input:focus-visible){outline:2px solid #e8c9a1 !important;outline-offset:4px !important}
+.kzh1.kzh1-nocturne .kzh1-stage{position:relative !important;order:1 !important;width:144px !important;height:114px !important;flex:0 0 144px !important;overflow:hidden !important;border:1px solid #71504477 !important;border-radius:55% 55% 5px 5px !important;background:radial-gradient(ellipse at 50% 100%,#792e1d33,transparent 75%) !important}
+.kzh1.kzh1-nocturne .kzh1-stage::after{content:'' !important;position:absolute !important;inset:5px !important;border:1px solid #b99a7220 !important;border-radius:inherit !important;pointer-events:none !important}
+.kzh1.kzh1-nocturne .kzh1-portrait{position:absolute !important;inset:10px 24px !important;display:block !important;width:96px !important;height:94px !important;max-width:none !important;object-fit:contain !important;opacity:0 !important;transform:none !important;transition:opacity .24s ease !important;filter:drop-shadow(0 7px 9px #0008) !important}
+.kzh1.kzh1-nocturne .kzh1-portrait:first-child{opacity:1 !important;transform:none !important}
+.kzh1.kzh1-nocturne .kzh1-gallery:has(.kzh1-choice input:checked) .kzh1-portrait{opacity:0 !important;transform:none !important}
+.kzh1.kzh1-nocturne .kzh1-gallery:has(.kzh1-select-1:checked) .kzh1-portrait:nth-child(1),.kzh1.kzh1-nocturne .kzh1-gallery:has(.kzh1-select-2:checked) .kzh1-portrait:nth-child(2),.kzh1.kzh1-nocturne .kzh1-gallery:has(.kzh1-select-3:checked) .kzh1-portrait:nth-child(3){opacity:1 !important;transform:none !important}
+.kzh1.kzh1-nocturne .kzh1-colophon{display:flex !important;flex-wrap:wrap !important;justify-content:space-between !important;gap:8px !important;padding:12px 25px !important;border-top:1px solid #33221c !important;background:#0b0807 !important;font:7px/1.6 Arial,sans-serif !important;letter-spacing:1px !important;color:#a69388 !important}
+.kzh1.kzh1-nocturne .kzh1-colophon a{color:#b5a084 !important;text-decoration:none !important}
+.kzh1.kzh1-nocturne .kzh1-colophon a:hover{color:#ead9bb !important}
+.kzh1.kzh1-nocturne .kzh1-colophon a:focus-visible{outline:1px solid #d9b98d !important;outline-offset:4px !important}
+@keyframes kzh1-breath{from{opacity:.35}to{opacity:.85}}
+@media(max-width:420px){.kzh1.kzh1-nocturne .kzh1-hero-copy{padding:110px 24px 25px !important}.kzh1.kzh1-nocturne .kzh1-title{font-size:43px !important}.kzh1.kzh1-nocturne .kzh1-title em{font-size:52px !important}.kzh1.kzh1-nocturne .kzh1-info{padding:0 22px !important}.kzh1.kzh1-nocturne .kzh1-meta{font-size:8px !important;gap:7px !important}.kzh1.kzh1-nocturne .kzh1-meta>span+span{padding-left:7px !important}.kzh1.kzh1-nocturne .kzh1-icon{width:10px !important;height:10px !important}.kzh1.kzh1-nocturne .kzh1-reading{margin:25px 13px !important;padding-left:21px !important}.kzh1.kzh1-nocturne .kzh1-story{padding:0 12px 0 10px !important;max-height:520px !important}.kzh1.kzh1-nocturne .kzh1-footer{padding:23px !important}.kzh1.kzh1-nocturne .kzh1-sign{flex-basis:130px !important}.kzh1.kzh1-nocturne .kzh1-gallery{margin:0 auto !important}.kzh1.kzh1-nocturne .kzh1-meta{letter-spacing:0 !important}}
+@media(prefers-reduced-motion:reduce){.kzh1.kzh1-nocturne *,.kzh1.kzh1-nocturne *::before,.kzh1.kzh1-nocturne *::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+
+/* v15: bounded reset, stable click targets, container-aware layout. */
+.kzh1.kzh1-nocturne{container:kzh1-card / inline-size !important;min-width:0 !important;clear:both !important;white-space:normal !important;word-break:normal !important;--gold:#b99a72 !important;--rose:#c56253 !important;--text:#ded4ca !important}
+.kzh1.kzh1-nocturne .kzh1-title{font-weight:600 !important}
+.kzh1.kzh1-nocturne .kzh1-title em{font-weight:600 !important}
+.kzh1.kzh1-nocturne .kzh1-hero>.kzh1-crest{position:absolute !important;left:29px !important;top:23px !important;margin:0 !important;z-index:1 !important;width:74px !important;height:36px !important}
+.kzh1.kzh1-nocturne .kzh1-hero>.kzh1-crest .kzh1-wing{width:24px !important;height:24px !important}
+.kzh1.kzh1-nocturne .kzh1-hero-copy{padding-top:162px !important}
+.kzh1.kzh1-nocturne .kzh1-story{font-size:15px !important;line-height:1.95 !important;overscroll-behavior-y:contain !important;scrollbar-color:#a83b39 #241812 !important}
+.kzh1.kzh1-nocturne .kzh1-story:focus-visible{outline:1px solid #a88664 !important;outline-offset:5px !important}
+.kzh1.kzh1-nocturne .kzh1-story b,.kzh1.kzh1-nocturne .kzh1-story strong{font-weight:600 !important;color:#f2dec3 !important}
+.kzh1.kzh1-nocturne .kzh1-story em,.kzh1.kzh1-nocturne .kzh1-story i{font-style:italic !important}
+.kzh1.kzh1-nocturne .kzh1-story a{color:#df9d89 !important;text-decoration:underline !important;text-underline-offset:3px !important;overflow-wrap:anywhere !important}
+.kzh1.kzh1-nocturne .kzh1-story img{height:auto !important;max-width:100% !important}
+.kzh1.kzh1-nocturne .kzh1-footer{gap:15px !important;padding:27px 28px 24px !important}
+.kzh1.kzh1-nocturne .kzh1-sign{flex:1 1 174px !important}
+.kzh1.kzh1-nocturne .kzh1-gallery{flex-basis:156px !important;width:156px !important;gap:8px !important}
+.kzh1.kzh1-nocturne .kzh1-choice{flex-basis:44px !important;width:44px !important;height:44px !important;padding:5px !important;transform:none !important;transition:border-color .3s,box-shadow .3s !important;background:#1c120f !important}
+.kzh1.kzh1-nocturne .kzh1-choice:hover{transform:none !important;box-shadow:0 0 14px #ad462d33 !important}
+.kzh1.kzh1-nocturne .kzh1-choice img{width:32px !important;height:32px !important;transition:opacity .3s,filter .3s !important}
+.kzh1.kzh1-nocturne .kzh1-choice:hover img{filter:brightness(1.2) !important}
+.kzh1.kzh1-nocturne .kzh1-choice input{padding:0 !important;border:0 !important;min-width:0 !important;max-width:none !important;min-height:0 !important;box-shadow:none !important;transform:none !important;appearance:auto !important}
+.kzh1.kzh1-nocturne .kzh1-stage{width:156px !important;height:144px !important;flex-basis:156px !important;border-radius:80px 80px 6px 6px !important;background:radial-gradient(ellipse at 50% 65%,#9c352133,transparent 70%),linear-gradient(0deg,#24140f77,transparent) !important}
+.kzh1.kzh1-nocturne .kzh1-stage::before{content:'' !important;position:absolute !important;inset:9px !important;border:1px dashed #b99a7233 !important;border-radius:inherit !important;pointer-events:none !important}
+.kzh1.kzh1-nocturne .kzh1-portrait{inset:23px 29px !important;width:96px !important;height:100px !important}
+.kzh1.kzh1-nocturne .kzh1-colophon{font-size:8px !important;padding:13px 26px !important}
+@container kzh1-card (max-width:420px){
+.kzh1.kzh1-nocturne .kzh1-hero-copy{padding:163px 24px 27px !important}
+.kzh1.kzh1-nocturne .kzh1-title{font-size:43px !important}
+.kzh1.kzh1-nocturne .kzh1-title em{font-size:52px !important}
+.kzh1.kzh1-nocturne .kzh1-info{padding:0 20px !important}
+.kzh1.kzh1-nocturne .kzh1-meta{font-size:8px !important;gap:6px !important;letter-spacing:0 !important}
+.kzh1.kzh1-nocturne .kzh1-meta>span+span{padding-left:6px !important}
+.kzh1.kzh1-nocturne .kzh1-meta>span{gap:4px !important}
+.kzh1.kzh1-nocturne .kzh1-icon{width:10px !important;height:10px !important}
+.kzh1.kzh1-nocturne .kzh1-reading{margin:25px 13px !important;padding-left:21px !important}
+.kzh1.kzh1-nocturne .kzh1-story{font-size:14px !important;max-height:520px !important;padding:0 12px 0 10px !important}
+.kzh1.kzh1-nocturne .kzh1-footer{padding:24px 18px !important;justify-content:center !important;text-align:center !important}
+.kzh1.kzh1-nocturne .kzh1-sign{flex-basis:100% !important}
+.kzh1.kzh1-nocturne .kzh1-footer .kzh1-crest{margin:0 auto 14px !important;justify-content:center !important}
+.kzh1.kzh1-nocturne .kzh1-state{justify-content:center !important}
+}
+@media(prefers-reduced-motion:reduce){.kzh1.kzh1-nocturne *,.kzh1.kzh1-nocturne *::before,.kzh1.kzh1-nocturne *::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}}
+
+/* Editorial refinement after studying the supplied Ciaran screenshots.
+   Original composition and code; no third-party template copied. */
+.kzh1.kzh1-nocturne{width:550px !important;--text:#d6d0ca !important;--rose:#b8433e !important;--gold:#a69276 !important;border-color:#3b2b25 !important;box-shadow:0 24px 70px #0004 !important}
+.kzh1.kzh1-nocturne .kzh1-hero{min-height:390px !important}
+.kzh1.kzh1-nocturne .kzh1-hero-copy{padding:210px 42px 28px !important}
+.kzh1.kzh1-nocturne .kzh1-hero>.kzh1-crest{left:40px !important;top:27px !important;opacity:.7 !important}
+.kzh1.kzh1-nocturne .kzh1-title{font-size:55px !important;letter-spacing:-1px !important;color:#ede5d7 !important}
+.kzh1.kzh1-nocturne .kzh1-title em{font-size:67px !important;letter-spacing:-1.5px !important;color:#c35e58 !important}
+.kzh1.kzh1-nocturne .kzh1-info{padding:0 43px !important}
+.kzh1.kzh1-nocturne .kzh1-meta{padding:8px 0 22px !important;gap:10px !important;letter-spacing:.4px !important;color:#b8aca6 !important}
+.kzh1.kzh1-nocturne .kzh1-reading{margin:42px 34px 39px !important;padding-left:25px !important}
+.kzh1.kzh1-nocturne .kzh1-story{font-size:15px !important;line-height:1.85 !important;padding:0 15px 0 20px !important;color:#d6d0ca !important}
+.kzh1.kzh1-nocturne .kzh1-p{margin-bottom:25px !important}
+.kzh1.kzh1-nocturne .kzh1-quote{font-size:22px !important;line-height:1.5 !important;color:#b8a28d !important;margin:30px 0 !important;padding-left:18px !important;border-color:#675244 !important}
+.kzh1.kzh1-nocturne .kzh1-dialogue{color:#c35e58 !important}
+.kzh1.kzh1-nocturne .kzh1-footer{padding:30px 41px 27px !important;border-top-color:#3a2821 !important}
+.kzh1.kzh1-nocturne .kzh1-small{letter-spacing:1.6px !important;color:#998b7c !important}
+.kzh1.kzh1-nocturne .kzh1-stage::before{border-style:solid !important;opacity:.45 !important}
+.kzh1.kzh1-nocturne .kzh1-colophon{font-size:8px !important;color:#998a80 !important}
+/* Alternative: cool ash, quiet silver and a desaturated portrait. */
+@container kzh1-card (max-width:420px){
+.kzh1.kzh1-nocturne .kzh1-hero{min-height:365px !important}
+.kzh1.kzh1-nocturne .kzh1-hero-copy{padding:209px 24px 26px !important}
+.kzh1.kzh1-nocturne .kzh1-title{font-size:43px !important}
+.kzh1.kzh1-nocturne .kzh1-title em{font-size:52px !important}
+.kzh1.kzh1-nocturne .kzh1-info{padding:0 20px !important}
+.kzh1.kzh1-nocturne .kzh1-meta{gap:6px !important;letter-spacing:0 !important}
+.kzh1.kzh1-nocturne .kzh1-reading{margin:30px 13px !important;padding-left:21px !important}
+.kzh1.kzh1-nocturne .kzh1-story{font-size:14px !important;padding:0 12px 0 10px !important}
+.kzh1.kzh1-nocturne .kzh1-footer{padding:26px 20px !important}
+}
+
+/* Portrait proportions match the square illustrations. Stable click surfaces. */
+.kzh1.kzh1-nocturne .kzh1-stage{width:128px !important;height:128px !important;flex-basis:128px !important;border-radius:5px !important;border:1px solid #93664766 !important;background:radial-gradient(ellipse at center,#63271c24,transparent 75%),#120d0b !important;box-shadow:0 0 18px #84322216 !important}
+.kzh1.kzh1-nocturne .kzh1-stage::before,.kzh1.kzh1-nocturne .kzh1-stage::after{content:none !important}
+.kzh1.kzh1-nocturne .kzh1-portrait{inset:8px !important;width:110px !important;height:110px !important;border-radius:2px !important}
+/* One skull between the wings, replacing the rotated jewel. */
+.kzh1.kzh1-nocturne .kzh1-jewel{display:block !important;flex:none !important;width:19px !important;height:22px !important;border-radius:0 !important;background:url('../v15/assets/skull.svg') center/contain no-repeat !important;transform:none !important;box-shadow:none !important}
+
+.kzh1.kzh1-nocturne .kzh1-colophon{font-size:10px !important;letter-spacing:.5px !important;padding:14px 26px !important}
+
+/* Identify Kazui through his existing portrait (legacy posts) or explicit opt-in.
+   Higher specificity than old Ange's broad hero override, including in quotes.
+   Image only: preserve Sangre antigua / Ceniza blend and palette settings. */
+.kzh1.kzh1-nocturne:is(.kzh1-kazui,:has(.kzh1-portrait[src*="1Sgtj1T"])) > .kzh1-hero{background-image:linear-gradient(0deg,#130d0d 0%,#130d0df5 7%,#130d0d99 24%,transparent 60%),linear-gradient(90deg,#09060b9c,transparent 83%),url('https://2img.net/i.imgur.com/YeSpBkx.jpeg') !important}
+/* Kazui: Noche de brujas. Scoped opt-in theme; keeps the protected base CSS. */
+
+.kzh1.kzh1-nocturne.kzh1-halloween{--hw-image:url('https://2img.net/i.imgur.com/YeSpBkx.jpeg');--hw-position:center 10%;--hw-size:cover;--ink:#160e20!important;--rose:#ee9e62!important;--gold:#c19bdb!important;--text:#e1d7e8!important;background:#160e20!important;border-color:#573761!important;box-shadow:0 24px 70px #0007,0 0 40px #73399816!important}
+.kzh1.kzh1-nocturne.kzh1-kazui.kzh1-halloween>.kzh1-hero{background:linear-gradient(0deg,#160e20 0%,#160e20ed 10%,#160e2080 36%,transparent 78%),linear-gradient(90deg,#251038b3,transparent 85%),var(--hw-image)!important;background-position:center,center,var(--hw-position)!important;background-size:cover,cover,var(--hw-size)!important;background-repeat:no-repeat!important;background-blend-mode:normal!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-hero::before{background:radial-gradient(ellipse at 12% 30%,#9752c54d,transparent 65%)!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-hero::after{border-color:#c995e64d!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-title{color:#e7d4f1!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-title em{color:#f0a060!important;text-shadow:0 2px 20px #d05c2433!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-title a:focus-visible{outline:2px solid #f0a060!important;outline-offset:5px!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-meta{color:#c6adcf!important;border-color:#563664!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-meta>span+span{border-color:#704368!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-meta b{color:#f0af76!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-meta .kzh1-rating{color:#ee747c!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-reading::before{background:linear-gradient(#d18fceaa,#78468a88 34%,#a74d4888 70%,#e59754aa)!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story{color:#e1d7e8!important;scrollbar-color:#a76ac4 #251530!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story::-webkit-scrollbar-track{background:#251530!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story::-webkit-scrollbar-thumb{background:#a76ac4!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story:focus-visible{outline-color:#c99be5!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-lead::first-letter{color:#eda365!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-dialogue{color:#efad78!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-quote{color:#caa0e3!important;border-color:#a94959!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story b,.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-story strong{color:#ead0fc!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-ending{color:#c799dd!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-wing,.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-cross{filter:sepia(.3) hue-rotate(240deg) saturate(1.5)!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-jewel,.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-icon{filter:sepia(.5) saturate(1.8)!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-footer{background:radial-gradient(ellipse at 90% 90%,#d66b2524,transparent 65%),radial-gradient(ellipse at 5% 30%,#823ec52e,transparent 75%),linear-gradient(#160e20,#21102b)!important;border-color:#573761!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-small{color:#bd98ce!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-name{color:#e8cffa!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-name em{color:#eea16e!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-state{color:#c2a0ce!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-state::before{background:#c44752!important;box-shadow:0 0 10px #c4475240!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-stage{background:radial-gradient(ellipse at center,#803db52b,transparent 80%),#1b1026!important;border-color:#94608a!important;box-shadow:0 0 24px #7a3fa922!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-choice{background:#24132e!important;border-color:#774a85!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-choice:has(input:checked){border-color:#efa064!important;box-shadow:0 0 0 3px #ef9b6020!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-choice:hover{border-color:#cb9be7!important;box-shadow:0 0 16px #9762c533!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-choice:has(input:focus-visible){outline-color:#efa064!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-colophon{background:#120b1b!important;border-color:#573761!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-colophon a{color:#bda0ce!important}
+.kzh1.kzh1-nocturne.kzh1-halloween .kzh1-colophon a:hover{color:#efad78!important}
