@@ -1,0 +1,39 @@
+/* Kazui: Noche de brujas. Scoped opt-in theme; keeps the protected base CSS. */
+@import url('https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@18f7733cad6bb4782fe2dba81d9ae48b965266a6/tablas-y-estilos/v15/kazui.css');
+.ow15.ow15-nocturne.ow15-halloween{--hw-image:url('https://2img.net/i.imgur.com/wChigK7.jpeg');--hw-position:center 10%;--hw-size:cover;--ink:#160e20!important;--rose:#ee9e62!important;--gold:#c19bdb!important;--text:#e1d7e8!important;background:#160e20!important;border-color:#573761!important;box-shadow:0 24px 70px #0007,0 0 40px #73399816!important}
+.ow15.ow15-nocturne.ow15-kazui.ow15-halloween>.ow15-hero{background:linear-gradient(0deg,#160e20 0%,#160e20ed 10%,#160e2080 36%,transparent 78%),linear-gradient(90deg,#251038b3,transparent 85%),var(--hw-image)!important;background-position:center,center,var(--hw-position)!important;background-size:cover,cover,var(--hw-size)!important;background-repeat:no-repeat!important;background-blend-mode:normal!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-hero::before{background:radial-gradient(ellipse at 12% 30%,#9752c54d,transparent 65%)!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-hero::after{border-color:#c995e64d!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-title{color:#e7d4f1!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-title em{color:#f0a060!important;text-shadow:0 2px 20px #d05c2433!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-title a:focus-visible{outline:2px solid #f0a060!important;outline-offset:5px!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-meta{color:#c6adcf!important;border-color:#563664!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-meta>span+span{border-color:#704368!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-meta b{color:#f0af76!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-meta .ow15-rating{color:#ee747c!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-reading::before{background:linear-gradient(#d18fceaa,#78468a88 34%,#a74d4888 70%,#e59754aa)!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-story{color:#e1d7e8!important;scrollbar-color:#a76ac4 #251530!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-story::-webkit-scrollbar-track{background:#251530!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-story::-webkit-scrollbar-thumb{background:#a76ac4!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-story:focus-visible{outline-color:#c99be5!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-lead::first-letter{color:#eda365!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-dialogue{color:#efad78!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-quote{color:#caa0e3!important;border-color:#a94959!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-story b,.ow15.ow15-nocturne.ow15-halloween .ow15-story strong{color:#ead0fc!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-ending{color:#c799dd!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-wing,.ow15.ow15-nocturne.ow15-halloween .ow15-cross{filter:sepia(.3) hue-rotate(240deg) saturate(1.5)!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-jewel,.ow15.ow15-nocturne.ow15-halloween .ow15-icon{filter:sepia(.5) saturate(1.8)!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-footer{background:radial-gradient(ellipse at 90% 90%,#d66b2524,transparent 65%),radial-gradient(ellipse at 5% 30%,#823ec52e,transparent 75%),linear-gradient(#160e20,#21102b)!important;border-color:#573761!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-small{color:#bd98ce!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-name{color:#e8cffa!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-name em{color:#eea16e!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-state{color:#c2a0ce!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-state::before{background:#c44752!important;box-shadow:0 0 10px #c4475240!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-stage{background:radial-gradient(ellipse at center,#803db52b,transparent 80%),#1b1026!important;border-color:#94608a!important;box-shadow:0 0 24px #7a3fa922!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-choice{background:#24132e!important;border-color:#774a85!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-choice:has(input:checked){border-color:#efa064!important;box-shadow:0 0 0 3px #ef9b6020!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-choice:hover{border-color:#cb9be7!important;box-shadow:0 0 16px #9762c533!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-choice:has(input:focus-visible){outline-color:#efa064!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-colophon{background:#120b1b!important;border-color:#573761!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-colophon a{color:#bda0ce!important}
+.ow15.ow15-nocturne.ow15-halloween .ow15-colophon a:hover{color:#efad78!important}
