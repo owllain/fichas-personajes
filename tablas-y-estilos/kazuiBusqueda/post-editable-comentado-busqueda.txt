@@ -1,9 +1,9 @@
 <!--
 BÚSQUEDA KAZUI / COMPOSICIÓN ORIGINAL
 Edita los textos dentro de sus etiquetas. Mantén los saltos de línea dentro de comentarios para Foroactivo.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@dc7e28dc57853b05942d8a4a349b2b1099b13b53/tablas-y-estilos/kazuiBusqueda/busqueda.css"><div class="kbq1"><div class="kbq1-hero"><div class="kbq1-art"><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@653796c13a9c54cb67929aa8cc58c4d90176f39d/tablas-y-estilos/kazuiBusqueda/busqueda.css"><div class="kbq1"><div class="kbq1-hero"><div class="kbq1-art"><!--
 IMAGEN: cambia src por tu nueva imagen.
---><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@dc7e28dc57853b05942d8a4a349b2b1099b13b53/tablas-y-estilos/kazuiBusqueda/assets/kazui-retrato.png" alt="Kazui von Vitra" width="400" height="600"></div><div class="kbq1-intro"><div class="kbq1-kicker">Kazui von Vitra · Búsqueda de rol</div><!--
+--><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@653796c13a9c54cb67929aa8cc58c4d90176f39d/tablas-y-estilos/kazuiBusqueda/assets/kazui-retrato.png" alt="Kazui von Vitra" width="400" height="600"></div><div class="kbq1-intro"><div class="kbq1-kicker">Kazui von Vitra · Búsqueda de rol</div><!--
 TÍTULO: br separa las dos líneas; em indica cursiva.
 --><div class="kbq1-title">El precio<br>de <em>conocerme.</em></div><span class="kbq1-tag">VÍNCULOS Y CONFLICTOS</span><!--
 PRESENTACIÓN: reemplaza este texto de ejemplo.
