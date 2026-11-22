@@ -6,7 +6,7 @@ Puedes añadir párrafos con <p>Tu texto.</p> dentro de kbq1-body.
 La barra aparece si el contenido supera 320 px.
 Mantén los saltos de línea dentro de comentarios para Foroactivo.
 El archivo post-para-foro-busqueda.txt conserva el ejemplo completo.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@e622434c948ffe882fd0dbe8338785990709490f/tablas-y-estilos/kazuiBusqueda/busqueda.css"><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@54701ebe79fb201177d94877f24a9ea3d03a5519/tablas-y-estilos/kazuiBusqueda/busqueda.css"><!--
 
 --><div class="kbq1"><!--
 
@@ -14,7 +14,7 @@ El archivo post-para-foro-busqueda.txt conserva el ejemplo completo.
 
 --><div class="kbq1-art"><!--
 
---><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@e622434c948ffe882fd0dbe8338785990709490f/tablas-y-estilos/kazuiBusqueda/assets/kazui-umbral-v2.png" alt="Kazui von Vitra" width="400" height="600"></div><!--
+--><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@54701ebe79fb201177d94877f24a9ea3d03a5519/tablas-y-estilos/kazuiBusqueda/assets/kazui-umbral-v2.png" alt="Kazui von Vitra" width="400" height="600"></div><!--
 
 --><div class="kbq1-intro"><!--
 
