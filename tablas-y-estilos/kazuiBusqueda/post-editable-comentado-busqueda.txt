@@ -1,0 +1,30 @@
+<!--
+KAZUI / BÚSQUEDA · PROTOTIPO EDITABLE
+Texto de ejemplo: sustituye premisas, disponibilidad y condiciones antes de publicar.
+No insertes saltos fuera de los comentarios. Cada párrafo va dentro de <p>...</p>.
+Esta tabla usa clases kbq1 y su propio CSS; no necesita ningún CSS de post.
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda/busqueda.css"><div class="kbq1"><div class="kbq1-hero"><div class="kbq1-art"><!--
+01 / IMAGEN · Cambia únicamente la dirección src. El encuadre puede ajustarse con --kbq1-photo-position en el div kbq1.
+--><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda/assets/kazui-retrato.png" alt="Kazui von Vitra" width="400" height="600"></div><div class="kbq1-intro"><div class="kbq1-kicker">Kazui von Vitra · Búsqueda de rol</div><div class="kbq1-title"><!--
+02 / TÍTULO · em muestra la segunda línea en cursiva.
+-->El precio de <em>conocerme.</em></div><p class="kbq1-description"><!--
+03 / PRESENTACIÓN · Ejemplo editable.
+-->Una presencia antigua en Stonefield. Busco encuentros que dejen huella: deudas, alianzas incómodas y enemigos con motivos propios.</p></div></div><div class="kbq1-facts"><!--
+04 / DATOS · Son ejemplos, no condiciones confirmadas.
+--><span>STONEFIELD</span><span>VÍNCULOS Y CONFLICTOS</span><span>PROPUESTAS A CONVERSAR</span></div><div class="kbq1-overview"><div class="kbq1-heading">Historias por escribir</div><p class="kbq1-hint">Abre cada vínculo para leer su propuesta. Puedes desplegar varios a la vez.</p></div><div class="kbq1-list"><!--
+05.01 / ACORDEÓN · Puedes duplicar TODO el bloque <details>...</details>.
+Quita open para que empiece cerrado; añade open para mostrarlo al cargar.
+No necesita id ni name: varias tablas pueden convivir sin interferir.
+--><details class="kbq1-search" open><summary class="kbq1-summary"><span class="kbq1-number">01</span><span class="kbq1-label">Una deuda de sangre</span><span class="kbq1-badge">A convenir</span><span class="kbq1-toggle" aria-hidden="true"></span></summary><div class="kbq1-body"><p>Una ayuda que nunca fue gratuita. Tu personaje necesita algo que Kazui puede conseguir; el precio y las consecuencias los decidimos entre ambos.</p><p><strong>Busco:</strong> Un personaje con una necesidad concreta y razones para desconfiar.</p><p><strong>Ofrezco:</strong> Negociación, tensión y una deuda que puede cambiar de manos.</p><div class="kbq1-note">Disponibilidad y detalles: a conversar.</div></div></details><!--
+05.02 / ACORDEÓN · Puedes duplicar TODO el bloque <details>...</details>.
+Quita open para que empiece cerrado; añade open para mostrarlo al cargar.
+No necesita id ni name: varias tablas pueden convivir sin interferir.
+--><details class="kbq1-search"><summary class="kbq1-summary"><span class="kbq1-number">02</span><span class="kbq1-label">El testigo del abismo</span><span class="kbq1-badge">A convenir</span><span class="kbq1-toggle" aria-hidden="true"></span></summary><div class="kbq1-body"><p>Tu personaje vio algo que habría preferido ignorar. Kazui reconoce las señales y tiene sus propios motivos para intervenir.</p><p><strong>Busco:</strong> Alguien que investigue, huya o intente comprender lo sucedido.</p><p><strong>Ofrezco:</strong> Misterio, horror y decisiones que transformen el vínculo.</p><div class="kbq1-note">Disponibilidad y detalles: a conversar.</div></div></details><!--
+05.03 / ACORDEÓN · Puedes duplicar TODO el bloque <details>...</details>.
+Quita open para que empiece cerrado; añade open para mostrarlo al cargar.
+No necesita id ni name: varias tablas pueden convivir sin interferir.
+--><details class="kbq1-search"><summary class="kbq1-summary"><span class="kbq1-number">03</span><span class="kbq1-label">Lo que aún me ata</span><span class="kbq1-badge">A convenir</span><span class="kbq1-toggle" aria-hidden="true"></span></summary><div class="kbq1-body"><p>Un rostro, un objeto o una promesa conecta a tu personaje con un episodio del pasado de Kazui.</p><p><strong>Busco:</strong> Una conexión construida de común acuerdo, sin imponer antecedentes a tu personaje.</p><p><strong>Ofrezco:</strong> Un vínculo ambiguo que pueda inclinarse hacia la alianza o el conflicto.</p><div class="kbq1-note">Disponibilidad y detalles: a conversar.</div></div></details><!--
+06 / CONDICIONES · Escribe aquí tus preferencias reales de ritmo, extensión, límites y contacto.
+--></div><div class="kbq1-bottom"><div class="kbq1-heading">Antes de cruzar el umbral</div><p>Ritmo, extensión y límites se acuerdan entre jugadores. Las premisas son puntos de partida y pueden adaptarse a nuestros personajes.</p><div class="kbq1-actions"><!--
+07 / CONTACTO · Sustituye el href del foro por tu enlace de ficha o de mensajes. No lleva un destinatario inventado.
+--><a class="kbq1-action" href="https://anima-pneuma.foroactivo.com/">ENCONTRARNOS EN EL FORO</a></div></div><div class="kbq1-credit"><a href="https://github.com/owllain/fichas-personajes/blob/main/tablas-y-estilos/kazuiBusqueda/CREDITOS.md">Créditos</a><a href="https://github.com/owllain">by Owllain</a></div></div>
