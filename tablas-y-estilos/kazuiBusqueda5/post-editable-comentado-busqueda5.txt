@@ -1,0 +1,153 @@
+<!--
+VARIANTE DE CINCO BÚSQUEDAS — CSS INDEPENDIENTE kbq5
+Sustituye los campos [[...]]. Duplica un bloque details completo para añadir tramas.
+Actualiza 05 PROPUESTAS si cambia el número de búsquedas.
+Una sola barra de 500 px en escritorio; lectura natural en móvil.
+Mantén los saltos dentro de comentarios para Foroactivo.
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda5/busqueda.css"><!--
+
+--><div class="kbq5"><!--
+
+--><div class="kbq5-hero"><!--
+
+--><div class="kbq5-art"><!--
+
+--><img class="kbq5-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda5/assets/kazui-umbral-v2.png" alt="Kazui von Vitra" width="400" height="600"></div><!--
+
+--><div class="kbq5-intro"><!--
+
+--><div class="kbq5-kicker">Kazui von Vitra · Búsqueda de rol</div><!--
+
+--><div class="kbq5-title">[[TÍTULO]]<br><em>[[SEGUNDA LÍNEA]]</em></div><!--
+
+--><span class="kbq5-tag">VÍNCULOS Y CONFLICTOS</span><!--
+
+--><p class="kbq5-description">[[PRESENTACIÓN]]</p><!--
+
+--><div class="kbq5-scroll-hint">05 PROPUESTAS · Abre una trama y desplázate por el listado.</div><!--
+
+--><div class="kbq5-list" tabindex="0" role="region" aria-label="Listado de búsquedas, área desplazable"><!--
+
+--><details class="kbq5-search"><!--
+
+--><summary class="kbq5-summary"><i class="kbq5-icon kbq5-icon-sangre" aria-hidden="true"></i><!--
+
+--><span class="kbq5-number">01.</span><!--
+
+--><span class="kbq5-label">[[NOMBRE DE LA TRAMA]]</span><!--
+
+--><span class="kbq5-badge">[[CUPO / ESTADO]]</span><!--
+
+--><span class="kbq5-toggle" aria-hidden="true"></span></summary><!--
+
+--><div class="kbq5-body"><!--
+
+--><p>[[PREMISA DE LA TRAMA]]</p><!--
+
+--><p><strong>Busco:</strong> [[QUÉ BUSCAS]]</p><!--
+
+--><p><strong>Ofrezco:</strong> [[QUÉ OFRECES]]</p><!--
+
+--><div class="kbq5-note">[[DISPONIBILIDAD]]</div></div></details><!--
+
+--><details class="kbq5-search"><!--
+
+--><summary class="kbq5-summary"><i class="kbq5-icon kbq5-icon-ojo" aria-hidden="true"></i><!--
+
+--><span class="kbq5-number">02.</span><!--
+
+--><span class="kbq5-label">[[NOMBRE DE LA TRAMA]]</span><!--
+
+--><span class="kbq5-badge">[[CUPO / ESTADO]]</span><!--
+
+--><span class="kbq5-toggle" aria-hidden="true"></span></summary><!--
+
+--><div class="kbq5-body"><!--
+
+--><p>[[PREMISA DE LA TRAMA]]</p><!--
+
+--><p><strong>Busco:</strong> [[QUÉ BUSCAS]]</p><!--
+
+--><p><strong>Ofrezco:</strong> [[QUÉ OFRECES]]</p><!--
+
+--><div class="kbq5-note">[[DISPONIBILIDAD]]</div></div></details><!--
+
+--><details class="kbq5-search"><!--
+
+--><summary class="kbq5-summary"><i class="kbq5-icon kbq5-icon-vinculo" aria-hidden="true"></i><!--
+
+--><span class="kbq5-number">03.</span><!--
+
+--><span class="kbq5-label">[[NOMBRE DE LA TRAMA]]</span><!--
+
+--><span class="kbq5-badge">[[CUPO / ESTADO]]</span><!--
+
+--><span class="kbq5-toggle" aria-hidden="true"></span></summary><!--
+
+--><div class="kbq5-body"><!--
+
+--><p>[[PREMISA DE LA TRAMA]]</p><!--
+
+--><p><strong>Busco:</strong> [[QUÉ BUSCAS]]</p><!--
+
+--><p><strong>Ofrezco:</strong> [[QUÉ OFRECES]]</p><!--
+
+--><div class="kbq5-note">[[DISPONIBILIDAD]]</div></div></details><!--
+
+--><details class="kbq5-search"><!--
+
+--><summary class="kbq5-summary"><i class="kbq5-icon kbq5-icon-ojo" aria-hidden="true"></i><!--
+
+--><span class="kbq5-number">04.</span><!--
+
+--><span class="kbq5-label">[[NOMBRE DE LA TRAMA]]</span><!--
+
+--><span class="kbq5-badge">[[CUPO / ESTADO]]</span><!--
+
+--><span class="kbq5-toggle" aria-hidden="true"></span></summary><!--
+
+--><div class="kbq5-body"><!--
+
+--><p>[[PREMISA DE LA TRAMA]]</p><!--
+
+--><p><strong>Busco:</strong> [[QUÉ BUSCAS]]</p><!--
+
+--><p><strong>Ofrezco:</strong> [[QUÉ OFRECES]]</p><!--
+
+--><div class="kbq5-note">[[DISPONIBILIDAD]]</div></div></details><!--
+
+--><details class="kbq5-search"><!--
+
+--><summary class="kbq5-summary"><i class="kbq5-icon kbq5-icon-vinculo" aria-hidden="true"></i><!--
+
+--><span class="kbq5-number">05.</span><!--
+
+--><span class="kbq5-label">[[NOMBRE DE LA TRAMA]]</span><!--
+
+--><span class="kbq5-badge">[[CUPO / ESTADO]]</span><!--
+
+--><span class="kbq5-toggle" aria-hidden="true"></span></summary><!--
+
+--><div class="kbq5-body"><!--
+
+--><p>[[PREMISA DE LA TRAMA]]</p><!--
+
+--><p><strong>Busco:</strong> [[QUÉ BUSCAS]]</p><!--
+
+--><p><strong>Ofrezco:</strong> [[QUÉ OFRECES]]</p><!--
+
+--><div class="kbq5-note">[[DISPONIBILIDAD]]</div></div></details></div><!--
+
+--><div class="kbq5-bottom"><!--
+
+--><p>[[CONDICIONES Y RITMO]]</p><!--
+
+--><div class="kbq5-actions"><!--
+
+--><a class="kbq5-action" href="[[URL_DE_CONTACTO]]">ENCONTRARNOS EN EL FORO</a></div></div></div></div><!--
+
+--><div class="kbq5-credit"><!--
+
+--><a href="https://github.com/owllain/fichas-personajes/blob/main/tablas-y-estilos/kazuiBusqueda5/CREDITOS.md">Créditos</a><!--
+
+--><a href="https://github.com/owllain">by Owllain</a></div></div>
