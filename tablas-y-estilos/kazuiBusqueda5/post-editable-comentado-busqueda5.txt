@@ -4,7 +4,7 @@ Sustituye los campos [[...]]. Duplica un bloque details completo para añadir tr
 Actualiza 05 PROPUESTAS si cambia el número de búsquedas.
 Una sola barra de 500 px en escritorio; lectura natural en móvil.
 Mantén los saltos dentro de comentarios para Foroactivo.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda5/busqueda.css"><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@380b6222c099d3d7c57b32d8ececa10c97eb7b5f/tablas-y-estilos/kazuiBusqueda5/busqueda.css"><!--
 
 --><div class="kbq5"><!--
 
@@ -12,7 +12,7 @@ Mantén los saltos dentro de comentarios para Foroactivo.
 
 --><div class="kbq5-art"><!--
 
---><img class="kbq5-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda5/assets/kazui-umbral-v2.png" alt="Kazui von Vitra" width="400" height="600"></div><!--
+--><img class="kbq5-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@380b6222c099d3d7c57b32d8ececa10c97eb7b5f/tablas-y-estilos/kazuiBusqueda5/assets/kazui-umbral-v2.png" alt="Kazui von Vitra" width="400" height="600"></div><!--
 
 --><div class="kbq5-intro"><!--
 
