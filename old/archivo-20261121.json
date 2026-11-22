@@ -1,0 +1,137 @@
+[
+  {
+    "from": "tablas-y-estilos\\v13\\kazui.css",
+    "to": "old\\tablas-y-estilos\\v13\\kazui.css",
+    "sha256": "6338f334b3581d83d258b57a3a9792d25c1d6f0d8a4c72873a05bca7531243bc"
+  },
+  {
+    "from": "tablas-y-estilos\\v13\\post-para-foro.txt",
+    "to": "old\\tablas-y-estilos\\v13\\post-para-foro.txt",
+    "sha256": "dd8c31feb943aad69f306c608ba76504d768d648977a3a6fabf33d092a5307c0"
+  },
+  {
+    "from": "tablas-y-estilos\\v13\\vista-previa.html",
+    "to": "old\\tablas-y-estilos\\v13\\vista-previa.html",
+    "sha256": "f5eb5a060bb2d5cf1780a4160603c34d7722efa41adc887cb47668d901f6d601"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\fonts.css",
+    "to": "old\\tablas-y-estilos\\v14\\fonts.css",
+    "sha256": "a8f7ea6e470f29ff6c891152e1dcff1780bfb0e89f5c6682aba04f73174b9828"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\fragmento.html",
+    "to": "old\\tablas-y-estilos\\v14\\fragmento.html",
+    "sha256": "9074555a7ad10c45d6248d75516e5ea330ce1e3c2859b496deb8edc3a164abb9"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\kazui-png.css",
+    "to": "old\\tablas-y-estilos\\v14\\kazui-png.css",
+    "sha256": "873bed8ec23945a02f37d08aa10fe165059c05bcdb22502d0623a66967ced66e"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\kazui.css",
+    "to": "old\\tablas-y-estilos\\v14\\kazui.css",
+    "sha256": "2bf407dbd77f5d9e50f76fd1e6410b5eb78c16ee612c7e5f7419660ddaeb98ea"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\kazui.source.css",
+    "to": "old\\tablas-y-estilos\\v14\\kazui.source.css",
+    "sha256": "ac10de00da9fec79b07cccfeda9ec9e3521ef3e50c474c9727763d1bc714ba6b"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\post-para-foro-png.txt",
+    "to": "old\\tablas-y-estilos\\v14\\post-para-foro-png.txt",
+    "sha256": "208f7818a4a64ead49f649fee2c98843eff53765fa2123ff21b753548bfbf6dd"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\post-para-foro.txt",
+    "to": "old\\tablas-y-estilos\\v14\\post-para-foro.txt",
+    "sha256": "c3b7bfc1edef69772218ccb0d9f5618475d4d91ac35dac415fe6abbe2e312e25"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\README.md",
+    "to": "old\\tablas-y-estilos\\v14\\README.md",
+    "sha256": "1f51869d2f1f0fd389e86f923eeee9b6c46d642ade24f2ea10df0de35908e320"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\vista-previa-cdn.html",
+    "to": "old\\tablas-y-estilos\\v14\\vista-previa-cdn.html",
+    "sha256": "1f75cdd4f65f313d96d2670814a51d40ccd82c968b2ced810ed4ac1bab4d07a9"
+  },
+  {
+    "from": "tablas-y-estilos\\v14\\vista-previa.html",
+    "to": "old\\tablas-y-estilos\\v14\\vista-previa.html",
+    "sha256": "cf05a945398dfc459d60e9b1484fa64aa98fd45ef1b3b20daca5dcc28f62266c"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\COMO-ESCRIBIR.md",
+    "to": "old\\tablas-y-estilos\\v15\\COMO-ESCRIBIR.md",
+    "sha256": "7696d6e05c8bcc5957ee7fea89ef810d4ba7c2e763085e24b6da57fb7291815c"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\HALLOWEEN.md",
+    "to": "old\\tablas-y-estilos\\v15\\HALLOWEEN.md",
+    "sha256": "940695835fb2fae22ed1a399733e0a63476a94ae56782c15900ffb1af3355a03"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\README.md",
+    "to": "old\\tablas-y-estilos\\v15\\README.md",
+    "sha256": "8d612ec88109e5ab496a771830a0b4e7f4baa359ce1ddef426897aad3b562f5b"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\comparar.html",
+    "to": "old\\tablas-y-estilos\\v15\\comparar.html",
+    "sha256": "d1a62f64ddf1c5b5c86cbfd25b88de43e242ec8297d0058549bdc52045a4e2c2"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\fragmento.html",
+    "to": "old\\tablas-y-estilos\\v15\\fragmento.html",
+    "sha256": "90eb24325701d620ff4244df81e2082dee153a3f3043102dfc169464771d12f4"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\kazui-halloween.css",
+    "to": "old\\tablas-y-estilos\\v15\\kazui-halloween.css",
+    "sha256": "cf16989b9fc2307514e53f9e7e4f00a892032d1c567e84353cd0e5db47ea3e47"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\post-editable-comentado-halloween.txt",
+    "to": "old\\tablas-y-estilos\\v15\\post-editable-comentado-halloween.txt",
+    "sha256": "a2ca6d231e07c4f67d5a9667e59ec77393adcad86a63af0c6046f26acb14fe33"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\post-para-foro-halloween.txt",
+    "to": "old\\tablas-y-estilos\\v15\\post-para-foro-halloween.txt",
+    "sha256": "19d583102cdc5b9d993997b42c2c0139b51adc51c5edff0e73141778cbb78c1b"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\preparar-post.html",
+    "to": "old\\tablas-y-estilos\\v15\\preparar-post.html",
+    "sha256": "a928ceb0fe507c6386883db1832c9357f9f43776b7f0f768a8a4404eb001f2a9"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\vista-previa-cdn.html",
+    "to": "old\\tablas-y-estilos\\v15\\vista-previa-cdn.html",
+    "sha256": "74cd3d7f3b635532665f5c392d2744546adbb95ceffa67d1589a81d0383cc31d"
+  },
+  {
+    "from": "tablas-y-estilos\\v15\\vista-previa.html",
+    "to": "old\\tablas-y-estilos\\v15\\vista-previa.html",
+    "sha256": "e81504979d6796f8aba532db82d343be3e8e86bfddf2b197a8ae8f20eaf8a7ad"
+  },
+  {
+    "from": "tablas-y-estilos\\angeSwan\\README.md",
+    "to": "old\\tablas-y-estilos\\angeSwan\\README.md",
+    "sha256": "ccc35f3e876d74f70478e5353bd1adeac50466073bce8438a29b2bc924864fc3"
+  },
+  {
+    "from": "tablas-y-estilos\\angeSwan\\preview.html",
+    "to": "old\\tablas-y-estilos\\angeSwan\\preview.html",
+    "sha256": "18cf705366caefcb19fb1d4cfe2776d0e4d1ad018a6ef52b9d4e891fe76cf7ff"
+  },
+  {
+    "from": "tablas-y-estilos\\kazuiHalloween\\README.md",
+    "to": "old\\tablas-y-estilos\\kazuiHalloween\\README.md",
+    "sha256": "06d84eaa574aa615d09c96a56eaecb610c00556a6a34f34f2d0760c311c471c2"
+  }
+]
