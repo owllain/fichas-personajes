@@ -3,9 +3,9 @@ KAZUI / BÚSQUEDA · PROTOTIPO EDITABLE
 Texto de ejemplo: sustituye premisas, disponibilidad y condiciones antes de publicar.
 No insertes saltos fuera de los comentarios. Cada párrafo va dentro de <p>...</p>.
 Esta tabla usa clases kbq1 y su propio CSS; no necesita ningún CSS de post.
---><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda/busqueda.css"><div class="kbq1"><div class="kbq1-hero"><div class="kbq1-art"><!--
+--><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@dc7e28dc57853b05942d8a4a349b2b1099b13b53/tablas-y-estilos/kazuiBusqueda/busqueda.css"><div class="kbq1"><div class="kbq1-hero"><div class="kbq1-art"><!--
 01 / IMAGEN · Cambia únicamente la dirección src. El encuadre puede ajustarse con --kbq1-photo-position en el div kbq1.
---><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@main/tablas-y-estilos/kazuiBusqueda/assets/kazui-retrato.png" alt="Kazui von Vitra" width="400" height="600"></div><div class="kbq1-intro"><div class="kbq1-kicker">Kazui von Vitra · Búsqueda de rol</div><div class="kbq1-title"><!--
+--><img class="kbq1-photo" src="https://cdn.jsdelivr.net/gh/owllain/fichas-personajes@dc7e28dc57853b05942d8a4a349b2b1099b13b53/tablas-y-estilos/kazuiBusqueda/assets/kazui-retrato.png" alt="Kazui von Vitra" width="400" height="600"></div><div class="kbq1-intro"><div class="kbq1-kicker">Kazui von Vitra · Búsqueda de rol</div><div class="kbq1-title"><!--
 02 / TÍTULO · em muestra la segunda línea en cursiva.
 -->El precio de <em>conocerme.</em></div><p class="kbq1-description"><!--
 03 / PRESENTACIÓN · Ejemplo editable.
